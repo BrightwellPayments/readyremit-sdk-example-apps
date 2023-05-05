@@ -35,7 +35,7 @@ This repository contains examples of how to integrate the ReadyRemit SDK into yo
 
 ### React Native Example
 
-- [React Native Example](https://github.com/ReadyRemit/react-native-sdk-example): demonstrates how to integrate the ReadyRemit SDK into a React Native app.
+- [React Native Example](https://github.com/BrightwellPayments/readyremit-sdk-example-apps/tree/main/React%20Native/RRM-ReactNative-Sample): demonstrates how to integrate the ReadyRemit SDK into a React Native app.
 
 ## Conclusion
 
