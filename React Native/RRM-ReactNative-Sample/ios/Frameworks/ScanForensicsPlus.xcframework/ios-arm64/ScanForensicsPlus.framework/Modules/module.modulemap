@@ -1,0 +1,11 @@
+framework module ScanForensicsPlus {
+  umbrella header "ScanForensicsPlus.h"
+
+  export *
+  module * { export * }
+}
+
+module ScanForensicsPlus.Swift {
+    header "ScanForensicsPlus-Swift.h"
+    requires objc
+}

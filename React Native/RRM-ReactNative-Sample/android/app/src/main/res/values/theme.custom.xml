@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Custom" parent="Theme.ReadyRemit.Light">
+        <item name="rrmColorPrimaryShade1">#FF9800</item> //input line, clickable text
+        <item name="rrmColorPrimaryShade2">#B16B04</item> //Primary button hover
+        <item name="rrmColorPrimaryShade3">#F6AD42</item> //Primary button rippler
+
+        <item name="rrmButtonPrimary">#FF9800</item> //Primary button enabled
+
+        <item name="rrmColorSecondaryShade1">#3E3E3E</item> //Secondary button hover
+        <item name="rrmColorSecondaryShade2">#B7B7B8</item> //Primary button disabled
+        <item name="rrmColorSecondaryShade3">#232323</item> //Secondary button border
+
+        <item name="rrmErrorColor">#D53F3F</item> //Error messages, error lines, error fields
+        <item name="rrmSuccessColor">#19AA81</item> //Success messages, success validations, success field values
+
+        <item name="rrmBackgroundColorPrimary">#F3F0EF</item> //Window color
+        <item name="rrmBackgroundColorSecondary">#FFF3E0</item> //Toolbar, cards and bottomsheet
+
+        <item name="rrmTextColorPrimaryShade1">#3D4045</item> //Common text
+        <item name="rrmTextColorPrimaryShade2">#55575A</item> //Placeholders
+        <item name="rrmTextColorPrimaryShade3">#47494A</item> //List items, value texts
+        <item name="rrmTextColorPrimaryShade4">#000000</item> //Titles, secondary button text color
+        <item name="rrmTextColorPrimaryShade5">#000000</item> //Primary button text color
+
+        <item name="rrmControlColorShade1">#898A8C</item> //Disabled inputs
+        <item name="rrmControlColorShade2">#DDDDDD</item> //Enabled inputs, search icon color
+
+        <item name="rrmAccessoryColorShade1">#9CA3AF</item> //Clear input button icon color
+        <item name="rrmAccessoryColorShade2">#1F2937</item> //Close button icon color
+    </style>
+</resources>
