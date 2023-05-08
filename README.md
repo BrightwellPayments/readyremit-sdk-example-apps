@@ -22,10 +22,10 @@ ReadyRemit can be used for a variety of purposes and endpoints, including person
 
 This repository contains examples of how to integrate the ReadyRemit SDK into your app using a variety of programming languages. Each example is organized by platform and programming language.
 
-<!-- ### iOS Examples
+ ### iOS Examples
 
-- [SwiftUI Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/SwiftUI): demonstrates how to integrate the ReadyRemit SDK into an iOS app using SwiftUI.
-- [UIKit Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/UIKit): demonstrates how to integrate the ReadyRemit SDK into an iOS app using UIKit.
+[UIKit Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/UIKit): demonstrates how to integrate the ReadyRemit SDK into an iOS app using UIKit.
+<!--- - [SwiftUI Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/SwiftUI): demonstrates how to integrate the ReadyRemit SDK into an iOS app using SwiftUI.
 - [Objective-C Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/Objective-C): demonstrates how to integrate the ReadyRemit SDK into an iOS app using Objective-C.
 
 ### Android Examples
