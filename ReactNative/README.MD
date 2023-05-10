@@ -2,11 +2,11 @@
 
 - clone this repo
 - on terminal do the following:
-  • cd ReactNative/
-  • npm install
-  • cd ios/
-  • pod install
-  • cd ..
+  • cd ReactNative/<br>
+  • npm install<br>
+  • cd ios/<br>
+  • pod install<br>
+  • cd ..<br>
 - open the file App.js and fill the senderId, clientId and clientSecret with your sandbox credentials
 - run 'npx react-native start'
 - on another terminal 'npm run <platform>' (android | ios) 
