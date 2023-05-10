@@ -5,7 +5,7 @@
   - senderId
   - clientId
   - clientSecret 
-- from the terminal
+- from the terminal at the root of the repository
   - `cd ReactNative`
   - `npm install`
   - `cd ios`
