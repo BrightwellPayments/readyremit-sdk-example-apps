@@ -14,3 +14,8 @@
   - `npx react-native start`
 - from a second terminal 
   - `npm run <platform> (android | ios)`
+
+## Verified Platforms
+- M1, M2, Intel on OSX Ventura 13.3.1
+- Xcode 14.2, 14.3
+- Android Studio Electric Eel 2022.1.1, Flamingo 2022.2.1
