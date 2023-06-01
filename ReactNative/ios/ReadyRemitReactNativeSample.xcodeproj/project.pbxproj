@@ -14,24 +14,26 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B7C695CD2935058800BC653A /* ReadyRemitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */; };
-		B7C695CE2935058800BC653A /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4E02A261FC2004F54BC /* AcuantCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DC293506E000BC653A /* AcuantCamera.xcframework */; };
+		A0B9D4E12A261FC2004F54BC /* AcuantCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DC293506E000BC653A /* AcuantCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4E22A261FC2004F54BC /* AcuantCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D6293506DF00BC653A /* AcuantCommon.xcframework */; };
+		A0B9D4E32A261FC2004F54BC /* AcuantCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D6293506DF00BC653A /* AcuantCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4E42A261FC2004F54BC /* AcuantFaceCapture.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D8293506DF00BC653A /* AcuantFaceCapture.xcframework */; };
+		A0B9D4E52A261FC2004F54BC /* AcuantFaceCapture.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D8293506DF00BC653A /* AcuantFaceCapture.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4E62A261FC2004F54BC /* AcuantImagePreparation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DB293506E000BC653A /* AcuantImagePreparation.xcframework */; };
+		A0B9D4E72A261FC2004F54BC /* AcuantImagePreparation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DB293506E000BC653A /* AcuantImagePreparation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4E82A261FC2004F54BC /* AcuantPassiveLiveness.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D7293506DF00BC653A /* AcuantPassiveLiveness.xcframework */; };
+		A0B9D4E92A261FC2004F54BC /* AcuantPassiveLiveness.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D7293506DF00BC653A /* AcuantPassiveLiveness.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4EA2A261FC2004F54BC /* ReadyRemitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */; };
+		A0B9D4EB2A261FC2004F54BC /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4EC2A261FC2004F54BC /* ScanForensicsPlus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D9293506DF00BC653A /* ScanForensicsPlus.xcframework */; };
+		A0B9D4ED2A261FC2004F54BC /* ScanForensicsPlus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D9293506DF00BC653A /* ScanForensicsPlus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4EE2A261FC2004F54BC /* TesseractOCR.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DA293506DF00BC653A /* TesseractOCR.xcframework */; };
+		A0B9D4EF2A261FC2004F54BC /* TesseractOCR.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DA293506DF00BC653A /* TesseractOCR.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0B9D4F02A261FC2004F54BC /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E8BD902A1FF76200523A17 /* VisaSensoryBranding.xcframework */; };
+		A0B9D4F12A261FC2004F54BC /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0E8BD902A1FF76200523A17 /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7C695D2293505C500BC653A /* ReadyRemitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C695D1293505C500BC653A /* ReadyRemitViewController.m */; };
 		B7C695D5293505F200BC653A /* RCTReadyRemitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C695D4293505F200BC653A /* RCTReadyRemitModule.m */; };
-		B7C695DD293506E000BC653A /* AcuantCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D6293506DF00BC653A /* AcuantCommon.xcframework */; };
-		B7C695DE293506E000BC653A /* AcuantCommon.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D6293506DF00BC653A /* AcuantCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7C695DF293506E000BC653A /* AcuantPassiveLiveness.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D7293506DF00BC653A /* AcuantPassiveLiveness.xcframework */; };
-		B7C695E0293506E000BC653A /* AcuantPassiveLiveness.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D7293506DF00BC653A /* AcuantPassiveLiveness.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7C695E1293506E000BC653A /* AcuantFaceCapture.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D8293506DF00BC653A /* AcuantFaceCapture.xcframework */; };
-		B7C695E2293506E000BC653A /* AcuantFaceCapture.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D8293506DF00BC653A /* AcuantFaceCapture.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7C695E3293506E000BC653A /* ScanForensicsPlus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D9293506DF00BC653A /* ScanForensicsPlus.xcframework */; };
-		B7C695E4293506E000BC653A /* ScanForensicsPlus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D9293506DF00BC653A /* ScanForensicsPlus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7C695E5293506E000BC653A /* TesseractOCR.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DA293506DF00BC653A /* TesseractOCR.xcframework */; };
-		B7C695E6293506E000BC653A /* TesseractOCR.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DA293506DF00BC653A /* TesseractOCR.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7C695E7293506E000BC653A /* AcuantImagePreparation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DB293506E000BC653A /* AcuantImagePreparation.xcframework */; };
-		B7C695E8293506E000BC653A /* AcuantImagePreparation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DB293506E000BC653A /* AcuantImagePreparation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B7C695E9293506E000BC653A /* AcuantCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DC293506E000BC653A /* AcuantCamera.xcframework */; };
-		B7C695EA293506E000BC653A /* AcuantCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DC293506E000BC653A /* AcuantCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,20 +47,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B7C695CF2935058800BC653A /* Embed Frameworks */ = {
+		A0B9D4F22A261FC2004F54BC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B7C695E0293506E000BC653A /* AcuantPassiveLiveness.xcframework in Embed Frameworks */,
-				B7C695DE293506E000BC653A /* AcuantCommon.xcframework in Embed Frameworks */,
-				B7C695CE2935058800BC653A /* ReadyRemitSDK.xcframework in Embed Frameworks */,
-				B7C695E6293506E000BC653A /* TesseractOCR.xcframework in Embed Frameworks */,
-				B7C695EA293506E000BC653A /* AcuantCamera.xcframework in Embed Frameworks */,
-				B7C695E8293506E000BC653A /* AcuantImagePreparation.xcframework in Embed Frameworks */,
-				B7C695E4293506E000BC653A /* ScanForensicsPlus.xcframework in Embed Frameworks */,
-				B7C695E2293506E000BC653A /* AcuantFaceCapture.xcframework in Embed Frameworks */,
+				A0B9D4E32A261FC2004F54BC /* AcuantCommon.xcframework in Embed Frameworks */,
+				A0B9D4EF2A261FC2004F54BC /* TesseractOCR.xcframework in Embed Frameworks */,
+				A0B9D4E72A261FC2004F54BC /* AcuantImagePreparation.xcframework in Embed Frameworks */,
+				A0B9D4ED2A261FC2004F54BC /* ScanForensicsPlus.xcframework in Embed Frameworks */,
+				A0B9D4EB2A261FC2004F54BC /* ReadyRemitSDK.xcframework in Embed Frameworks */,
+				A0B9D4E12A261FC2004F54BC /* AcuantCamera.xcframework in Embed Frameworks */,
+				A0B9D4E92A261FC2004F54BC /* AcuantPassiveLiveness.xcframework in Embed Frameworks */,
+				A0B9D4F12A261FC2004F54BC /* VisaSensoryBranding.xcframework in Embed Frameworks */,
+				A0B9D4E52A261FC2004F54BC /* AcuantFaceCapture.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +85,7 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ReadyRemitReactNativeSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadyRemitReactNativeSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReadyRemitReactNativeSample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.release.xcconfig"; path = "Target Support Files/Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests/Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		A0E8BD902A1FF76200523A17 /* VisaSensoryBranding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VisaSensoryBranding.xcframework; path = Frameworks/VisaSensoryBranding.xcframework; sourceTree = "<group>"; };
 		B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReadyRemitSDK.xcframework; path = Frameworks/ReadyRemitSDK.xcframework; sourceTree = "<group>"; };
 		B7C695D0293505A700BC653A /* ReadyRemitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadyRemitViewController.h; sourceTree = "<group>"; };
 		B7C695D1293505C500BC653A /* ReadyRemitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadyRemitViewController.m; sourceTree = "<group>"; };
@@ -110,15 +114,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7C695DF293506E000BC653A /* AcuantPassiveLiveness.xcframework in Frameworks */,
-				B7C695E7293506E000BC653A /* AcuantImagePreparation.xcframework in Frameworks */,
-				B7C695DD293506E000BC653A /* AcuantCommon.xcframework in Frameworks */,
-				B7C695CD2935058800BC653A /* ReadyRemitSDK.xcframework in Frameworks */,
-				B7C695E9293506E000BC653A /* AcuantCamera.xcframework in Frameworks */,
+				A0B9D4E82A261FC2004F54BC /* AcuantPassiveLiveness.xcframework in Frameworks */,
+				A0B9D4EC2A261FC2004F54BC /* ScanForensicsPlus.xcframework in Frameworks */,
+				A0B9D4E22A261FC2004F54BC /* AcuantCommon.xcframework in Frameworks */,
+				A0B9D4E02A261FC2004F54BC /* AcuantCamera.xcframework in Frameworks */,
+				A0B9D4EA2A261FC2004F54BC /* ReadyRemitSDK.xcframework in Frameworks */,
+				A0B9D4F02A261FC2004F54BC /* VisaSensoryBranding.xcframework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-ReadyRemitReactNativeSample.a in Frameworks */,
-				B7C695E1293506E000BC653A /* AcuantFaceCapture.xcframework in Frameworks */,
-				B7C695E3293506E000BC653A /* ScanForensicsPlus.xcframework in Frameworks */,
-				B7C695E5293506E000BC653A /* TesseractOCR.xcframework in Frameworks */,
+				A0B9D4EE2A261FC2004F54BC /* TesseractOCR.xcframework in Frameworks */,
+				A0B9D4E62A261FC2004F54BC /* AcuantImagePreparation.xcframework in Frameworks */,
+				A0B9D4E42A261FC2004F54BC /* AcuantFaceCapture.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +167,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0E8BD902A1FF76200523A17 /* VisaSensoryBranding.xcframework */,
 				B7C695DC293506E000BC653A /* AcuantCamera.xcframework */,
 				B7C695D6293506DF00BC653A /* AcuantCommon.xcframework */,
 				B7C695D8293506DF00BC653A /* AcuantFaceCapture.xcframework */,
@@ -255,7 +261,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
-				B7C695CF2935058800BC653A /* Embed Frameworks */,
+				A0B9D4F22A261FC2004F54BC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
