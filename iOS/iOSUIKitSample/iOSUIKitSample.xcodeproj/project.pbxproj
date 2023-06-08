@@ -30,6 +30,8 @@
 		A001F2A02A096C54003DA650 /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2912A096C53003DA650 /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A001F2A12A096C54003DA650 /* ScanForensicsPlus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2922A096C54003DA650 /* ScanForensicsPlus.xcframework */; };
 		A001F2A22A096C54003DA650 /* ScanForensicsPlus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2922A096C54003DA650 /* ScanForensicsPlus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A042FD412A3155550041DFE9 /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */; };
+		A042FD422A3155550041DFE9 /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +48,7 @@
 				A001F2A02A096C54003DA650 /* ReadyRemitSDK.xcframework in Embed Frameworks */,
 				A001F29A2A096C54003DA650 /* AcuantImagePreparation.xcframework in Embed Frameworks */,
 				A001F2942A096C54003DA650 /* TesseractOCR.xcframework in Embed Frameworks */,
+				A042FD422A3155550041DFE9 /* VisaSensoryBranding.xcframework in Embed Frameworks */,
 				A001F2982A096C54003DA650 /* AcuantFaceCapture.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -71,6 +74,7 @@
 		A001F2902A096C53003DA650 /* AcuantCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AcuantCommon.xcframework; path = Frameworks/AcuantCommon.xcframework; sourceTree = "<group>"; };
 		A001F2912A096C53003DA650 /* ReadyRemitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReadyRemitSDK.xcframework; path = Frameworks/ReadyRemitSDK.xcframework; sourceTree = "<group>"; };
 		A001F2922A096C54003DA650 /* ScanForensicsPlus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ScanForensicsPlus.xcframework; path = Frameworks/ScanForensicsPlus.xcframework; sourceTree = "<group>"; };
+		A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VisaSensoryBranding.xcframework; path = Frameworks/VisaSensoryBranding.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 				A001F29F2A096C54003DA650 /* ReadyRemitSDK.xcframework in Frameworks */,
 				A001F2992A096C54003DA650 /* AcuantImagePreparation.xcframework in Frameworks */,
 				A001F2932A096C54003DA650 /* TesseractOCR.xcframework in Frameworks */,
+				A042FD412A3155550041DFE9 /* VisaSensoryBranding.xcframework in Frameworks */,
 				A001F2972A096C54003DA650 /* AcuantFaceCapture.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +132,7 @@
 		A001F28A2A096C52003DA650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */,
 				A001F28F2A096C53003DA650 /* AcuantCamera.xcframework */,
 				A001F2902A096C53003DA650 /* AcuantCommon.xcframework */,
 				A001F28D2A096C53003DA650 /* AcuantFaceCapture.xcframework */,

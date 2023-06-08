@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ReadyRemitSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -16,6 +16,7 @@ import ScanForensicsPlus
 import Swift
 import SwiftUI
 import UIKit
+import VisaSensoryBranding
 import WebKit
 import _Concurrency
 import _StringProcessing
@@ -37,9 +38,9 @@ extension Swift.Collection where Self.Element : Swift.StringProtocol {
   @objc public static let shared: ReadyRemitSDK.ReadyRemit
   @objc public var appearance: ReadyRemitSDK.ReadyRemitAppearance
   @objc public var environment: ReadyRemitSDK.ReadyRemitEnvironment
-  public func launch(inNavigation: UIKit.UINavigationController, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  public func launch(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
   public func launchEntrySwiftUi(authToken: Swift.String, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)?) -> SwiftUI.AnyView
-  @objc public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  @objc public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
   @objc public func languageSelected(_ lang: Swift.String)
   @objc override dynamic public init()
   @objc deinit
@@ -55,7 +56,7 @@ public typealias Headers = [Swift.String : Swift.String]
 @objc public class ReadyRemitObjcOAuthToken : ObjectiveC.NSObject, Swift.Decodable {
   @objc public init(tokenType: Swift.String, accessToken: Swift.String, expiresInSeconds: Swift.Int)
   @objc deinit
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class ReadyRemitFontScheme : ObjectiveC.NSObject {
   @objc public static var defaultFamily: Swift.String
@@ -64,29 +65,19 @@ public typealias Headers = [Swift.String : Swift.String]
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class ReadyRemitColorScheme : ObjectiveC.NSObject {
-  @objc public var primaryShade1: UIKit.UIColor
-  @objc public var secondaryShade1: UIKit.UIColor
-  @objc public var textPrimaryShade1: UIKit.UIColor
-  @objc public var textPrimaryShade2: UIKit.UIColor
-  @objc public var textPrimaryShade3: UIKit.UIColor
-  @objc public var textPrimaryShade4: UIKit.UIColor
-  @objc public var backgroundColorPrimary: UIKit.UIColor
-  @objc public var backgroundColorSecondary: UIKit.UIColor
+  @objc public var background: UIKit.UIColor
+  @objc public var foreground: UIKit.UIColor
+  @objc public var danger: UIKit.UIColor
+  @objc public var dangerLight: UIKit.UIColor
   @objc public var success: UIKit.UIColor
-  @objc public var error: UIKit.UIColor
-  @objc public var controlShade1: UIKit.UIColor
-  @objc public var controlAccessoryShade1: UIKit.UIColor
-  @objc public var primaryShade2: UIKit.UIColor
-  @objc public var secondaryShade2: UIKit.UIColor
-  @objc public var secondaryShade3: UIKit.UIColor
-  @objc public var textPrimaryShade5: UIKit.UIColor
-  @objc public var backgroundColorTertiary: UIKit.UIColor
-  public var errorBackground: UIKit.UIColor
-  @objc public var controlShade2: UIKit.UIColor
-  @objc public var controlAccessoryShade2: UIKit.UIColor
-  @objc public var textPrimaryDisabled: UIKit.UIColor
-  @objc public var textTertiaryDisabled: UIKit.UIColor
-  @objc public var textQuaternaryDisabled: UIKit.UIColor
+  @objc public var divider: UIKit.UIColor
+  @objc public var inputLine: UIKit.UIColor
+  @objc public var icon: UIKit.UIColor
+  @objc public var text: UIKit.UIColor
+  @objc public var textSecondary: UIKit.UIColor
+  @objc public var buttonText: UIKit.UIColor
+  @objc public var primary: UIKit.UIColor
+  @objc public var primaryLight: UIKit.UIColor
   @objc override dynamic public init()
   @objc deinit
 }
@@ -113,8 +104,8 @@ extension ReadyRemitSDK.ReadyRemit {
     @objc public init(dstCountryIso3Code: Swift.String, dstCurrencyIso3Code: Swift.String, srcCurrencyIso3Code: Swift.String, transferMethod: Swift.String, quoteBy: Swift.String, amount: Swift.Int, fee: Swift.Int, recipientId: Swift.String, recipientAccountId: Swift.String?, purposeOfRemittance: Swift.String, fields: [ReadyRemitSDK.ReadyRemit.RequestField]?, quoteHistoryId: Swift.String, sourceOfFunds: Swift.String? = nil)
     @objc public func toJSON() -> Swift.String?
     @objc deinit
-    public func encode(to encoder: Swift.Encoder) throws
-    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
   }
   @objc public class RequestField : ObjectiveC.NSObject, Swift.Codable {
     @objc final public let id: Swift.String
@@ -124,8 +115,8 @@ extension ReadyRemitSDK.ReadyRemit {
     @objc final public let displayText: Swift.String
     @objc public init(id: Swift.String, name: Swift.String, type: Swift.String, value: Swift.String, displayText: Swift.String)
     @objc deinit
-    public func encode(to encoder: Swift.Encoder) throws
-    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
   }
 }
 @_inheritsConvenienceInitializers @objc public class ReadyRemitAppearance : ObjectiveC.NSObject {
