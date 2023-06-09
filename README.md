@@ -26,12 +26,12 @@ This repository contains examples of how to integrate the ReadyRemit SDK into yo
 
 - [UIKit Example](https://github.com/BrightwellPayments/readyremit-sdk-example-apps/tree/main/iOS/iOSUIKitSample): demonstrates how to integrate the ReadyRemit SDK into an iOS app using UIKit.
 <!--- - [SwiftUI Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/SwiftUI): demonstrates how to integrate the ReadyRemit SDK into an iOS app using SwiftUI.
-- [Objective-C Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/Objective-C): demonstrates how to integrate the ReadyRemit SDK into an iOS app using Objective-C.
+- [Objective-C Example](https://github.com/ReadyRemit/ios-sdk-examples/tree/main/Objective-C): demonstrates how to integrate the ReadyRemit SDK into an iOS app using Objective-C.-->
 
 ### Android Examples
 
-- [Kotlin Example](https://github.com/ReadyRemit/android-sdk-examples/tree/main/Kotlin): demonstrates how to integrate the ReadyRemit SDK into an Android app using Kotlin.
-- [Java Example](https://github.com/ReadyRemit/android-sdk-examples/tree/main/Java): demonstrates how to integrate the ReadyRemit SDK into an Android app using Java. -->
+- [Kotlin Example](https://github.com/ReadyRemit/android-sdk-examples/tree/main/Android): demonstrates how to integrate the ReadyRemit SDK into an Android app using Kotlin.
+<!---- [Java Example](https://github.com/ReadyRemit/android-sdk-examples/tree/main/Java): demonstrates how to integrate the ReadyRemit SDK into an Android app using Java. -->
 
 ### React Native Example
 
