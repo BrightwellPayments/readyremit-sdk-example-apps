@@ -135,12 +135,12 @@ def reactNativeArchitectures() {
 android {
     ndkVersion rootProject.ext.ndkVersion
 
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.readyremitreactnativesample"
         minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         minSdkVersion 26
@@ -267,19 +267,21 @@ dependencies {
     implementation files('libs/scanforensicsplus.aar')
     implementation files ('libs/visa-sensory-branding-2.0.aar')
 
-    implementation 'com.acuant:acuantcommon:11.4.16'
-    implementation 'com.acuant:acuantcamera:11.4.16'
-    implementation 'com.acuant:acuantimagepreparation:11.4.16'
-    implementation 'com.acuant:acuantfacecapture:11.4.16'
-    implementation 'com.acuant:acuantpassiveliveness:11.4.16'
-    implementation 'com.github.smart-fun:XmlToJson:1.4.5'
+    implementation 'com.acuant:acuantcommon:11.5.4'
+    implementation 'com.acuant:acuantcamera:11.5.4'
+    implementation 'com.acuant:acuantimagepreparation:11.5.4'
+    implementation 'com.acuant:acuantfacecapture:11.5.4'
+    implementation 'com.acuant:acuantpassiveliveness:11.5.4'
+    implementation 'com.github.smart-fun:XmlToJson:1.5.1'
 
-    // Material
-    implementation 'com.google.android.material:material:1.4.0'
-
-    // Navigation component
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    // Android / Material
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     // OkHttp
     implementation 'com.squareup.okhttp3:okhttp:4.9.1'
