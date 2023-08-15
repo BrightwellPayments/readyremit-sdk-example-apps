@@ -3,7 +3,7 @@ package com.brightwell.readyremit.androisample.ui
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.brightwell.readyremit.androisample.databinding.ActivityMainBinding
-import com.brightwell.readyremit.sdk.Environment
+import com.brightwell.readyremit.sdk.environment.Environment
 import com.brightwell.readyremit.sdk.ReadyRemit
 import com.brightwell.readyremit.sdk.ReadyRemitAuthCallback
 import com.brightwell.readyremit.sdk.ReadyRemitTransferCallback

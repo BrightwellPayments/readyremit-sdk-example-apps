@@ -39,24 +39,30 @@ android {
 }
 
 dependencies {
-
     //Android / Material
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0'
-    implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    //Android
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     //Retrofit
-    implementation 'com.squareup.okhttp3:okhttp:4.11.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    implementation 'com.localebro:okhttpprofiler:1.0.8'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
 
-//     Moshi
+    //Moshi
     kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.14.0'
     implementation 'com.squareup.moshi:moshi:1.14.0'
     implementation 'com.squareup.moshi:moshi-kotlin:1.14.0'
@@ -79,11 +85,12 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:2.37"
 
     //KYC
-    implementation 'com.acuant:acuantcommon:11.4.16'
-    implementation 'com.acuant:acuantcamera:11.4.16'
-    implementation 'com.acuant:acuantimagepreparation:11.4.16'
-    implementation 'com.acuant:acuantfacecapture:11.4.16'
-    implementation 'com.acuant:acuantpassiveliveness:11.4.16'
+    implementation 'com.acuant:acuantcommon:11.5.4'
+    implementation 'com.acuant:acuantcamera:11.5.4'
+    implementation 'com.acuant:acuantimagepreparation:11.5.4'
+    implementation 'com.acuant:acuantfacecapture:11.5.4'
+    implementation 'com.acuant:acuantpassiveliveness:11.5.4'
+    implementation 'com.github.smart-fun:XmlToJson:1.5.1'
     //endregion
 
 }
