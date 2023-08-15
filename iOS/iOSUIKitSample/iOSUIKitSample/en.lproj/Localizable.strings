@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  iOSUIKitSample
+
+  Created by Lucas Araujo on 15/08/23.
+  
+*/
+"acuant_camera_align" = "ALIGN";
+"acuant_camera_manual_capture" = "ALIGN & TAP";
+"acuant_camera_move_closer" = "MOVE CLOSER";
+"acuant_camera_hold_steady" = "HOLD STEADY";
+"acuant_camera_capturing" = "CAPTURING";
+"acuant_camera_outside_view" = "TOO CLOSE!";
+
+"acuant_face_camera_initial" = "Align face to start capture";
+"acuant_face_camera_face_too_close" = "Too Close! Move Away";
+"acuant_face_camera_face_too_far" = "Move Closer";
+"acuant_face_camera_face_has_angle" = "Face has Angle. Do not tilt";
+"acuant_face_camera_face_not_in_frame" = "Move in Frame";
+"acuant_face_camera_face_moved" = "Hold Steady";
+"acuant_face_camera_capturing_2" = "Capturing\n2...";
+"acuant_face_camera_capturing_1" = "Capturing\n1...";
+
+
+"idology_header_title" = "Please capture the front of the ID";
+"idology_retry" = "Retry";
+"idology_cancel" = "Cancel";
+"idology_confirm" = "Confirm";
+"idology_captureBack" = "If you are satisfied please confirm and capture the back of the document";
+"idology_captureSelfie" = "If you are satisfied please confirm and please take a selfie";
+"idology_thankYou" = "If you are satisfied with all the images, please confirm";
+"idology_start" = "Start";
