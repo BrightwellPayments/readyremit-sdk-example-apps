@@ -1,13 +1,19 @@
 package com.readyremit_demo // Put your package name here
 
 import android.util.Log
-import com.brightwell.readyremit.sdk.*
+import com.brightwell.readyremit.sdk.ReadyRemit
+import com.brightwell.readyremit.sdk.ReadyRemitAuth
+import com.brightwell.readyremit.sdk.ReadyRemitAuthCallback
+import com.brightwell.readyremit.sdk.ReadyRemitError
+import com.brightwell.readyremit.sdk.ReadyRemitTransferCallback
+import com.brightwell.readyremit.sdk.ReadyRemitTransferRequest
+import com.brightwell.readyremit.sdk.SDKClosed
+import com.brightwell.readyremit.sdk.environment.Environment
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.modules.core.DeviceEventManagerModule.RCTDeviceEventEmitter
-import kotlinx.coroutines.runBlocking
 import com.google.gson.Gson
 import com.readyremitreactnativesample.R
 import kotlinx.coroutines.*
@@ -37,8 +43,6 @@ class ReadyRemitModule(reactContext: ReactApplicationContext) : ReactContextBase
                 .build()
         )
 
-        ReadyRemit.remitFrom(currentActivity!!, REQUEST_CODE, R.style.Theme_Custom, language)
-
         ReadyRemit.setEventListener { event ->
             when (event) {
                 SDKClosed -> {
@@ -50,6 +54,8 @@ class ReadyRemitModule(reactContext: ReactApplicationContext) : ReactContextBase
                 else -> Log.d("NOT IMPLEMENTED", "NOT IMPLEMENTED")
             }
         }
+
+        ReadyRemit.remitFrom(currentActivity!!, REQUEST_CODE, R.style.Theme_Custom, language)
     }
 
     @ReactMethod
@@ -62,13 +68,11 @@ class ReadyRemitModule(reactContext: ReactApplicationContext) : ReactContextBase
     }
 
     private fun requestReadyRemitAccessToken(callback: ReadyRemitAuthCallback) {
-        runBlocking {
-            _onAuthCallback = callback
+        _onAuthCallback = callback
 
-            reactApplicationContext
-                .getJSModule(RCTDeviceEventEmitter::class.java)
-                .emit(READYREMIT_AUTH_TOKEN_REQUESTED, null)
-        }
+        reactApplicationContext
+            .getJSModule(RCTDeviceEventEmitter::class.java)
+            .emit(READYREMIT_AUTH_TOKEN_REQUESTED, null)
     }
 
     @ReactMethod
@@ -81,7 +85,7 @@ class ReadyRemitModule(reactContext: ReactApplicationContext) : ReactContextBase
         }
     }
 
-    private suspend fun submitReadyRemitTransfer(
+    private fun submitReadyRemitTransfer(
         request: ReadyRemitTransferRequest,
         callback: ReadyRemitTransferCallback
     ) {

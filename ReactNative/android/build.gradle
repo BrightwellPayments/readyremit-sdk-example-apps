@@ -6,7 +6,7 @@ buildscript {
         minSdkVersion = 26
         compileSdkVersion = 31
         targetSdkVersion = 31
-        kotlinVersion = "1.7.10"
+        kotlinVersion = "1.6.0"
 
         if (System.properties['os.arch'] == "aarch64") {
             // For M1 Users we need to use the NDK 24 which added support for aarch64
@@ -21,12 +21,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:7.2.1")
+        classpath("com.android.tools.build:gradle:7.4.2")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("de.undercouch:gradle-download-task:5.0.1")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.28-alpha"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
     }
 }
 
@@ -48,7 +48,10 @@ allprojects {
             }
         }
         google()
-        maven { url 'https://www.jitpack.io' }
+        mavenCentral()
+        jcenter()
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }
         maven { url 'https://raw.githubusercontent.com/Acuant/AndroidSdkMaven/main/maven/' }
         maven { url 'https://raw.githubusercontent.com/iProov/android/master/maven/' }
     }

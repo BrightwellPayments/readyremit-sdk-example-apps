@@ -81,11 +81,13 @@ import org.apache.tools.ant.taskdefs.condition.Os
  * ]
  */
 
-project.ext.react = [
-    enableHermes: true,  // clean and rebuild if changing
-]
+import com.android.build.OutputFile
 
 apply from: "../../node_modules/react-native/react.gradle"
+
+project.ext.react = [
+        enableHermes: false,  // clean and rebuild if changing
+]
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -122,11 +124,13 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
-def enableHermes = project.ext.react.get("enableHermes", false);
 
 /**
  * Architectures to build native code for.
  */
+
+def enableHermes = project.ext.react.get("enableHermes", false);
+
 def reactNativeArchitectures() {
     def value = project.getProperties().get("reactNativeArchitectures")
     return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
@@ -135,12 +139,12 @@ def reactNativeArchitectures() {
 android {
     ndkVersion rootProject.ext.ndkVersion
 
-    compileSdkVersion 31
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "com.readyremitreactnativesample"
         minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         minSdkVersion 26
@@ -207,7 +211,6 @@ android {
     }
 
     buildFeatures {
-        dataBinding true
         viewBinding true
     }
 
@@ -258,7 +261,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation fileTree(dir: "libs", include: ["*.jar", "*.aar"])
 
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
@@ -267,19 +270,27 @@ dependencies {
     implementation files('libs/scanforensicsplus.aar')
     implementation files ('libs/visa-sensory-branding-2.0.aar')
 
-    implementation 'com.acuant:acuantcommon:11.4.16'
-    implementation 'com.acuant:acuantcamera:11.4.16'
-    implementation 'com.acuant:acuantimagepreparation:11.4.16'
-    implementation 'com.acuant:acuantfacecapture:11.4.16'
-    implementation 'com.acuant:acuantpassiveliveness:11.4.16'
-    implementation 'com.github.smart-fun:XmlToJson:1.4.5'
+    implementation 'com.acuant:acuantcommon:11.5.4'
+    implementation 'com.acuant:acuantcamera:11.5.4'
+    implementation 'com.acuant:acuantimagepreparation:11.5.4'
+    implementation 'com.acuant:acuantfacecapture:11.5.4'
+    implementation 'com.acuant:acuantpassiveliveness:11.5.4'
+    implementation 'com.github.smart-fun:XmlToJson:1.5.1'
 
-    // Material
+    // React Native
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     implementation 'com.google.android.material:material:1.4.0'
 
     // Navigation component
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+    //Android
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
 
     // OkHttp
     implementation 'com.squareup.okhttp3:okhttp:4.9.1'
@@ -293,9 +304,9 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:${retrofit_version}"
 
     // Moshi
-    def moshi_version = '1.13.0'
+    def moshi_version = '1.12.0'
     implementation "com.squareup.moshi:moshi:${moshi_version}"
-    implementation "com.squareup.moshi:moshi-adapters:${moshi_version}"
+    implementation("com.squareup.moshi:moshi-adapters:${moshi_version}")
     kapt "com.squareup.moshi:moshi-kotlin-codegen:${moshi_version}"
 
     //Glide
@@ -303,10 +314,10 @@ dependencies {
     kapt 'com.github.bumptech.glide:compiler:4.12.0'
 
     //region Dagger
-    def dagger_version = '2.34'
     implementation "com.google.dagger:dagger:2.37"
     annotationProcessor "com.google.dagger:dagger-compiler:2.37"
     kapt "com.google.dagger:dagger-compiler:2.37"
+
 
     // Used for AndroidSupportInjection
     implementation "com.google.dagger:dagger-android:2.37"
@@ -314,7 +325,11 @@ dependencies {
     annotationProcessor "com.google.dagger:dagger-android-processor:2.37"
     kapt "com.google.dagger:dagger-android-processor:2.37"
 
-    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    // Process
+    implementation 'com.jakewharton:process-phoenix:2.1.2'
+    implementation 'com.github.lisawray.groupie:groupie:2.10.0'
+    implementation 'com.github.lisawray.groupie:groupie-viewbinding:2.10.0'
+    implementation 'com.facebook.soloader:soloader:0.9.0+'
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
@@ -351,6 +366,9 @@ if (isNewArchitectureEnabled()) {
             substitute(module("com.facebook.react:hermes-engine"))
                     .using(project(":ReactAndroid:hermes-engine"))
                     .because("On New Architecture we're building Hermes from source")
+        }
+        resolutionStrategy {
+            force "com.facebook.soloader:soloader:0.8.2"
         }
     }
 }
