@@ -8,14 +8,95 @@ import Combine
 import Foundation
 import Network
 @_exported import ReadyRemitSDK
-import ScanForensicsPlus
 import Swift
 import SwiftUI
+import SystemConfiguration
 import UIKit
 import VisaSensoryBranding
 import WebKit
 import _Concurrency
 import _StringProcessing
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (ReadyRemitSDK.Reachability) -> ()
+  public typealias NetworkUnreachable = (ReadyRemitSDK.Reachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: ReadyRemitSDK.Reachability.NetworkStatus, b: ReadyRemitSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    @available(*, deprecated, renamed: "unavailable")
+    public static let none: ReadyRemitSDK.Reachability.Connection
+    public static func == (a: ReadyRemitSDK.Reachability.Connection, b: ReadyRemitSDK.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var whenReachable: ReadyRemitSDK.Reachability.NetworkReachable?
+  public var whenUnreachable: ReadyRemitSDK.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: ReadyRemitSDK.Reachability.Connection {
+    get
+  }
+  public var connection: ReadyRemitSDK.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension ReadyRemitSDK.Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
 extension UIKit.UIFont {
   public static func registerSFFont(withFilenameString filenameString: Swift.String)
 }
@@ -35,6 +116,7 @@ extension Swift.Collection where Self.Element : Swift.StringProtocol {
   @objc public var appearance: ReadyRemitSDK.ReadyRemitAppearance
   @objc public var environment: ReadyRemitSDK.ReadyRemitEnvironment
   public func launch(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  public func launch(onLoad: @escaping (SwiftUI.AnyView) -> Swift.Void, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
   public func launchEntrySwiftUi(authToken: Swift.String, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)?) -> SwiftUI.AnyView
   @objc public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
   @objc public func languageSelected(_ lang: Swift.String)
@@ -93,11 +175,9 @@ extension ReadyRemitSDK.ReadyRemit {
     @objc final public let fee: Swift.Int
     @objc final public let recipientId: Swift.String
     @objc final public let recipientAccountId: Swift.String?
-    @objc final public let purposeOfRemittance: Swift.String
     @objc final public let fields: [ReadyRemitSDK.ReadyRemit.RequestField]?
     @objc final public let quoteHistoryId: Swift.String?
-    @objc final public let sourceOfFunds: Swift.String?
-    @objc public init(dstCountryIso3Code: Swift.String, dstCurrencyIso3Code: Swift.String, srcCurrencyIso3Code: Swift.String, transferMethod: Swift.String, quoteBy: Swift.String, amount: Swift.Int, fee: Swift.Int, recipientId: Swift.String, recipientAccountId: Swift.String?, purposeOfRemittance: Swift.String, fields: [ReadyRemitSDK.ReadyRemit.RequestField]?, quoteHistoryId: Swift.String, sourceOfFunds: Swift.String? = nil)
+    @objc public init(dstCountryIso3Code: Swift.String, dstCurrencyIso3Code: Swift.String, srcCurrencyIso3Code: Swift.String, transferMethod: Swift.String, quoteBy: Swift.String, amount: Swift.Int, fee: Swift.Int, recipientId: Swift.String, recipientAccountId: Swift.String?, fields: [ReadyRemitSDK.ReadyRemit.RequestField]?, quoteHistoryId: Swift.String)
     @objc public func toJSON() -> Swift.String?
     @objc deinit
     public func encode(to encoder: any Swift.Encoder) throws
@@ -123,6 +203,12 @@ extension ReadyRemitSDK.ReadyRemit {
   @objc override dynamic public init()
   @objc deinit
 }
+@available(*, unavailable, renamed: "Connection")
+extension ReadyRemitSDK.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension ReadyRemitSDK.Reachability.NetworkStatus : Swift.Hashable {}
+extension ReadyRemitSDK.Reachability.Connection : Swift.Equatable {}
+extension ReadyRemitSDK.Reachability.Connection : Swift.Hashable {}
 extension ReadyRemitSDK.ReadyRemitEnvironment : Swift.Equatable {}
 extension ReadyRemitSDK.ReadyRemitEnvironment : Swift.Hashable {}
 extension ReadyRemitSDK.ReadyRemitEnvironment : Swift.RawRepresentable {}

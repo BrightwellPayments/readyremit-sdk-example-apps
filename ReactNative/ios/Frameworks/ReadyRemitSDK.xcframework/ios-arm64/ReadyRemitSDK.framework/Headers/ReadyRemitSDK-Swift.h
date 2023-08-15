@@ -320,11 +320,9 @@ SWIFT_CLASS("_TtCC13ReadyRemitSDK10ReadyRemit15TransferRequest")
 @property (nonatomic, readonly) NSInteger fee;
 @property (nonatomic, readonly, copy) NSString * _Nonnull recipientId;
 @property (nonatomic, readonly, copy) NSString * _Nullable recipientAccountId;
-@property (nonatomic, readonly, copy) NSString * _Nonnull purposeOfRemittance;
 @property (nonatomic, readonly, copy) NSArray<RequestField *> * _Nullable fields;
 @property (nonatomic, readonly, copy) NSString * _Nullable quoteHistoryId;
-@property (nonatomic, readonly, copy) NSString * _Nullable sourceOfFunds;
-- (nonnull instancetype)initWithDstCountryIso3Code:(NSString * _Nonnull)dstCountryIso3Code dstCurrencyIso3Code:(NSString * _Nonnull)dstCurrencyIso3Code srcCurrencyIso3Code:(NSString * _Nonnull)srcCurrencyIso3Code transferMethod:(NSString * _Nonnull)transferMethod quoteBy:(NSString * _Nonnull)quoteBy amount:(NSInteger)amount fee:(NSInteger)fee recipientId:(NSString * _Nonnull)recipientId recipientAccountId:(NSString * _Nullable)recipientAccountId purposeOfRemittance:(NSString * _Nonnull)purposeOfRemittance fields:(NSArray<RequestField *> * _Nullable)fields quoteHistoryId:(NSString * _Nonnull)quoteHistoryId sourceOfFunds:(NSString * _Nullable)sourceOfFunds OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithDstCountryIso3Code:(NSString * _Nonnull)dstCountryIso3Code dstCurrencyIso3Code:(NSString * _Nonnull)dstCurrencyIso3Code srcCurrencyIso3Code:(NSString * _Nonnull)srcCurrencyIso3Code transferMethod:(NSString * _Nonnull)transferMethod quoteBy:(NSString * _Nonnull)quoteBy amount:(NSInteger)amount fee:(NSInteger)fee recipientId:(NSString * _Nonnull)recipientId recipientAccountId:(NSString * _Nullable)recipientAccountId fields:(NSArray<RequestField *> * _Nullable)fields quoteHistoryId:(NSString * _Nonnull)quoteHistoryId OBJC_DESIGNATED_INITIALIZER;
 - (NSString * _Nullable)toJSON SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -410,6 +408,8 @@ SWIFT_CLASS("_TtC13ReadyRemitSDK24ReadyRemitObjcOAuthToken")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
 
 
 
