@@ -8,6 +8,7 @@ import com.brightwell.readyremit.sdk.ReadyRemit
 import com.brightwell.readyremit.sdk.ReadyRemitAuthCallback
 import com.brightwell.readyremit.sdk.ReadyRemitTransferCallback
 import com.brightwell.readyremit.sdk.ReadyRemitTransferRequest
+import com.brightwell.readyremit.sdk.environment.Environment
 
 class MainActivity : AppCompatActivity() {
 

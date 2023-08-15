@@ -9,7 +9,7 @@ import com.brightwell.readyremit.sdk.ReadyRemitAuthCallback
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -52,7 +52,7 @@ class MainViewModel {
         callback: ReadyRemitAuthCallback
     ) {
         val request = AuthRequest(clientId, clientSecret, senderId)
-        runBlocking {
+        GlobalScope {
             try {
                 val token = service.auth(request).token
                 withContext(Dispatchers.Main) {
