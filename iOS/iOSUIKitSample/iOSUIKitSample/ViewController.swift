@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ReadyRemitDelegate {
-    func onAuthTokenRequest(success: @escaping (String) -> Void, failure: @escaping () -> Void) {
+    func onAuthTokenRequest(success: (String) -> Void, failure: () -> Void) {
         API.onAuth(senderId: senderId, clientId: clientId, clientSecret: clientSecret, onSuccess: success, onFailure: failure)
     }
     
