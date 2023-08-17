@@ -1,0 +1,37 @@
+/* 
+  Localizable.strings
+  iOSUIKitSample
+
+  Created by Lucas Araujo on 15/08/23.
+  
+*/
+
+"acuant_camera_align" = "CENTRAR";
+"acuant_camera_manual_capture" = "CENTRE Y TOQUE LA PANTALLA";
+"acuant_camera_move_closer" = "ACÉRQUESE";
+"acuant_camera_hold_steady" = "MANTÉNGASE FIRME";
+"acuant_camera_capturing" = "CAPTURANDO";
+"acuant_camera_outside_view" = "¡MUY CERCA!";
+
+"acuant_face_camara_initial" = "Centre su rostro para tomar la foto";
+"acuant_face_camera_face_too_close" = "¡Muy cerca! Retroceda";
+"acuant_face_camera_face_too_far" = "Acérquese";
+"acuant_face_camera_face_has_angle" = "Su rostro está inclinado. Por favor no lo incline";
+"acuant_face_camera_face_not_in_frame" = "Muévase dentro del marco";
+"acuant_face_camera_face_moved" = "Mantenga el teléfono estable";
+
+"acuant_face_camera_capturing_2" = "Capturando\n2...";
+"acuant_face_camera_capturing_1" = "Capturando\n1...";
+
+"idology_header_title" = "Capture el frente de la identificación";
+
+"idology_retry" = "Reintentar";
+"idology_cancel" = "Cancelar";
+"idology_confirm" = "Confirmar";
+
+"idology_captureBack" = "Si está satisfecho, confirme y capture el dorso del documento";
+"idology_captureSelfie" = "Si está satisfecho, confirme y tome una foto de su rostro";
+
+"idology_thankYou" = "Si está satisfecho con las imágenes, por favor confirme";
+
+"idology_start" = "Comenzar";

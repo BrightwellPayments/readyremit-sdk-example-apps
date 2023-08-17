@@ -30,6 +30,7 @@
 		A001F2A02A096C54003DA650 /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2912A096C53003DA650 /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A001F2A12A096C54003DA650 /* ScanForensicsPlus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2922A096C54003DA650 /* ScanForensicsPlus.xcframework */; };
 		A001F2A22A096C54003DA650 /* ScanForensicsPlus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2922A096C54003DA650 /* ScanForensicsPlus.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A00D8CB42A8BA72700F3B877 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00D8CB62A8BA72700F3B877 /* Localizable.strings */; };
 		A042FD412A3155550041DFE9 /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */; };
 		A042FD422A3155550041DFE9 /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -74,6 +75,10 @@
 		A001F2902A096C53003DA650 /* AcuantCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AcuantCommon.xcframework; path = Frameworks/AcuantCommon.xcframework; sourceTree = "<group>"; };
 		A001F2912A096C53003DA650 /* ReadyRemitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReadyRemitSDK.xcframework; path = Frameworks/ReadyRemitSDK.xcframework; sourceTree = "<group>"; };
 		A001F2922A096C54003DA650 /* ScanForensicsPlus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ScanForensicsPlus.xcframework; path = Frameworks/ScanForensicsPlus.xcframework; sourceTree = "<group>"; };
+		A00D8CB02A8BA71100F3B877 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		A00D8CB12A8BA71200F3B877 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A00D8CB52A8BA72700F3B877 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A00D8CB72A8BA72B00F3B877 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VisaSensoryBranding.xcframework; path = Frameworks/VisaSensoryBranding.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +130,7 @@
 				A001F27D2A093F44003DA650 /* Assets.xcassets */,
 				A001F27F2A093F44003DA650 /* LaunchScreen.storyboard */,
 				A001F2822A093F44003DA650 /* Info.plist */,
+				A00D8CB62A8BA72700F3B877 /* Localizable.strings */,
 			);
 			path = iOSUIKitSample;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = A001F2682A093F44003DA650;
 			productRefGroup = A001F2722A093F44003DA650 /* Products */;
@@ -205,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A001F2812A093F44003DA650 /* LaunchScreen.storyboard in Resources */,
+				A00D8CB42A8BA72700F3B877 /* Localizable.strings in Resources */,
 				A001F27E2A093F44003DA650 /* Assets.xcassets in Resources */,
 				A001F27C2A093F44003DA650 /* Main.storyboard in Resources */,
 			);
@@ -231,6 +239,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A001F27B2A093F44003DA650 /* Base */,
+				A00D8CB02A8BA71100F3B877 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -239,8 +248,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				A001F2802A093F44003DA650 /* Base */,
+				A00D8CB12A8BA71200F3B877 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A00D8CB62A8BA72700F3B877 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A00D8CB52A8BA72700F3B877 /* en */,
+				A00D8CB72A8BA72B00F3B877 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -250,6 +269,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -310,6 +330,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
