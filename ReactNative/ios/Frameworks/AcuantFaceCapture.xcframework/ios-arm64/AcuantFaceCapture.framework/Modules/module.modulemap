@@ -6,6 +6,6 @@ framework module AcuantFaceCapture {
 }
 
 module AcuantFaceCapture.Swift {
-    header "AcuantFaceCapture-Swift.h"
-    requires objc
+  header "AcuantFaceCapture-Swift.h"
+  requires objc
 }

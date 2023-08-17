@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		IqCGVBU1Hts3bV/BHFQZZvsLtBw=
+		DB5dJEfcTRvxnS5pMIKPsROrSWo=
 		</data>
 		<key>Headers/AcuantCamera-Swift.h</key>
 		<data>
-		mpjSmBsc0h+2tmXZkEgWqHiPwJU=
+		Xuo7sMrk9bWiX0lUbILJpknj6Hs=
 		</data>
 		<key>Headers/AcuantCamera.h</key>
 		<data>
@@ -18,23 +18,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7rTsctOODKLdwchLCrph21Imc3U=
+		cT4371g2fvrv6ub2P3Olwi9NXdU=
+		</data>
+		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		zFAYxPK0+cFLSbuRX/Y4RvfdMe0=
+		</data>
+		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		CEUHHZXbWPrT+9xgDCVAZQOl1+I=
 		</data>
 		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		595naOLfbOCmNupJKAbdbP7wk4Q=
+		JMCqFCVSfcCEZDkFalIcmF6XA7M=
 		</data>
 		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6Rn2g9LaNFw26gz1c+OXZyBkC5M=
+		CEUHHZXbWPrT+9xgDCVAZQOl1+I=
 		</data>
 		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		L+Kcjz2V4USFLaXvKLuIqkY+boY=
+		BBVj5rd94wWenCCDde9OmgL3hqs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		jIJiKiVZhRH/L93ETUEAQu/763E=
+		VcNmZ2nyj428ZpQbYZsfDG6Lw3M=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -43,14 +51,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			In9HQ0mSB9vKJC2uzAtsrWpgbOUnDTcSz7dIgM2nvQc=
+			2k/mNMdFw/JQ8UwVePN4bFNagEbzmTXl9QjMjDeR+aI=
 			</data>
 		</dict>
 		<key>Headers/AcuantCamera-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			EeHi7CMmelEqPv/ZxAhX9vOzwr06wj7HEfjSNy5ly/E=
+			5+Ge2nofwrPUAzorZCo7FidieuZRCXM6SoE3XHxq1wo=
 			</data>
 		</dict>
 		<key>Headers/AcuantCamera.h</key>
@@ -60,32 +68,46 @@
 			gei9kpWx1sjsyVu9t2ZQZ5eMnnZy2NMtPwr+ZVwB8Q0=
 			</data>
 		</dict>
+		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			F4tr/WLWI4gh05sLTW7i681P+B+4Kg9DEsexTeSwPkE=
+			</data>
+		</dict>
+		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nETQBg+3Q7dp7XocDEaRqnrRynBxsUvDAkzlyjISHfc=
+			</data>
+		</dict>
 		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n+067y1UfC7g1YdIexxs7kiUn+Hs/lNkSLFygzQ/puU=
+			d4vHsAso2ud3+lgpJ5GNXgp1+2IOIKyRYT3Wd88vyLA=
 			</data>
 		</dict>
 		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pW4U/4bVz33KzpK+M29C7PRJKd9+WGQejlb/jUWQCAs=
+			nETQBg+3Q7dp7XocDEaRqnrRynBxsUvDAkzlyjISHfc=
 			</data>
 		</dict>
 		<key>Modules/AcuantCamera.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aRN+4OzBpvQxu2yFSJXk5GXI51D2lGG9zar9EpKi2QQ=
+			+p7vNUuZfZmULuzfWDMDx1Fu/js9YgDKA5k4On9F5ho=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ipsE0HMkPHmOLWvx1Odt6adC49LyK8OGtQKUrbPN1Ys=
+			9B+PGKOPwVnz2A+dGQkmbfoLn/JQZOBhCU6+9a1TMD8=
 			</data>
 		</dict>
 	</dict>

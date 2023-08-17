@@ -14,6 +14,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A03582CB2A8C200A0037165B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A03582CD2A8C200A0037165B /* Localizable.strings */; };
 		A0B9D4E02A261FC2004F54BC /* AcuantCamera.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DC293506E000BC653A /* AcuantCamera.xcframework */; };
 		A0B9D4E12A261FC2004F54BC /* AcuantCamera.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695DC293506E000BC653A /* AcuantCamera.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0B9D4E22A261FC2004F54BC /* AcuantCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695D6293506DF00BC653A /* AcuantCommon.xcframework */; };
@@ -85,6 +86,8 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ReadyRemitReactNativeSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadyRemitReactNativeSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReadyRemitReactNativeSample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.release.xcconfig"; path = "Target Support Files/Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests/Pods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		A03582CC2A8C200A0037165B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A03582CE2A8C200E0037165B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A0E8BD902A1FF76200523A17 /* VisaSensoryBranding.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VisaSensoryBranding.xcframework; path = Frameworks/VisaSensoryBranding.xcframework; sourceTree = "<group>"; };
 		B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReadyRemitSDK.xcframework; path = Frameworks/ReadyRemitSDK.xcframework; sourceTree = "<group>"; };
 		B7C695D0293505A700BC653A /* ReadyRemitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadyRemitViewController.h; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 				B7C695D1293505C500BC653A /* ReadyRemitViewController.m */,
 				B7C695D3293505E900BC653A /* RCTReadyRemitModule.h */,
 				B7C695D4293505F200BC653A /* RCTReadyRemitModule.m */,
+				A03582CD2A8C200A0037165B /* Localizable.strings */,
 			);
 			name = ReadyRemitReactNativeSample;
 			sourceTree = "<group>";
@@ -296,6 +300,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
@@ -321,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				A03582CB2A8C200A0037165B /* Localizable.strings in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +512,18 @@
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A03582CD2A8C200A0037165B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A03582CC2A8C200A0037165B /* en */,
+				A03582CE2A8C200E0037165B /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {

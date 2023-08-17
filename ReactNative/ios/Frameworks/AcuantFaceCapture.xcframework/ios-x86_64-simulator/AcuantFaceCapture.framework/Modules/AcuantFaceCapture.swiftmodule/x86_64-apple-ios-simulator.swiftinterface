@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcuantFaceCapture
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 @_exported import AcuantFaceCapture
 import AcuantImagePreparation
@@ -8,6 +9,7 @@ import Foundation
 import Swift
 import UIKit
 import _Concurrency
+import _StringProcessing
 @objc @objcMembers public class AcuantFaceCaptureSession : AVFoundation.AVCaptureSession, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
   @objc public init(captureDevice: AVFoundation.AVCaptureDevice, callback: @escaping ((AcuantFaceCapture.AcuantFaceDetails) -> ()))
   @objc public func start()
@@ -30,9 +32,9 @@ import _Concurrency
 @objc @objcMembers public class AcuantFaceDetails : ObjectiveC.NSObject {
   @objc final public let image: UIKit.UIImage?
   @objc final public let state: AcuantFaceCapture.AcuantFaceState
-  final public let faceRect: CoreGraphics.CGRect?
-  final public let cleanAperture: CoreGraphics.CGRect?
-  public init(state: AcuantFaceCapture.AcuantFaceState, image: UIKit.UIImage? = nil, cleanAperture: CoreGraphics.CGRect? = nil, faceRect: CoreGraphics.CGRect? = nil)
+  final public let faceRect: CoreFoundation.CGRect?
+  final public let cleanAperture: CoreFoundation.CGRect?
+  public init(state: AcuantFaceCapture.AcuantFaceState, image: UIKit.UIImage? = nil, cleanAperture: CoreFoundation.CGRect? = nil, faceRect: CoreFoundation.CGRect? = nil)
   @objc deinit
 }
 @objc public enum AcuantFaceState : Swift.Int {
@@ -50,20 +52,25 @@ import _Concurrency
   }
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class FaceCaptureController : UIKit.UIViewController {
-  @_Concurrency.MainActor(unsafe) public var callback: ((UIKit.UIImage?) -> ())?
+  @_Concurrency.MainActor(unsafe) public var callback: ((AcuantFaceCapture.FaceCaptureResult?) -> Swift.Void)?
   @_Concurrency.MainActor(unsafe) public var options: AcuantFaceCapture.FaceCameraOptions?
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) public func setLookFromState(state: AcuantFaceCapture.AcuantFaceState)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class FaceCaptureResult : ObjectiveC.NSObject {
+  @objc final public let image: UIKit.UIImage
+  @objc final public let jpegData: Foundation.Data
   @objc deinit
 }
 extension AcuantFaceCapture.AcuantFaceState : Swift.Equatable {}

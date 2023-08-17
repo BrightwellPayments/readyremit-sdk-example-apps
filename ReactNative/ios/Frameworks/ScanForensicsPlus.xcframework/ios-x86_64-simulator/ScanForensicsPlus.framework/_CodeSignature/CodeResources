@@ -4,9 +4,21 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Frameworks/TesseractOCR.framework/Info.plist</key>
+		<data>
+		uukfSxog36MIBfvOK/cupftco2Y=
+		</data>
+		<key>Frameworks/TesseractOCR.framework/TesseractOCR</key>
+		<data>
+		f0DkAjdXrj4H4cRFh/ZnxRpbRYY=
+		</data>
+		<key>Frameworks/TesseractOCR.framework/_CodeSignature/CodeResources</key>
+		<data>
+		dgJnamAfSR6Wx1c7oqD6x6T4b1Q=
+		</data>
 		<key>Headers/ScanForensicsPlus-Swift.h</key>
 		<data>
-		7DsVDxvhFv0jrEVwAbGukOzQAKg=
+		/zUxH1FYE/PLDT1iJHo6HTAmzZo=
 		</data>
 		<key>Headers/ScanForensicsPlus.h</key>
 		<data>
@@ -14,32 +26,61 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		J5VwA8pu7f4M5DQCK1pHml94+d0=
+		fWRk1VpuactD9A0HzoMFz3mXv+I=
+		</data>
+		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		5MVcYc1kgf9FrisVJ+LUphQxq2s=
+		</data>
+		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		hjJkcKTLNuhbI5yxxUGGWWVIZnE=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		h/Ru3pRIxBoWzdgYhekzlk9P8Zc=
+		PyzD7mNX0eGYSGNZJb2byqOrJxg=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6QYBjpNSYmC7VofiaD9UDc1T+BA=
+		hjJkcKTLNuhbI5yxxUGGWWVIZnE=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3gG6Q3Txiu5VJXb3udsSkKwlG20=
+		mpC+iZo+q6gzz6LaPQEmRvbeeVQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		CR8Z7seVj4nVJ5zPlVoEUuwgHgs=
+		hZi2Yqp0/ms8P4zOZDldPFcHhh0=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/TesseractOCR.framework/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			isXJxj+j1Jhmqdd0VxCPCKHtKRb8CSkmt3I5dMcL8y4=
+			</data>
+		</dict>
+		<key>Frameworks/TesseractOCR.framework/TesseractOCR</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4XlF+IMl46Bsx9uzdsStL78ZuTvOxiCekfyPO84Mgl8=
+			</data>
+		</dict>
+		<key>Frameworks/TesseractOCR.framework/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lPtHoPT/k/jzvRr7kleZ7xPT1T5Pm9o8B0ciOXE15Nw=
+			</data>
+		</dict>
 		<key>Headers/ScanForensicsPlus-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zTibcK5Wmh4yHsIdqcriQAAofO2dqO+QMbzfnj+Tujc=
+			HprS6bRPDNFj8mjceO+081OdiFN04QGnjw2XeAvFbHk=
 			</data>
 		</dict>
 		<key>Headers/ScanForensicsPlus.h</key>
@@ -49,32 +90,46 @@
 			mchEwpY+z3/gWFzyQwBPQYBj5rAHgSH4OxtxeTtmglU=
 			</data>
 		</dict>
+		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Txqf3UYo+g2VNuLxmyC+JZ15eLb4s6Gw0k2ba9D6HrY=
+			</data>
+		</dict>
+		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RfcXjyeNQcf0ZB4nrK8FeXmFxp+S/dFp/v4AQJ2PGW0=
+			</data>
+		</dict>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			srlBG6Dm4v8oJwVMBYcj8TfVlb8ogKN4j9lx3fYXorI=
+			njGBN3VIC28KZN43FHrvcaiGUGDcSMOPfBh1OxW8O9k=
 			</data>
 		</dict>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			34UtckuFiwEIgCOQmV+crUKMELbX8/Vjv2qJ/QcGG5g=
+			RfcXjyeNQcf0ZB4nrK8FeXmFxp+S/dFp/v4AQJ2PGW0=
 			</data>
 		</dict>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NizDpH9Zk2leGqOOivXKvRS2n95KDjYA3S8qrimbmx0=
+			YfEa4RNJLnSktsLP/ihtQsqn1Xn5P60gnQ9Z/RZdfJE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F/nCh6ZQfMJrSa3Y9EjZW0lJeuA0nz8txM1zyNRum1Y=
+			iOgmPmi9MKpunH4DqqH8Ofvy5hjFZDl2kH5Mkd+q62U=
 			</data>
 		</dict>
 	</dict>
