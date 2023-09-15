@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/AcuantFaceCapture-Swift.h</key>
 		<data>
-		4viGKrsJp6Tr0E35SFZbLguPVm8=
+		eM6KdX29ueQPNdzIGFUHHhnn6VU=
 		</data>
 		<key>Headers/AcuantFaceCapture.h</key>
 		<data>
@@ -14,23 +14,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NtFpvjqwS3nWqQ1mRJcZnYlGaxA=
+		sNGWL3ZSF0OZsM3d7w+Oq9wSdTw=
+		</data>
+		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<data>
+		tWi24WKXovUpitEL3xwCObOUJ+k=
+		</data>
+		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<data>
+		6YseP81DPGDeFglxq3mLwAi8Sso=
 		</data>
 		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		74R5w9RU9ixTVeU4mMWQ64Pxaok=
+		l+LcyUPinnMUtRC/rhVtcC652zE=
 		</data>
 		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		Oe+jfPOXvlBU1H8fDkekdiF8qoE=
+		6YseP81DPGDeFglxq3mLwAi8Sso=
 		</data>
 		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LVtJ2oSE8SsrCTsQF7R+KjirCl0=
+		JLzD563c9JomU6zPAm5UfxD92yI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		7gu+CfTf8jxT1D9URmx1bKFsJ98=
+		DtyT29Lh1psOBTkiZ8eKS9aYNb0=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,7 +47,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			5xptX89ieIy3sS1HaA4L6aMhUuuigSn8yyZfuy3Zhj4=
+			grUznbJYdZ69bRK9iKdM+NUjKbgiZ8kaShT78eeRtak=
 			</data>
 		</dict>
 		<key>Headers/AcuantFaceCapture.h</key>
@@ -49,32 +57,46 @@
 			HJUBxHuCazKQB38W4CYwzEacVdI2m/stVnnipSgLPhg=
 			</data>
 		</dict>
+		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZbT6E2VVsM3g5pB7Kiw5EB8aOAxJvoTLvJd/IP90YD0=
+			</data>
+		</dict>
+		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sPw+wjaJYGyp5JxAoG87Ik6oGZW0jqZV3SsF7NgJpnA=
+			</data>
+		</dict>
 		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c55bgFwNn8ZcMCXg0FdwC+dYUvHGGMat9bLZrqmxK6c=
+			7zpYBfkNnxRDuUexR5l0GC9n7NddOH0IzYl9e8GWJ8o=
 			</data>
 		</dict>
 		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ERqa2Jx24m6ufrvB+p3DBTbOoV+zt6iY7bnd+YTBY5A=
+			sPw+wjaJYGyp5JxAoG87Ik6oGZW0jqZV3SsF7NgJpnA=
 			</data>
 		</dict>
 		<key>Modules/AcuantFaceCapture.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QQM3RZ/9Mqb0KOVI3kLwBughqr6m5rOZ8ujMRXHTYGo=
+			m/Gm7cNC7ZQD+HbyToWicmmV3Ne5qcPb0rcKaVYhQn8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Afjb2inxPTFEZykl0z2zGwdpwx36kvLIM1857yInbWQ=
+			EvF7S1Rw3svxW0+zbRCUKumVRBEa6Z+F8tW8nfSu/8k=
 			</data>
 		</dict>
 	</dict>

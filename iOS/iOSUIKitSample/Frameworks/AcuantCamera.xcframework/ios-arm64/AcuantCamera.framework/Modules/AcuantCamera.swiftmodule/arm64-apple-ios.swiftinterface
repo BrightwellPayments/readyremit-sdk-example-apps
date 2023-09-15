@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcuantCamera
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 @_exported import AcuantCamera
 import AcuantCommon
@@ -10,6 +11,10 @@ import Swift
 import TesseractOCR
 import UIKit
 import _Concurrency
+import _StringProcessing
+@objc public protocol BarcodeCameraDelegate {
+  @objc func captured(barcode: Swift.String?)
+}
 @objc @_inheritsConvenienceInitializers @objcMembers public class CaptureConstants : ObjectiveC.NSObject {
   @objc public static let CAMERA_PREVIEW_LONGER_SIDE_STANDARD: Swift.Int
   @objc public static let CAMERA_PRIVEW_LARGER_DOCUMENT_DPI_RATIO: Swift.Double
@@ -38,7 +43,6 @@ import _Concurrency
   @objc public var gender: Swift.String
   @objc public var passportExpiration: Swift.String
   @objc public var personalDocNumber: Swift.String
-  @objc public var checkSumChar1: Swift.String
   @objc public var optional1: Swift.String
   @objc public var checkSumResult1: Swift.Bool
   @objc public var checkSumResult2: Swift.Bool
@@ -54,6 +58,20 @@ public class AcuantMrzParser {
   public func parseMrz(mrz: Swift.String) -> AcuantCamera.AcuantMrzResult?
   @objc deinit
 }
+@objc @_hasMissingDesignatedInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class BarcodeCameraViewController : UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public init(options: AcuantCamera.CameraOptions, delegate: any AcuantCamera.BarcodeCameraDelegate)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
+  @objc deinit
+}
+extension AcuantCamera.BarcodeCameraViewController : AcuantCamera.BarcodeCaptureDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func captured(barcode: Swift.String?)
+}
 @objc public protocol DocumentCaptureDelegate {
   @objc func readyToCapture()
   @objc func documentCaptured(image: UIKit.UIImage, barcodeString: Swift.String?)
@@ -62,7 +80,7 @@ public class AcuantMrzParser {
   @objc func getAutoCapture() -> Swift.Bool
   @objc func setAutoCapture(autoCapture: Swift.Bool)
 }
-@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class DocumentCameraController : UIKit.UIViewController, AcuantCamera.DocumentCaptureDelegate, AcuantCamera.FrameAnalysisDelegate, AcuantCamera.AutoCaptureDelegate {
+@objc @_inheritsConvenienceInitializers @objcMembers @_Concurrency.MainActor(unsafe) public class DocumentCameraController : UIKit.UIViewController {
   @objc public enum CameraState : Swift.Int {
     case Align = 0, MoveCloser = 1, Steady = 2, Hold = 3, Capture = 4
     public init?(rawValue: Swift.Int)
@@ -71,43 +89,53 @@ public class AcuantMrzParser {
       get
     }
   }
-  @objc @_Concurrency.MainActor(unsafe) public class func getCameraController(delegate: AcuantCamera.CameraCaptureDelegate, cameraOptions: AcuantCamera.CameraOptions) -> AcuantCamera.DocumentCameraController
-  @_Concurrency.MainActor(unsafe) @objc public func setAutoCapture(autoCapture: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc public func getAutoCapture() -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public class func getCameraController(delegate: any AcuantCamera.CameraCaptureDelegate, cameraOptions: AcuantCamera.CameraOptions) -> AcuantCamera.DocumentCameraController
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
-  @_Concurrency.MainActor(unsafe) @objc public func documentCaptured(image: UIKit.UIImage, barcodeString: Swift.String?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
   @objc @_Concurrency.MainActor(unsafe) public func rotateImage(image: UIKit.UIImage) -> UIKit.UIImage
-  @objc @_Concurrency.MainActor(unsafe) public func isDocumentMoved(newPoints: Swift.Array<CoreGraphics.CGPoint>) -> Swift.Bool
-  @_Concurrency.MainActor(unsafe) @objc public func onFrameAvailable(frameResult: AcuantCamera.FrameResult, points: Swift.Array<CoreGraphics.CGPoint>?)
-  @_Concurrency.MainActor(unsafe) @objc public func readyToCapture()
+  @objc @_Concurrency.MainActor(unsafe) public func isDocumentMoved(points: [CoreFoundation.CGPoint]) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
+extension AcuantCamera.DocumentCameraController : AcuantCamera.DocumentCaptureDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func readyToCapture()
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func documentCaptured(image: UIKit.UIImage, barcodeString: Swift.String?)
+}
+extension AcuantCamera.DocumentCameraController : AcuantCamera.FrameAnalysisDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func onFrameAvailable(frameResult: AcuantCamera.FrameResult, points: Swift.Array<CoreFoundation.CGPoint>?)
+}
+extension AcuantCamera.DocumentCameraController : AcuantCamera.AutoCaptureDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func getAutoCapture() -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func setAutoCapture(autoCapture: Swift.Bool)
+}
 @objc @objcMembers public class AcuantMrzCaptureSession : AVFoundation.AVCaptureSession, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
-  @objc public init(captureDevice: AVFoundation.AVCaptureDevice, userCallback: ((AcuantCamera.AcuantMrzCameraController.MrzCameraState, AcuantCamera.AcuantMrzResult?, Swift.Array<CoreGraphics.CGPoint>?) -> Swift.Void)? = nil)
+  @objc public init(captureDevice: AVFoundation.AVCaptureDevice, userCallback: ((AcuantCamera.AcuantMrzCameraController.MrzCameraState, AcuantCamera.AcuantMrzResult?, Swift.Array<CoreFoundation.CGPoint>?) -> Swift.Void)? = nil)
   @objc public func start()
   @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
   @objc public func stopCamera()
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class CameraTextView : QuartzCore.CATextLayer {
-  public var textSizeDefault: CoreGraphics.CGFloat
-  public var textSizeCapture: CoreGraphics.CGFloat
+  public var textSizeDefault: CoreFoundation.CGFloat
+  public var textSizeCapture: CoreFoundation.CGFloat
   public var backgroundColorDefault: CoreGraphics.CGColor?
   public var backgroundColorCapture: CoreGraphics.CGColor?
   public var foregroundColorDefault: CoreGraphics.CGColor?
   public var foregroundColorCapture: CoreGraphics.CGColor?
-  public func setDefaultSettings(frame: CoreGraphics.CGRect)
-  public func setCaptureSettings(frame: CoreGraphics.CGRect)
+  @objc override dynamic public var string: Any? {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public func draw(in context: CoreGraphics.CGContext)
+  public func setDefaultSettings(frame: CoreFoundation.CGRect)
+  public func setCaptureSettings(frame: CoreFoundation.CGRect)
   @objc deinit
 }
 @objc @_hasMissingDesignatedInitializers public class CameraDocumentOverlayView : QuartzCore.CAShapeLayer {
@@ -124,8 +152,8 @@ public class AcuantMrzParser {
   @objc final public let hideNavigationBar: Swift.Bool
   @objc final public let bracketLengthInHorizontal: Swift.Int
   @objc final public let bracketLengthInVertical: Swift.Int
-  @objc final public let defaultBracketMarginWidth: CoreGraphics.CGFloat
-  @objc final public let defaultBracketMarginHeight: CoreGraphics.CGFloat
+  @objc final public let defaultBracketMarginWidth: CoreFoundation.CGFloat
+  @objc final public let defaultBracketMarginHeight: CoreFoundation.CGFloat
   @objc final public let colorHold: CoreGraphics.CGColor
   @objc final public let colorCapturing: CoreGraphics.CGColor
   @objc final public let colorBracketAlign: CoreGraphics.CGColor
@@ -134,19 +162,28 @@ public class AcuantMrzParser {
   @objc final public let colorBracketCapture: CoreGraphics.CGColor
   @objc final public let defaultImageUrl: Swift.String
   @objc final public let showBackButton: Swift.Bool
-  @objc public init(timeInMsPerDigit: Swift.Int = 900, digitsToShow: Swift.Int = 2, allowBox: Swift.Bool = true, autoCapture: Swift.Bool = true, hideNavigationBar: Swift.Bool = true, bracketLengthInHorizontal: Swift.Int = 80, bracketLengthInVertical: Swift.Int = 50, defaultBracketMarginWidth: CoreGraphics.CGFloat = 0.5, defaultBracketMarginHeight: CoreGraphics.CGFloat = 0.6, colorHold: CoreGraphics.CGColor = UIColor.yellow.cgColor, colorCapturing: CoreGraphics.CGColor = UIColor.green.cgColor, colorBracketAlign: CoreGraphics.CGColor = UIColor.black.cgColor, colorBracketCloser: CoreGraphics.CGColor = UIColor.red.cgColor, colorBracketHold: CoreGraphics.CGColor = UIColor.yellow.cgColor, colorBracketCapture: CoreGraphics.CGColor = UIColor.green.cgColor, defaultImageUrl: Swift.String = "", showBackButton: Swift.Bool = true)
+  @objc public init(timeInMsPerDigit: Swift.Int = 900, digitsToShow: Swift.Int = 2, allowBox: Swift.Bool = true, autoCapture: Swift.Bool = true, hideNavigationBar: Swift.Bool = true, bracketLengthInHorizontal: Swift.Int = 80, bracketLengthInVertical: Swift.Int = 50, defaultBracketMarginWidth: CoreFoundation.CGFloat = 0.5, defaultBracketMarginHeight: CoreFoundation.CGFloat = 0.6, colorHold: CoreGraphics.CGColor = UIColor.yellow.cgColor, colorCapturing: CoreGraphics.CGColor = UIColor.green.cgColor, colorBracketAlign: CoreGraphics.CGColor = UIColor.black.cgColor, colorBracketCloser: CoreGraphics.CGColor = UIColor.red.cgColor, colorBracketHold: CoreGraphics.CGColor = UIColor.yellow.cgColor, colorBracketCapture: CoreGraphics.CGColor = UIColor.green.cgColor, defaultImageUrl: Swift.String = "", showBackButton: Swift.Bool = true)
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @objcMembers public class DocumentCaptureSession : AVFoundation.AVCaptureSession, AVFoundation.AVCaptureMetadataOutputObjectsDelegate, AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate, AVFoundation.AVCapturePhotoCaptureDelegate {
+@objc @_inheritsConvenienceInitializers @objcMembers public class DocumentCaptureSession : AVFoundation.AVCaptureSession {
   @objc override dynamic public init()
-  @objc public class func getDocumentCaptureSession(delegate: AcuantCamera.DocumentCaptureDelegate?, frameDelegate: AcuantCamera.FrameAnalysisDelegate, autoCaptureDelegate: AcuantCamera.AutoCaptureDelegate, captureDevice: AVFoundation.AVCaptureDevice?) -> AcuantCamera.DocumentCaptureSession
+  @objc public class func getDocumentCaptureSession(delegate: (any AcuantCamera.DocumentCaptureDelegate)?, frameDelegate: any AcuantCamera.FrameAnalysisDelegate, autoCaptureDelegate: any AcuantCamera.AutoCaptureDelegate, captureDevice: AVFoundation.AVCaptureDevice?) -> AcuantCamera.DocumentCaptureSession
   @objc public func enableCapture()
   @objc public func start()
-  @objc public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
   @objc public func getFrameMatchThreshold(cropDuration: Swift.Double) -> Swift.Int
-  @objc public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
-  @objc public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVFoundation.AVCapturePhoto, error: Swift.Error?)
   @objc deinit
+}
+extension AcuantCamera.DocumentCaptureSession : AVFoundation.AVCaptureVideoDataOutputSampleBufferDelegate {
+  @objc dynamic public func captureOutput(_ output: AVFoundation.AVCaptureOutput, didOutput sampleBuffer: CoreMedia.CMSampleBuffer, from connection: AVFoundation.AVCaptureConnection)
+}
+extension AcuantCamera.DocumentCaptureSession : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @objc dynamic public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+}
+extension AcuantCamera.DocumentCaptureSession : AVFoundation.AVCapturePhotoCaptureDelegate {
+  @objc dynamic public func photoOutput(_ output: AVFoundation.AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVFoundation.AVCapturePhoto, error: (any Swift.Error)?)
+}
+@objc public protocol BarcodeCaptureDelegate {
+  @objc func captured(barcode: Swift.String?)
 }
 public class AcuantOcrDetector {
   public init()
@@ -169,20 +206,27 @@ public class AcuantOcrDetector {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var prefersStatusBarHidden: Swift.Bool {
-    @_Concurrency.MainActor(unsafe) @objc get
+    @objc get
   }
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLayoutSubviews()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func didReceiveMemoryWarning()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillTransition(to size: CoreFoundation.CGSize, with coordinator: any UIKit.UIViewControllerTransitionCoordinator)
   @objc @_Concurrency.MainActor(unsafe) public func exitTimer()
   @objc @_Concurrency.MainActor(unsafe) public func onMrzParsed(result: AcuantCamera.AcuantMrzResult)
-  @objc @_Concurrency.MainActor(unsafe) public func isDocumentMoved(newPoints: Swift.Array<CoreGraphics.CGPoint>) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func isDocumentMoved(newPoints: Swift.Array<CoreFoundation.CGPoint>) -> Swift.Bool
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
 }
+@objc @_hasMissingDesignatedInitializers @objcMembers public class BarcodeCaptureSession : AVFoundation.AVCaptureSession {
+  @objc deinit
+}
+extension AcuantCamera.BarcodeCaptureSession : AVFoundation.AVCaptureMetadataOutputObjectsDelegate {
+  @objc dynamic public func metadataOutput(_ output: AVFoundation.AVCaptureMetadataOutput, didOutput metadataObjects: [AVFoundation.AVMetadataObject], from connection: AVFoundation.AVCaptureConnection)
+}
 @objc public protocol FrameAnalysisDelegate {
-  @objc func onFrameAvailable(frameResult: AcuantCamera.FrameResult, points: Swift.Array<CoreGraphics.CGPoint>?)
+  @objc func onFrameAvailable(frameResult: AcuantCamera.FrameResult, points: Swift.Array<CoreFoundation.CGPoint>?)
 }
 @objc public enum FrameResult : Swift.Int {
   case NO_DOCUMENT, SMALL_DOCUMENT, BAD_ASPECT_RATIO, GOOD_DOCUMENT, DOCUMENT_NOT_IN_FRAME
@@ -198,11 +242,11 @@ public class AcuantOcrDetector {
 @objc @_hasMissingDesignatedInitializers public class CameraCornerOverlayView : QuartzCore.CALayer {
   public var bracketWidth: Swift.Int?
   public var bracketHeight: Swift.Int?
-  public var defaultBracketMarginWidth: CoreGraphics.CGFloat?
-  public var defaultBracketMarginHeight: CoreGraphics.CGFloat?
+  public var defaultBracketMarginWidth: CoreFoundation.CGFloat?
+  public var defaultBracketMarginHeight: CoreFoundation.CGFloat?
   public init(options: AcuantCamera.CameraOptions)
   public func setColor(color: CoreGraphics.CGColor?)
-  public func setDefaultCorners(frame: CoreGraphics.CGRect)
+  public func setDefaultCorners(frame: CoreFoundation.CGRect)
   @objc deinit
 }
 extension AcuantCamera.DocumentCameraController.CameraState : Swift.Equatable {}

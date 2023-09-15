@@ -6,6 +6,6 @@ framework module AcuantCamera {
 }
 
 module AcuantCamera.Swift {
-    header "AcuantCamera-Swift.h"
-    requires objc
+  header "AcuantCamera-Swift.h"
+  requires objc
 }

@@ -1,10 +1,11 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AcuantCommon
 import Foundation
 import MobileCoreServices
 import Swift
 import UIKit
+import _Concurrency
 public protocol IAcuantInitializer {
   func initialize(packages: [AcuantCommon.IAcuantPackage], callback: @escaping (AcuantCommon.AcuantError?) -> ()) -> Foundation.URLSessionTask?
 }
@@ -24,6 +25,9 @@ public class AcuantInitializer : AcuantCommon.IAcuantInitializer {
     get
   }
   public var hasLiveCapture: Swift.Bool {
+    get
+  }
+  public var ipLiveness: Swift.Bool {
     get
   }
   @objc deinit
@@ -51,8 +55,7 @@ public class AcuantInitializer : AcuantCommon.IAcuantInitializer {
   @objc override dynamic public init()
   @objc deinit
 }
-public class AcuantJwtParser {
-  public init()
+@_hasMissingDesignatedInitializers public class AcuantJwtParser {
   public func parseToken(jwtToken: Swift.String) -> AcuantCommon.AcuantJwtToken?
   public func decode(jwtToken jwt: Swift.String) -> [Swift.String : Any]
   public func base64UrlDecode(_ value: Swift.String) -> Foundation.Data?
@@ -70,7 +73,7 @@ public protocol IAcuantPackage {
   @objc public class func newInstance() -> AcuantCommon.AcuantError
   @objc deinit
 }
-public class AcuantJwtToken {
+@_hasMissingDesignatedInitializers public class AcuantJwtToken {
   final public let value: Swift.String
   final public let expiration: Foundation.Date
   public init(value: Swift.String, expiration: Foundation.Date)
@@ -179,12 +182,29 @@ public class AcuantJwtToken {
   @objc public var frmEndpoint: Swift.String?
   @objc public var idEndpoint: Swift.String?
   @objc public var passiveLivenessEndpoint: Swift.String?
+  @objc public var ipLivenessEndpoint: Swift.String?
   @objc public var healthInsuranceEndpoint: Swift.String?
-  @objc public var acasEndpoint: Swift.String?
-  @objc public var ozoneEndpoint: Swift.String?
+  @objc @AcuantCommon.IsValidDomain public var acasEndpoint: Swift.String? {
+    @objc get
+    @objc set
+    _modify
+  }
+  @objc @AcuantCommon.IsValidDomain public var ozoneEndpoint: Swift.String? {
+    @objc get
+    @objc set
+    _modify
+  }
   @objc public class func newInstance() -> AcuantCommon.Endpoints
   @objc override dynamic public init()
   @objc deinit
+}
+@propertyWrapper public struct IsValidDomain {
+  public init()
+  public init(endpoint: Swift.String)
+  public var wrappedValue: Swift.String? {
+    get
+    set
+  }
 }
 @objc @_inheritsConvenienceInitializers @objcMembers public class Utils : ObjectiveC.NSObject {
   @objc public static var SENT_IMAGE_QUALITY_JPEG_COMPRESSION: CoreGraphics.CGFloat

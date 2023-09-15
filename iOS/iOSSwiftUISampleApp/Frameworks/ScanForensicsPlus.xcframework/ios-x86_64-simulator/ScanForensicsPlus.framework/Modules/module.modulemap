@@ -6,6 +6,6 @@ framework module ScanForensicsPlus {
 }
 
 module ScanForensicsPlus.Swift {
-    header "ScanForensicsPlus-Swift.h"
-    requires objc
+  header "ScanForensicsPlus-Swift.h"
+  requires objc
 }
