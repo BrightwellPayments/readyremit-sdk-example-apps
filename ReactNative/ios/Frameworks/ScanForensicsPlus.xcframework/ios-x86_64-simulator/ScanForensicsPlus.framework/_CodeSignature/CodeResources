@@ -4,21 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Frameworks/TesseractOCR.framework/Info.plist</key>
-		<data>
-		uukfSxog36MIBfvOK/cupftco2Y=
-		</data>
-		<key>Frameworks/TesseractOCR.framework/TesseractOCR</key>
-		<data>
-		f0DkAjdXrj4H4cRFh/ZnxRpbRYY=
-		</data>
-		<key>Frameworks/TesseractOCR.framework/_CodeSignature/CodeResources</key>
-		<data>
-		dgJnamAfSR6Wx1c7oqD6x6T4b1Q=
-		</data>
 		<key>Headers/ScanForensicsPlus-Swift.h</key>
 		<data>
-		/zUxH1FYE/PLDT1iJHo6HTAmzZo=
+		RjRIFKd2BenwB5wGa2kXxvvRoTg=
 		</data>
 		<key>Headers/ScanForensicsPlus.h</key>
 		<data>
@@ -26,61 +14,48 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		fWRk1VpuactD9A0HzoMFz3mXv+I=
+		SCDniSOcEkkEfUejr3gF4a63mYE=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		5MVcYc1kgf9FrisVJ+LUphQxq2s=
+		Do7oLZWxXAXXTDg+pbvekeOHbiE=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		hjJkcKTLNuhbI5yxxUGGWWVIZnE=
+		ILiQwqFgtzG+4+xaQLlO4q7G+Qk=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		PyzD7mNX0eGYSGNZJb2byqOrJxg=
+		A+oTHND0bwo2PREa+1pSsQfLvhA=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		hjJkcKTLNuhbI5yxxUGGWWVIZnE=
+		ILiQwqFgtzG+4+xaQLlO4q7G+Qk=
 		</data>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mpC+iZo+q6gzz6LaPQEmRvbeeVQ=
+		Eb07vK6u8DCqI83mPlMUD7KU7XY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		hZi2Yqp0/ms8P4zOZDldPFcHhh0=
+		4NnWtaunqE7j8RgXGPOyOEa1acc=
+		</data>
+		<key>build_xcf.sh</key>
+		<data>
+		0RxxURhRrPB3XzTVxLrcc6Ke73c=
+		</data>
+		<key>readme.md</key>
+		<data>
+		NUbcnWzhMElGTCIIKInwoJg13Qk=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Frameworks/TesseractOCR.framework/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			isXJxj+j1Jhmqdd0VxCPCKHtKRb8CSkmt3I5dMcL8y4=
-			</data>
-		</dict>
-		<key>Frameworks/TesseractOCR.framework/TesseractOCR</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4XlF+IMl46Bsx9uzdsStL78ZuTvOxiCekfyPO84Mgl8=
-			</data>
-		</dict>
-		<key>Frameworks/TesseractOCR.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			lPtHoPT/k/jzvRr7kleZ7xPT1T5Pm9o8B0ciOXE15Nw=
-			</data>
-		</dict>
 		<key>Headers/ScanForensicsPlus-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HprS6bRPDNFj8mjceO+081OdiFN04QGnjw2XeAvFbHk=
+			kQQtdNwavVcOJOZCQKZMpoQQLDvE176D/2ucZ1+mih8=
 			</data>
 		</dict>
 		<key>Headers/ScanForensicsPlus.h</key>
@@ -94,42 +69,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Txqf3UYo+g2VNuLxmyC+JZ15eLb4s6Gw0k2ba9D6HrY=
+			XsLC3fEQwyPOSPSLqGt0yGG9zmAXsT6mVrl6MsthTDY=
 			</data>
 		</dict>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RfcXjyeNQcf0ZB4nrK8FeXmFxp+S/dFp/v4AQJ2PGW0=
+			xlWBILilm91nHv8xY4LMY7HkgN1otRBP76annMPazwc=
 			</data>
 		</dict>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			njGBN3VIC28KZN43FHrvcaiGUGDcSMOPfBh1OxW8O9k=
+			F7z1IeossZNJ0yCB1uID18aOQ5LKlmWF+qOUOSeMmp4=
 			</data>
 		</dict>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RfcXjyeNQcf0ZB4nrK8FeXmFxp+S/dFp/v4AQJ2PGW0=
+			xlWBILilm91nHv8xY4LMY7HkgN1otRBP76annMPazwc=
 			</data>
 		</dict>
 		<key>Modules/ScanForensicsPlus.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YfEa4RNJLnSktsLP/ihtQsqn1Xn5P60gnQ9Z/RZdfJE=
+			/XBPLVeTWnE3uE4rd+WZbQMGJ6G8BAYi+8CUuw//fFc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iOgmPmi9MKpunH4DqqH8Ofvy5hjFZDl2kH5Mkd+q62U=
+			I97MWoeFTQAdGdMo6Ku/y2sfSOT1rrk/p/S+/vxV854=
+			</data>
+		</dict>
+		<key>build_xcf.sh</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iQB1eEdQ3NtpBXYvB9lySUv8Q4vyYjIhfgFql+EiE4o=
+			</data>
+		</dict>
+		<key>readme.md</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			kofK2qAF9y4tdJoe2UHz6y4ZmE9txYegHod2Q9dsoVc=
 			</data>
 		</dict>
 	</dict>
