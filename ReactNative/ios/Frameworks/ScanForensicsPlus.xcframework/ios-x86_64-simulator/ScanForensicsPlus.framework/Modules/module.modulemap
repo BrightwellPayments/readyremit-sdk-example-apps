@@ -1,7 +1,7 @@
 framework module ScanForensicsPlus {
   umbrella header "ScanForensicsPlus.h"
-
   export *
+
   module * { export * }
 }
 
