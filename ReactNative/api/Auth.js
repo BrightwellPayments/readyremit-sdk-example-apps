@@ -16,6 +16,7 @@ export default async function onAuth(senderId, clientSecret, clientId) {
             })
         });
         const json = await response.json();
+        console.log(json)
         var error = null;
         var token = null;
         if (json[0] !== null && json[0] !== undefined) {

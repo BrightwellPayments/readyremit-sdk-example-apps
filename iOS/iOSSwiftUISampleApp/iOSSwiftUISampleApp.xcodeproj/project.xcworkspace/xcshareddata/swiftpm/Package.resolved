@@ -1,0 +1,13 @@
+{
+  "pins" : [
+    {
+      "identity" : "readyremit-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BrightwellPayments/readyremit-sdk-ios.git",
+      "state" : {
+        "revision" : "04e82869f1f9a54934241218abb256d941d8b7a6"
+      }
+    }
+  ],
+  "version" : 2
+}
