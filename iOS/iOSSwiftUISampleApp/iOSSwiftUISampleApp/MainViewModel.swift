@@ -12,9 +12,9 @@ internal class MainViewModel: ObservableObject, MainViewState {
     
     var destView = AnyView(Color.white)
     
-    let senderId = "d1279346-c9da-4968-b6b4-d7ee1f9cc8f1"
-    let clientId = "ymZyGsLmCmhz7GMSQQ5OKUVxYrtuHfot"
-    let clientSecret = "PoPLoW8Y0EqayFhvfLEVcUb-qGTenDETN-cYww_9R5_Z99IVc4bfo6qP4dUjjikT"
+    let senderId = "<Your Sender ID>"
+    let clientId = "<Your Client ID>"
+    let clientSecret = "<Your Client Secret>"
     
     func onTapStartSDK() {
         changeFont()
