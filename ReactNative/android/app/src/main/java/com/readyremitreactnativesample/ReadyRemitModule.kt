@@ -55,6 +55,7 @@ class ReadyRemitModule(reactContext: ReactApplicationContext) : ReactContextBase
         }
 
         ReadyRemit.remitFrom(currentActivity!!, REQUEST_CODE, R.style.Theme_Custom, language)
+        ReadyRemit.close(60)
     }
 
     @ReactMethod

@@ -15,7 +15,7 @@
   [super viewDidLoad];
   
   _launchCompletion = ^{ NSLog(@"ObjC: ReadyRemit launched."); };
-    _onDismiss = ^{ [[self navigationController] dismissViewControllerAnimated: YES completion:nil]; };
+  _onDismiss = ^{ [[self navigationController] dismissViewControllerAnimated: YES completion:nil]; };
   
   _readyRemit = [ReadyRemit shared];
     
