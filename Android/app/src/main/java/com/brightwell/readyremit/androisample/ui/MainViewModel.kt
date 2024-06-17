@@ -6,8 +6,6 @@ import com.brightwell.readyremit.androisample.network.ReadyRemitService
 import com.brightwell.readyremit.androisample.network.model.AuthRequest
 import com.brightwell.readyremit.sdk.ReadyRemitAuth
 import com.brightwell.readyremit.sdk.ReadyRemitAuthCallback
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -27,13 +25,7 @@ class MainViewModel {
                     })
                     .build()
             )
-            .addConverterFactory(
-                MoshiConverterFactory.create(
-                    Moshi.Builder()
-                        .add(KotlinJsonAdapterFactory())
-                        .build()
-                )
-            )
+            .addConverterFactory(MoshiConverterFactory.create())
             .build().create(ReadyRemitService::class.java)
     }
 
