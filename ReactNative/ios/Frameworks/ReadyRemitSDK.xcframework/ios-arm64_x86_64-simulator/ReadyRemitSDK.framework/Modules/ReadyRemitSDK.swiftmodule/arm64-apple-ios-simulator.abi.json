@@ -33,6 +33,16 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -152,6 +162,13 @@
       },
       {
         "kind": "Import",
+        "name": "Swinject",
+        "printedName": "Swinject",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -243,10 +260,7 @@
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
+        "moduleName": "ReadyRemitSDK"
       },
       {
         "kind": "Import",
@@ -274,6 +288,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
       },
       {
         "kind": "Import",
@@ -2045,6 +2076,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
         "declKind": "Import",
@@ -2216,8 +2257,28 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
@@ -2275,6 +2336,33 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Swinject",
+        "printedName": "Swinject",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK"
       },
@@ -3134,6 +3222,101 @@
           },
           {
             "kind": "Function",
+            "name": "launchAFT",
+            "printedName": "launchAFT(onLoad:delegate:onLaunch:onDismiss:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftUI.AnyView) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AnyView",
+                    "printedName": "SwiftUI.AnyView",
+                    "usr": "s:7SwiftUI7AnyViewV"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ReadyRemitDelegate",
+                "printedName": "ReadyRemitSDK.ReadyRemitDelegate",
+                "usr": "c:@M@ReadyRemitSDK@objc(pl)ReadyRemitDelegate"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:13ReadyRemitSDK0aB0C9launchAFT6onLoad8delegate0F6Launch0F7Dismissyy7SwiftUI7AnyViewVc_AA0aB8Delegate_pyycSgAMtF",
+            "mangledName": "$s13ReadyRemitSDK0aB0C9launchAFT6onLoad8delegate0F6Launch0F7Dismissyy7SwiftUI7AnyViewVc_AA0aB8Delegate_pyycSgAMtF",
+            "moduleName": "ReadyRemitSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "close",
             "printedName": "close(afterSeconds:)",
             "children": [
@@ -3854,9 +4037,126 @@
                 ]
               },
               {
+                "kind": "Var",
+                "name": "sourceAccountId",
+                "printedName": "sourceAccountId",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvp",
+                "mangledName": "$s13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvp",
+                "moduleName": "ReadyRemitSDK",
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl",
+                  "ObjC"
+                ],
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvg",
+                    "mangledName": "$s13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvg",
+                    "moduleName": "ReadyRemitSDK",
+                    "implicit": true,
+                    "declAttributes": [
+                      "ObjC"
+                    ],
+                    "accessorKind": "get"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Set",
+                    "printedName": "Set()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvs",
+                    "mangledName": "$s13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvs",
+                    "moduleName": "ReadyRemitSDK",
+                    "implicit": true,
+                    "declAttributes": [
+                      "ObjC"
+                    ],
+                    "accessorKind": "set"
+                  },
+                  {
+                    "kind": "Accessor",
+                    "name": "Modify",
+                    "printedName": "Modify()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvM",
+                    "mangledName": "$s13ReadyRemitSDK0aB0C15TransferRequestC15sourceAccountIdSSSgvM",
+                    "moduleName": "ReadyRemitSDK",
+                    "implicit": true,
+                    "accessorKind": "_modify"
+                  }
+                ]
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(dstCountryIso3Code:dstCurrencyIso3Code:srcCurrencyIso3Code:transferMethod:quoteBy:amount:fee:recipientId:recipientAccountId:fields:quoteHistoryId:)",
+                "printedName": "init(dstCountryIso3Code:dstCurrencyIso3Code:srcCurrencyIso3Code:transferMethod:quoteBy:amount:fee:recipientId:recipientAccountId:fields:quoteHistoryId:sourceAccountId:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -3953,13 +4253,28 @@
                     "name": "String",
                     "printedName": "Swift.String",
                     "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "hasDefaultArg": true,
+                    "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC18dstCountryIso3Code0f8CurrencyhI003srcjhI014transferMethod7quoteBy6amount3fee11recipientId0r7AccountS06fields0n7HistoryS0AESS_S5SSiS2SSgSayAC0E5FieldCGSgSStcfc",
-                "mangledName": "$s13ReadyRemitSDK0aB0C15TransferRequestC18dstCountryIso3Code0f8CurrencyhI003srcjhI014transferMethod7quoteBy6amount3fee11recipientId0r7AccountS06fields0n7HistoryS0AESS_S5SSiS2SSgSayAC0E5FieldCGSgSStcfc",
+                "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC18dstCountryIso3Code0f8CurrencyhI003srcjhI014transferMethod7quoteBy6amount3fee11recipientId0r7AccountS06fields0n7HistoryS006sourcetS0AESS_S5SSiS2SSgSayAC0E5FieldCGSgSSARtcfc",
+                "mangledName": "$s13ReadyRemitSDK0aB0C15TransferRequestC18dstCountryIso3Code0f8CurrencyhI003srcjhI014transferMethod7quoteBy6amount3fee11recipientId0r7AccountS06fields0n7HistoryS006sourcetS0AESS_S5SSiS2SSgSayAC0E5FieldCGSgSSARtcfc",
                 "moduleName": "ReadyRemitSDK",
-                "objc_name": "initWithDstCountryIso3Code:dstCurrencyIso3Code:srcCurrencyIso3Code:transferMethod:quoteBy:amount:fee:recipientId:recipientAccountId:fields:quoteHistoryId:",
+                "objc_name": "initWithDstCountryIso3Code:dstCurrencyIso3Code:srcCurrencyIso3Code:transferMethod:quoteBy:amount:fee:recipientId:recipientAccountId:fields:quoteHistoryId:sourceAccountId:",
                 "declAttributes": [
                   "AccessControl",
                   "ObjC"
@@ -4023,35 +4338,6 @@
                 "init_kind": "Designated"
               },
               {
-                "kind": "Constructor",
-                "name": "init",
-                "printedName": "init(from:)",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "TransferRequest",
-                    "printedName": "ReadyRemitSDK.ReadyRemit.TransferRequest",
-                    "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Decoder",
-                    "printedName": "Swift.Decoder",
-                    "usr": "s:s7DecoderP"
-                  }
-                ],
-                "declKind": "Constructor",
-                "usr": "s:13ReadyRemitSDK0aB0C15TransferRequestC4fromAEs7Decoder_p_tKcfc",
-                "mangledName": "$s13ReadyRemitSDK0aB0C15TransferRequestC4fromAEs7Decoder_p_tKcfc",
-                "moduleName": "ReadyRemitSDK",
-                "implicit": true,
-                "declAttributes": [
-                  "Required"
-                ],
-                "throwing": true,
-                "init_kind": "Designated"
-              },
-              {
                 "kind": "Function",
                 "name": "encode",
                 "printedName": "encode(to:)",
@@ -4091,13 +4377,6 @@
               "ObjectiveC.NSObject"
             ],
             "conformances": [
-              {
-                "kind": "Conformance",
-                "name": "Decodable",
-                "printedName": "Decodable",
-                "usr": "s:Se",
-                "mangledName": "$sSe"
-              },
               {
                 "kind": "Conformance",
                 "name": "Encodable",
@@ -4726,6 +5005,23 @@
       },
       {
         "kind": "Import",
+        "name": "Swinject",
+        "printedName": "Swinject",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwinjectAutoregistration",
+        "printedName": "SwinjectAutoregistration",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -4844,6 +5140,30 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -4856,6 +5176,16 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
@@ -5601,6 +5931,572 @@
       },
       {
         "kind": "Import",
+        "name": "Swinject",
+        "printedName": "Swinject",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InjectSettings",
+        "printedName": "InjectSettings",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "resolver",
+            "printedName": "resolver",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swinject.Resolver?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resolver",
+                    "printedName": "Swinject.Resolver",
+                    "usr": "s:8Swinject8ResolverP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvpZ",
+            "mangledName": "$s13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvpZ",
+            "moduleName": "ReadyRemitSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swinject.Resolver?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resolver",
+                        "printedName": "Swinject.Resolver",
+                        "usr": "s:8Swinject8ResolverP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvgZ",
+                "mangledName": "$s13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvgZ",
+                "moduleName": "ReadyRemitSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swinject.Resolver?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Resolver",
+                        "printedName": "Swinject.Resolver",
+                        "usr": "s:8Swinject8ResolverP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvsZ",
+                "mangledName": "$s13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvsZ",
+                "moduleName": "ReadyRemitSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvMZ",
+                "mangledName": "$s13ReadyRemitSDK14InjectSettingsV8resolver8Swinject8Resolver_pSgvMZ",
+                "moduleName": "ReadyRemitSDK",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13ReadyRemitSDK14InjectSettingsV",
+        "mangledName": "$s13ReadyRemitSDK14InjectSettingsV",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Inject",
+        "printedName": "Inject",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReadyRemitSDK6InjectV12wrappedValuexvp",
+            "mangledName": "$s13ReadyRemitSDK6InjectV12wrappedValuexvp",
+            "moduleName": "ReadyRemitSDK",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReadyRemitSDK6InjectV12wrappedValuexvg",
+                "mangledName": "$s13ReadyRemitSDK6InjectV12wrappedValuexvg",
+                "moduleName": "ReadyRemitSDK",
+                "genericSig": "<τ_0_0>",
+                "sugared_genericSig": "<Value>",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Inject",
+                "printedName": "ReadyRemitSDK.Inject<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:13ReadyRemitSDK6InjectV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ReadyRemitSDK6InjectVACyxGycfc",
+            "mangledName": "$s13ReadyRemitSDK6InjectVACyxGycfc",
+            "moduleName": "ReadyRemitSDK",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:resolver:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Inject",
+                "printedName": "ReadyRemitSDK.Inject<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:13ReadyRemitSDK6InjectV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swinject.Resolver?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resolver",
+                    "printedName": "Swinject.Resolver",
+                    "usr": "s:8Swinject8ResolverP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ReadyRemitSDK6InjectV4name8resolverACyxGSSSg_8Swinject8Resolver_pSgtcfc",
+            "mangledName": "$s13ReadyRemitSDK6InjectV4name8resolverACyxGSSSg_8Swinject8Resolver_pSgtcfc",
+            "moduleName": "ReadyRemitSDK",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Value>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:resolver:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Inject",
+                "printedName": "ReadyRemitSDK.Inject<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:13ReadyRemitSDK6InjectV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swinject.Resolver?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resolver",
+                    "printedName": "Swinject.Resolver",
+                    "usr": "s:8Swinject8ResolverP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ReadyRemitSDK6InjectV4name8resolverACyqd__SgGSSSg_8Swinject8Resolver_pSgtcAFRszlufc",
+            "mangledName": "$s13ReadyRemitSDK6InjectV4name8resolverACyqd__SgGSSSg_8Swinject8Resolver_pSgtcAFRszlufc",
+            "moduleName": "ReadyRemitSDK",
+            "genericSig": "<τ_0_0, τ_1_0 where τ_0_0 == τ_1_0?>",
+            "sugared_genericSig": "<Value, Wrapped where Value == Wrapped?>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13ReadyRemitSDK6InjectV",
+        "mangledName": "$s13ReadyRemitSDK6InjectV",
+        "moduleName": "ReadyRemitSDK",
+        "genericSig": "<τ_0_0>",
+        "sugared_genericSig": "<Value>",
+        "declAttributes": [
+          "AccessControl",
+          "PropertyWrapper"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InjectStateObject",
+        "printedName": "InjectStateObject",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InjectStateObject",
+                "printedName": "ReadyRemitSDK.InjectStateObject<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:13ReadyRemitSDK17InjectStateObjectV"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ReadyRemitSDK17InjectStateObjectVACyxGycfc",
+            "mangledName": "$s13ReadyRemitSDK17InjectStateObjectVACyxGycfc",
+            "moduleName": "ReadyRemitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : Combine.ObservableObject>",
+            "sugared_genericSig": "<Value where Value : Combine.ObservableObject>",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:resolver:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InjectStateObject",
+                "printedName": "ReadyRemitSDK.InjectStateObject<τ_0_0>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "usr": "s:13ReadyRemitSDK17InjectStateObjectV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swinject.Resolver?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Resolver",
+                    "printedName": "Swinject.Resolver",
+                    "usr": "s:8Swinject8ResolverP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:13ReadyRemitSDK17InjectStateObjectV4name8resolverACyxGSSSg_8Swinject8Resolver_pSgtcfc",
+            "mangledName": "$s13ReadyRemitSDK17InjectStateObjectV4name8resolverACyxGSSSg_8Swinject8Resolver_pSgtcfc",
+            "moduleName": "ReadyRemitSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : Combine.ObservableObject>",
+            "sugared_genericSig": "<Value where Value : Combine.ObservableObject>",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "wrappedValue",
+            "printedName": "wrappedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReadyRemitSDK17InjectStateObjectV12wrappedValuexvp",
+            "mangledName": "$s13ReadyRemitSDK17InjectStateObjectV12wrappedValuexvp",
+            "moduleName": "ReadyRemitSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GenericTypeParam",
+                    "printedName": "τ_0_0"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReadyRemitSDK17InjectStateObjectV12wrappedValuexvg",
+                "mangledName": "$s13ReadyRemitSDK17InjectStateObjectV12wrappedValuexvg",
+                "moduleName": "ReadyRemitSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Combine.ObservableObject>",
+                "sugared_genericSig": "<Value where Value : Combine.ObservableObject>",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "projectedValue",
+            "printedName": "projectedValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Wrapper",
+                "printedName": "SwiftUI.ObservedObject<τ_0_0>.Wrapper",
+                "usr": "s:7SwiftUI14ObservedObjectV7WrapperV"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:13ReadyRemitSDK17InjectStateObjectV14projectedValue7SwiftUI08ObservedF0V7WrapperVyx_Gvp",
+            "mangledName": "$s13ReadyRemitSDK17InjectStateObjectV14projectedValue7SwiftUI08ObservedF0V7WrapperVyx_Gvp",
+            "moduleName": "ReadyRemitSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Wrapper",
+                    "printedName": "SwiftUI.ObservedObject<τ_0_0>.Wrapper",
+                    "usr": "s:7SwiftUI14ObservedObjectV7WrapperV"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:13ReadyRemitSDK17InjectStateObjectV14projectedValue7SwiftUI08ObservedF0V7WrapperVyx_Gvg",
+                "mangledName": "$s13ReadyRemitSDK17InjectStateObjectV14projectedValue7SwiftUI08ObservedF0V7WrapperVyx_Gvg",
+                "moduleName": "ReadyRemitSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : Combine.ObservableObject>",
+                "sugared_genericSig": "<Value where Value : Combine.ObservableObject>",
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:13ReadyRemitSDK17InjectStateObjectV",
+        "mangledName": "$s13ReadyRemitSDK17InjectStateObjectV",
+        "moduleName": "ReadyRemitSDK",
+        "genericSig": "<τ_0_0 where τ_0_0 : Combine.ObservableObject>",
+        "sugared_genericSig": "<Value where Value : Combine.ObservableObject>",
+        "declAttributes": [
+          "Custom",
+          "AccessControl",
+          "PropertyWrapper"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "DynamicProperty",
+            "printedName": "DynamicProperty",
+            "usr": "s:7SwiftUI15DynamicPropertyP",
+            "mangledName": "$s7SwiftUI15DynamicPropertyP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -5730,6 +6626,16 @@
         "printedName": "Combine",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -5871,16 +6777,6 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
         "declKind": "Import",
@@ -6011,16 +6907,6 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
@@ -6076,6 +6962,23 @@
       },
       {
         "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -6174,6 +7077,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -6186,6 +7099,16 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
@@ -7880,6 +8803,23 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -8336,23 +9276,6 @@
       },
       {
         "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK"
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -8465,6 +9388,16 @@
         "printedName": "Combine",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -8610,6 +9543,16 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -8627,6 +9570,23 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Swinject",
+        "printedName": "Swinject",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwinjectAutoregistration",
+        "printedName": "SwinjectAutoregistration",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
       },
       {
         "kind": "Import",
@@ -8739,6 +9699,23 @@
       },
       {
         "kind": "Import",
+        "name": "Swinject",
+        "printedName": "Swinject",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwinjectAutoregistration",
+        "printedName": "SwinjectAutoregistration",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -8786,30 +9763,6 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "AcuantImagePreparation",
-        "printedName": "AcuantImagePreparation",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -8832,6 +9785,23 @@
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Swinject",
+        "printedName": "Swinject",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwinjectAutoregistration",
+        "printedName": "SwinjectAutoregistration",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK"
       },
@@ -8945,6 +9915,16 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -9466,40 +10446,6 @@
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
         ]
       },
       {
@@ -10364,6 +11310,13 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Business\/UseCase\/FetchCardListUseCase.swift",
+      "kind": "Array",
+      "offset": 333,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/DynamicFormFields\/PhoneNumberField.swift",
       "kind": "BooleanLiteral",
       "offset": 472,
@@ -10422,30 +11375,58 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/ContainerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 334,
+      "offset": 350,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/ContainerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 368,
+      "offset": 384,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/ContainerView.swift",
       "kind": "BooleanLiteral",
-      "offset": 765,
+      "offset": 781,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/ContainerView.swift",
       "kind": "StringLiteral",
-      "offset": 5641,
+      "offset": 5814,
       "length": 13,
       "value": "\"INTERACTION\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Sender.swift",
+      "kind": "StringLiteral",
+      "offset": 498,
+      "length": 12,
+      "value": "\"PREFUNDING\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Sender.swift",
+      "kind": "StringLiteral",
+      "offset": 530,
+      "length": 16,
+      "value": "\"ACCOUNTFUNDING\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Sender.swift",
+      "kind": "StringLiteral",
+      "offset": 498,
+      "length": 12,
+      "value": "\"PREFUNDING\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Sender.swift",
+      "kind": "StringLiteral",
+      "offset": 530,
+      "length": 16,
+      "value": "\"ACCOUNTFUNDING\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
@@ -10667,7 +11648,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsView.swift",
       "kind": "BooleanLiteral",
-      "offset": 492,
+      "offset": 318,
       "length": 4,
       "value": "true"
     },
@@ -11076,6 +12057,20 @@
       "offset": 1693,
       "length": 5,
       "value": "\"KYC\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Presentantion\/ViewModel\/SenderCardViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 310,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Presentantion\/ViewModel\/SenderCardViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 196,
+      "length": 19,
+      "value": "\"ReadyRemitSDK.SenderCardViewModel\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/Profile\/CardDetails\/CardDetailsViewModel.swift",
@@ -11169,44 +12164,30 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerifier\/KYCVerifierViewModel.swift",
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCOnboardingStepOne\/KYCVerifierViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 590,
+      "offset": 719,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerifier\/KYCVerifierViewModel.swift",
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCOnboardingStepOne\/KYCVerifierViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 639,
+      "offset": 768,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerifier\/KYCVerifierViewModel.swift",
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCOnboardingStepOne\/KYCVerifierViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 723,
+      "offset": 870,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerifier\/KYCVerifierViewModel.swift",
-      "kind": "Array",
-      "offset": 774,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerifier\/KYCVerifierViewModel.swift",
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCOnboardingStepOne\/KYCVerifierViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1051,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerifier\/KYCVerifierViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1357,
+      "offset": 980,
       "length": 5,
       "value": "false"
     },
@@ -11220,32 +12201,39 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 742,
+      "offset": 762,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 775,
+      "offset": 795,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 873,
+      "offset": 893,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 933,
+      "offset": 953,
       "length": 4,
       "value": "true"
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1217,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Public\/ReadyRemit.swift",
       "kind": "IntegerLiteral",
       "offset": 203,
@@ -11258,11 +12246,18 @@
       "offset": 203,
       "length": 7,
       "value": "1"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Public\/ReadyRemit.swift",
+      "kind": "BooleanLiteral",
+      "offset": 797,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Public\/ReadyRemit.swift",
       "kind": "StringLiteral",
-      "offset": 6664,
+      "offset": 7283,
       "length": 4,
       "value": "\"en\""
     },
@@ -11295,6 +12290,20 @@
       "value": "\"ReadyRemitSDK.Coordinator\""
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerificationFlow\/KycScreen.swift",
+      "kind": "StringLiteral",
+      "offset": 376,
+      "length": 30,
+      "value": "\"socure\/error\/ConsentDeclined\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCVerificationFlow\/KycScreen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 543,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Api\/LoggingAPI.swift",
       "kind": "StringLiteral",
       "offset": 232,
@@ -11437,30 +12446,30 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Api\/LoggingAPI.swift",
       "kind": "StringLiteral",
-      "offset": 1574,
+      "offset": 1496,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Api\/LoggingAPI.swift",
       "kind": "StringLiteral",
-      "offset": 2577,
+      "offset": 2421,
       "length": 49,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Api\/LoggingAPI.swift",
       "kind": "StringLiteral",
-      "offset": 2618,
+      "offset": 2462,
       "length": 1,
       "value": "\"\/events\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Api\/LoggingAPI.swift",
       "kind": "StringLiteral",
-      "offset": 2835,
+      "offset": 2679,
       "length": 5,
-      "value": "\"5.5\""
+      "value": "\"6.0\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/TransferType.swift",
@@ -11624,6 +12633,13 @@
       "value": "\"ReadyRemitSDK.ReadyRemitObjcOAuthToken\""
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/LinkCard.swift",
+      "kind": "StringLiteral",
+      "offset": 463,
+      "length": 6,
+      "value": "\"CARD\""
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/APIError.swift",
       "kind": "IntegerLiteral",
       "offset": 471,
@@ -11641,6 +12657,13 @@
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/VisaView.swift",
       "kind": "BooleanLiteral",
       "offset": 370,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/Controls\/PrimaryButton.swift",
+      "kind": "BooleanLiteral",
+      "offset": 577,
       "length": 5,
       "value": "false"
     },
@@ -11668,28 +12691,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 691,
+      "offset": 726,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 740,
+      "offset": 775,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "Array",
-      "offset": 869,
+      "offset": 904,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 984,
+      "offset": 1019,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1063,
       "length": 4,
       "value": "true"
     },
@@ -11801,490 +12831,504 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2358,
+      "offset": 2314,
+      "length": 20,
+      "value": "\"KYC - Retry Tapped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2360,
+      "length": 19,
+      "value": "\"KYC - Back Tapped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2450,
       "length": 29,
       "value": "\"ProfileCardDetails = Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2430,
+      "offset": 2522,
       "length": 36,
       "value": "\"ProfileCardDetails = Delete Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2511,
+      "offset": 2603,
       "length": 39,
       "value": "\"ProfileCardDetails = Alert Yes Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2594,
+      "offset": 2686,
       "length": 38,
       "value": "\"ProfileCardDetails = Alert No Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2673,
+      "offset": 2765,
       "length": 34,
       "value": "\"ProfileCardDetails = Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2784,
+      "offset": 2876,
       "length": 32,
       "value": "\"ProfileAccountDetails = Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2862,
+      "offset": 2954,
       "length": 39,
       "value": "\"ProfileAccountDetails = Delete Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2949,
+      "offset": 3041,
       "length": 42,
       "value": "\"ProfileAccountDetails = Alert Yes Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3038,
+      "offset": 3130,
       "length": 41,
       "value": "\"ProfileAccountDetails = Alert No Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3123,
+      "offset": 3215,
       "length": 37,
       "value": "\"ProfileAccountDetails = Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3239,
+      "offset": 3331,
       "length": 34,
       "value": "\"ProfileRecipientProfile = Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3321,
+      "offset": 3413,
       "length": 41,
       "value": "\"ProfileRecipientProfile = Delete Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3412,
+      "offset": 3504,
       "length": 44,
       "value": "\"ProfileRecipientProfile = Alert Yes Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3505,
+      "offset": 3597,
       "length": 43,
       "value": "\"ProfileRecipientProfile = Alert No Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3594,
+      "offset": 3686,
       "length": 39,
       "value": "\"ProfileRecipientProfile = Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3679,
+      "offset": 3771,
       "length": 47,
       "value": "\"ProfileRecipientProfile = Edit Account Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3784,
+      "offset": 3876,
       "length": 53,
       "value": "\"ProfileRecipientProfile = Start New Transfer Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3893,
+      "offset": 3985,
       "length": 21,
       "value": "\"PushToCard - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3947,
+      "offset": 4039,
       "length": 26,
       "value": "\"PushToCard - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4011,
+      "offset": 4103,
       "length": 31,
       "value": "\"PushToCard - Webview Resigned\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4082,
+      "offset": 4174,
       "length": 34,
       "value": "\"PushToCard - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4163,
+      "offset": 4255,
       "length": 42,
       "value": "\"PushToCard - Error Expired Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4238,
+      "offset": 4330,
       "length": 26,
       "value": "\"PushToCard - Edit Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4301,
+      "offset": 4393,
       "length": 30,
       "value": "\"PushToCard - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4381,
+      "offset": 4473,
       "length": 18,
       "value": "\"Reciept - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4429,
+      "offset": 4521,
       "length": 23,
       "value": "\"Reciept - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4506,
+      "offset": 4598,
       "length": 20,
       "value": "\"Recipient - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4562,
+      "offset": 4654,
       "length": 29,
       "value": "\"Recipient - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4630,
+      "offset": 4722,
       "length": 33,
       "value": "\"Recipient - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4695,
+      "offset": 4787,
       "length": 25,
       "value": "\"Recipient - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4782,
+      "offset": 4874,
       "length": 24,
       "value": "\"RecipientBank - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4846,
+      "offset": 4938,
       "length": 33,
       "value": "\"RecipientBank - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4915,
+      "offset": 5007,
       "length": 29,
       "value": "\"RecipientBank - Edit Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4987,
+      "offset": 5079,
       "length": 37,
       "value": "\"RecipientBank - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5060,
+      "offset": 5152,
       "length": 29,
       "value": "\"RecipientBank - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5151,
+      "offset": 5243,
       "length": 24,
       "value": "\"RecipientList - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5214,
+      "offset": 5306,
       "length": 32,
       "value": "\"RecipientList - Profile Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5294,
+      "offset": 5386,
       "length": 44,
       "value": "\"RecipientList - Add a New Recipient Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5391,
+      "offset": 5483,
       "length": 51,
       "value": "\"RecipientList - Header Add a New Recipient Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5485,
+      "offset": 5577,
       "length": 37,
       "value": "\"RecipientList - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5558,
+      "offset": 5650,
       "length": 29,
       "value": "\"RecipientList - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5638,
+      "offset": 5730,
       "length": 47,
       "value": "\"RecipientList - Row Start New Transfer Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5753,
+      "offset": 5845,
       "length": 27,
       "value": "\"RecipientMissing - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5823,
+      "offset": 5915,
       "length": 36,
       "value": "\"RecipientMissing - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5905,
+      "offset": 5997,
       "length": 40,
       "value": "\"RecipientMissing - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5984,
+      "offset": 6076,
       "length": 32,
       "value": "\"RecipientMissing - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6082,
+      "offset": 6174,
       "length": 26,
       "value": "\"TransferDetails - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6151,
+      "offset": 6243,
       "length": 36,
       "value": "\"TransferDetails - Country Selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6229,
+      "offset": 6321,
       "length": 35,
       "value": "\"TransferDetails - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6309,
+      "offset": 6401,
       "length": 39,
       "value": "\"TransferDetails - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6386,
+      "offset": 6478,
       "length": 31,
       "value": "\"TransferDetails - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6457,
+      "offset": 6549,
       "length": 32,
       "value": "\"TransferDetails - Quote Change\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6531,
+      "offset": 6623,
       "length": 35,
       "value": "\"TransferDetails - Method Selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6606,
+      "offset": 6698,
       "length": 33,
       "value": "\"TransferDetails - Amount Filled\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6686,
+      "offset": 6778,
       "length": 41,
       "value": "\"TransferDetails - Receive Amount Filled\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6791,
+      "offset": 6883,
       "length": 25,
       "value": "\"TransferReview - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6857,
+      "offset": 6949,
       "length": 34,
       "value": "\"TransferReview - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6938,
+      "offset": 7030,
       "length": 42,
       "value": "\"TransferReview - Error KYC Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7031,
+      "offset": 7123,
       "length": 46,
       "value": "\"TransferReview - Error Network Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7121,
+      "offset": 7213,
       "length": 38,
       "value": "\"TransferReview - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7196,
+      "offset": 7288,
       "length": 30,
       "value": "\"TransferReview - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7265,
+      "offset": 7357,
       "length": 26,
       "value": "\"TransferReview - Timeout\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7319,
+      "offset": 7411,
       "length": 10,
       "value": "\"Transfer\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7395,
+      "offset": 7487,
       "length": 26,
       "value": "\"TransferSuccess - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7459,
+      "offset": 7551,
       "length": 31,
       "value": "\"TransferSuccess - Done Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7534,
+      "offset": 7626,
       "length": 38,
       "value": "\"TransferSuccess - Pickup Link Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7616,
+      "offset": 7708,
       "length": 38,
       "value": "\"TransferSuccess - Pickup Link Closed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7699,
+      "offset": 7791,
       "length": 39,
       "value": "\"TransferSuccess - Show Receipt Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7776,
+      "offset": 7868,
       "length": 31,
       "value": "\"TransferSuccess - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7863,
+      "offset": 7955,
       "length": 23,
       "value": "\"VisaBranding - Viewed\""
     },
@@ -12396,490 +13440,504 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2358,
+      "offset": 2314,
+      "length": 20,
+      "value": "\"KYC - Retry Tapped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2360,
+      "length": 19,
+      "value": "\"KYC - Back Tapped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 2450,
       "length": 29,
       "value": "\"ProfileCardDetails = Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2430,
+      "offset": 2522,
       "length": 36,
       "value": "\"ProfileCardDetails = Delete Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2511,
+      "offset": 2603,
       "length": 39,
       "value": "\"ProfileCardDetails = Alert Yes Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2594,
+      "offset": 2686,
       "length": 38,
       "value": "\"ProfileCardDetails = Alert No Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2673,
+      "offset": 2765,
       "length": 34,
       "value": "\"ProfileCardDetails = Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2784,
+      "offset": 2876,
       "length": 32,
       "value": "\"ProfileAccountDetails = Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2862,
+      "offset": 2954,
       "length": 39,
       "value": "\"ProfileAccountDetails = Delete Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 2949,
+      "offset": 3041,
       "length": 42,
       "value": "\"ProfileAccountDetails = Alert Yes Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3038,
+      "offset": 3130,
       "length": 41,
       "value": "\"ProfileAccountDetails = Alert No Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3123,
+      "offset": 3215,
       "length": 37,
       "value": "\"ProfileAccountDetails = Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3239,
+      "offset": 3331,
       "length": 34,
       "value": "\"ProfileRecipientProfile = Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3321,
+      "offset": 3413,
       "length": 41,
       "value": "\"ProfileRecipientProfile = Delete Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3412,
+      "offset": 3504,
       "length": 44,
       "value": "\"ProfileRecipientProfile = Alert Yes Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3505,
+      "offset": 3597,
       "length": 43,
       "value": "\"ProfileRecipientProfile = Alert No Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3594,
+      "offset": 3686,
       "length": 39,
       "value": "\"ProfileRecipientProfile = Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3679,
+      "offset": 3771,
       "length": 47,
       "value": "\"ProfileRecipientProfile = Edit Account Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3784,
+      "offset": 3876,
       "length": 53,
       "value": "\"ProfileRecipientProfile = Start New Transfer Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3893,
+      "offset": 3985,
       "length": 21,
       "value": "\"PushToCard - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 3947,
+      "offset": 4039,
       "length": 26,
       "value": "\"PushToCard - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4011,
+      "offset": 4103,
       "length": 31,
       "value": "\"PushToCard - Webview Resigned\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4082,
+      "offset": 4174,
       "length": 34,
       "value": "\"PushToCard - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4163,
+      "offset": 4255,
       "length": 42,
       "value": "\"PushToCard - Error Expired Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4238,
+      "offset": 4330,
       "length": 26,
       "value": "\"PushToCard - Edit Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4301,
+      "offset": 4393,
       "length": 30,
       "value": "\"PushToCard - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4381,
+      "offset": 4473,
       "length": 18,
       "value": "\"Reciept - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4429,
+      "offset": 4521,
       "length": 23,
       "value": "\"Reciept - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4506,
+      "offset": 4598,
       "length": 20,
       "value": "\"Recipient - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4562,
+      "offset": 4654,
       "length": 29,
       "value": "\"Recipient - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4630,
+      "offset": 4722,
       "length": 33,
       "value": "\"Recipient - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4695,
+      "offset": 4787,
       "length": 25,
       "value": "\"Recipient - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4782,
+      "offset": 4874,
       "length": 24,
       "value": "\"RecipientBank - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4846,
+      "offset": 4938,
       "length": 33,
       "value": "\"RecipientBank - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4915,
+      "offset": 5007,
       "length": 29,
       "value": "\"RecipientBank - Edit Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 4987,
+      "offset": 5079,
       "length": 37,
       "value": "\"RecipientBank - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5060,
+      "offset": 5152,
       "length": 29,
       "value": "\"RecipientBank - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5151,
+      "offset": 5243,
       "length": 24,
       "value": "\"RecipientList - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5214,
+      "offset": 5306,
       "length": 32,
       "value": "\"RecipientList - Profile Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5294,
+      "offset": 5386,
       "length": 44,
       "value": "\"RecipientList - Add a New Recipient Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5391,
+      "offset": 5483,
       "length": 51,
       "value": "\"RecipientList - Header Add a New Recipient Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5485,
+      "offset": 5577,
       "length": 37,
       "value": "\"RecipientList - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5558,
+      "offset": 5650,
       "length": 29,
       "value": "\"RecipientList - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5638,
+      "offset": 5730,
       "length": 47,
       "value": "\"RecipientList - Row Start New Transfer Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5753,
+      "offset": 5845,
       "length": 27,
       "value": "\"RecipientMissing - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5823,
+      "offset": 5915,
       "length": 36,
       "value": "\"RecipientMissing - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5905,
+      "offset": 5997,
       "length": 40,
       "value": "\"RecipientMissing - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 5984,
+      "offset": 6076,
       "length": 32,
       "value": "\"RecipientMissing - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6082,
+      "offset": 6174,
       "length": 26,
       "value": "\"TransferDetails - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6151,
+      "offset": 6243,
       "length": 36,
       "value": "\"TransferDetails - Country Selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6229,
+      "offset": 6321,
       "length": 35,
       "value": "\"TransferDetails - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6309,
+      "offset": 6401,
       "length": 39,
       "value": "\"TransferDetails - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6386,
+      "offset": 6478,
       "length": 31,
       "value": "\"TransferDetails - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6457,
+      "offset": 6549,
       "length": 32,
       "value": "\"TransferDetails - Quote Change\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6531,
+      "offset": 6623,
       "length": 35,
       "value": "\"TransferDetails - Method Selected\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6606,
+      "offset": 6698,
       "length": 33,
       "value": "\"TransferDetails - Amount Filled\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6686,
+      "offset": 6778,
       "length": 41,
       "value": "\"TransferDetails - Receive Amount Filled\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6791,
+      "offset": 6883,
       "length": 25,
       "value": "\"TransferReview - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6857,
+      "offset": 6949,
       "length": 34,
       "value": "\"TransferReview - Continue Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 6938,
+      "offset": 7030,
       "length": 42,
       "value": "\"TransferReview - Error KYC Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7031,
+      "offset": 7123,
       "length": 46,
       "value": "\"TransferReview - Error Network Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7121,
+      "offset": 7213,
       "length": 38,
       "value": "\"TransferReview - Error Action Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7196,
+      "offset": 7288,
       "length": 30,
       "value": "\"TransferReview - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7265,
+      "offset": 7357,
       "length": 26,
       "value": "\"TransferReview - Timeout\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7319,
+      "offset": 7411,
       "length": 10,
       "value": "\"Transfer\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7395,
+      "offset": 7487,
       "length": 26,
       "value": "\"TransferSuccess - Viewed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7459,
+      "offset": 7551,
       "length": 31,
       "value": "\"TransferSuccess - Done Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7534,
+      "offset": 7626,
       "length": 38,
       "value": "\"TransferSuccess - Pickup Link Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7616,
+      "offset": 7708,
       "length": 38,
       "value": "\"TransferSuccess - Pickup Link Closed\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7699,
+      "offset": 7791,
       "length": 39,
       "value": "\"TransferSuccess - Show Receipt Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7776,
+      "offset": 7868,
       "length": 31,
       "value": "\"TransferSuccess - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
-      "offset": 7863,
+      "offset": 7955,
       "length": 23,
       "value": "\"VisaBranding - Viewed\""
     },
@@ -13355,7 +14413,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/DoneButtonTextfield.swift",
       "kind": "StringLiteral",
-      "offset": 2326,
+      "offset": 2365,
       "length": 11,
       "value": "\"ReadyRemitSDK.Coordinator\""
     },
@@ -13551,7 +14609,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/DynamicFormFields\/CurrencyField.swift",
       "kind": "BooleanLiteral",
-      "offset": 579,
+      "offset": 581,
       "length": 5,
       "value": "false"
     },
@@ -13733,7 +14791,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsPresenter.swift",
       "kind": "BooleanLiteral",
-      "offset": 2821,
+      "offset": 3089,
       "length": 4,
       "value": "true"
     },
@@ -13782,7 +14840,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Public\/Model\/ReadyRemit.TransferRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2671,
+      "offset": 2914,
       "length": 12,
       "value": "\"ReadyRemitSDK.RequestField\""
     },
@@ -13845,7 +14903,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/WebView.swift",
       "kind": "StringLiteral",
-      "offset": 1492,
+      "offset": 1800,
       "length": 11,
       "value": "\"ReadyRemitSDK.Coordinator\""
     },
@@ -13859,28 +14917,28 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/View Modifiers\/NetworkAPIErrorBanner.swift",
       "kind": "BooleanLiteral",
-      "offset": 395,
+      "offset": 401,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/View Modifiers\/NetworkAPIErrorBanner.swift",
       "kind": "BooleanLiteral",
-      "offset": 477,
+      "offset": 483,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCSelfie\/KYCSelfieViewModel.swift",
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCOnboardingStepTwo\/KYCSelfieViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 443,
+      "offset": 408,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCSelfie\/KYCSelfieViewModel.swift",
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCOnboardingStepTwo\/KYCSelfieViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 523,
+      "offset": 490,
       "length": 5,
       "value": "false"
     },
@@ -13897,13 +14955,6 @@
       "offset": 727,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/KYC\/KYCConfirmation\/KYCConfirmationViewModel.swift",
-      "kind": "BooleanLiteral",
-      "offset": 455,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Field.swift",
@@ -14009,6 +15060,13 @@
       "offset": 2991,
       "length": 3414,
       "value": "[(\"AED\", \"ARE\"), (\"AFN\", \"AFG\"), (\"ALL\", \"ALB\"), (\"AMD\", \"ARM\"), (\"ANG\", \"ANT\"), (\"AOA\", \"AGO\"), (\"ARS\", \"ARG\"), (\"AUD\", \"AUS\"), (\"AWG\", \"ABW\"), (\"AZN\", \"AZE\"), (\"BAM\", \"BIH\"), (\"BBD\", \"BRB\"), (\"BDT\", \"BGD\"), (\"BGN\", \"BGR\"), (\"BHD\", \"BHR\"), (\"BIF\", \"BDI\"), (\"BMD\", \"BMU\"), (\"BND\", \"BRN\"), (\"BOB\", \"BOL\"), (\"BRL\", \"BRA\"), (\"BSD\", \"BHS\"), (\"BTN\", \"BTN\"), (\"BWP\", \"BWA\"), (\"BYN\", \"BLR\"), (\"BZD\", \"BLZ\"), (\"CAD\", \"CAN\"), (\"CDF\", \"COD\"), (\"CHF\", \"CHE\"), (\"CLP\", \"CHL\"), (\"CNY\", \"CHN\"), (\"COP\", \"COL\"), (\"CRC\", \"CRI\"), (\"CUP\", \"CUW\"), (\"CVE\", \"CPV\"), (\"CZK\", \"CZE\"), (\"DJF\", \"DJI\"), (\"DKK\", \"DNK\"), (\"DOP\", \"DOM\"), (\"DZD\", \"DZA\"), (\"EEK\", \"EST\"), (\"EGP\", \"EGY\"), (\"ERN\", \"ERI\"), (\"ETB\", \"ETH\"), (\"EUR\", \"EUR\"), (\"FJD\", \"FJI\"), (\"FKP\", \"FLK\"), (\"GBP\", \"GBR\"), (\"GEL\", \"GEO\"), (\"GHS\", \"GHA\"), (\"GIP\", \"GIB\"), (\"GMD\", \"GAB\"), (\"GNF\", \"GIN\"), (\"GTQ\", \"GTM\"), (\"GYD\", \"GUY\"), (\"HKD\", \"HKG\"), (\"HNL\", \"HND\"), (\"HRK\", \"HRV\"), (\"HTG\", \"HTI\"), (\"HUF\", \"HUN\"), (\"IDR\", \"IDN\"), (\"ILS\", \"ISR\"), (\"INR\", \"IND\"), (\"IQD\", \"IRQ\"), (\"IRR\", \"IRN\"), (\"ISK\", \"ISL\"), (\"JMD\", \"JAM\"), (\"JOD\", \"JOR\"), (\"JPY\", \"JPN\"), (\"KES\", \"KEN\"), (\"KGS\", \"KGZ\"), (\"KHR\", \"KHM\"), (\"KMF\", \"COM\"), (\"KPW\", \"PRK\"), (\"KRW\", \"KOR\"), (\"KWD\", \"KWT\"), (\"KYD\", \"CYM\"), (\"KZT\", \"KAZ\"), (\"LAK\", \"LAO\"), (\"LBP\", \"LBN\"), (\"LKR\", \"LKA\"), (\"LRD\", \"LBR\"), (\"LSL\", \"LSO\"), (\"LTL\", \"LTU\"), (\"LVL\", \"LVA\"), (\"LYD\", \"LBY\"), (\"MAD\", \"MAR\"), (\"MDL\", \"MDA\"), (\"MGA\", \"MDG\"), (\"MKD\", \"MKD\"), (\"MMK\", \"MMR\"), (\"MNT\", \"MNG\"), (\"MOP\", \"MAC\"), (\"MRO\", \"MRT\"), (\"MUR\", \"MUS\"), (\"MVR\", \"MDV\"), (\"MWK\", \"MWI\"), (\"MXN\", \"MEX\"), (\"MYR\", \"MYS\"), (\"MZN\", \"MOZ\"), (\"NAD\", \"NAM\"), (\"NGN\", \"NGA\"), (\"NIO\", \"NIC\"), (\"NOK\", \"NOR\"), (\"NPR\", \"NPL\"), (\"NZD\", \"NZL\"), (\"OMR\", \"OMN\"), (\"PAB\", \"PAN\"), (\"PEN\", \"PER\"), (\"PGK\", \"PNG\"), (\"PHP\", \"PHL\"), (\"PKR\", \"PAK\"), (\"PLN\", \"POL\"), (\"PYG\", \"PRY\"), (\"QAR\", \"QAT\"), (\"RON\", \"ROM\"), (\"RSD\", \"SRB\"), (\"RUB\", \"RUS\"), (\"SAR\", \"SAU\"), (\"SBD\", \"SLB\"), (\"SCR\", \"SYC\"), (\"SDG\", \"SDN\"), (\"SEK\", \"SWE\"), (\"SGD\", \"SGP\"), (\"SHP\", \"SHN\"), (\"SLL\", \"SLE\"), (\"SOS\", \"SOM\"), (\"SRD\", \"SUR\"), (\"SYP\", \"SYR\"), (\"SZL\", \"SWZ\"), (\"THB\", \"THA\"), (\"TJS\", \"TJK\"), (\"TMT\", \"TKM\"), (\"TND\", \"TUN\"), (\"TRY\", \"TUR\"), (\"TTD\", \"TTO\"), (\"TWD\", \"TWN\"), (\"TZS\", \"TZA\"), (\"UAH\", \"UKR\"), (\"UGX\", \"UGA\"), (\"USD\", \"USA\"), (\"UYU\", \"URY\"), (\"UZS\", \"UZB\"), (\"VEF\", \"VEN\"), (\"VND\", \"VNM\"), (\"VUV\", \"VUT\"), (\"WST\", \"WSM\"), (\"XAF\", \"CAF\"), (\"YER\", \"YEM\"), (\"ZAR\", \"ZAF\"), (\"ZMW\", \"ZMB\"), (\"ZWL\", \"ZWE\"), (\"TOP\", \"TON\"), (\"SSP\", \"SSD\"), (\"STN\", \"STP\"), (\"RWF\", \"RWA\")]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/DynamicFormFields\/DynamicFormView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 327,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Transfer.swift",
@@ -14151,6 +15209,20 @@
       "value": "true"
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Presentantion\/State\/SenderCardViewState.swift",
+      "kind": "BooleanLiteral",
+      "offset": 382,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Presentantion\/State\/SenderCardViewState.swift",
+      "kind": "Array",
+      "offset": 423,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/HorizontalButtonView.swift",
       "kind": "StringLiteral",
       "offset": 238,
@@ -14237,70 +15309,70 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 1813,
+      "offset": 1785,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2123,
+      "offset": 2095,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2719,
+      "offset": 2691,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 3334,
+      "offset": 3306,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4641,
+      "offset": 4613,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5920,
+      "offset": 5892,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5953,
+      "offset": 5925,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6353,
+      "offset": 6325,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6749,
+      "offset": 6721,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 7050,
+      "offset": 7022,
       "length": 1,
       "value": "2"
     },
@@ -14345,6 +15417,13 @@
       "offset": 810,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardView.swift",
+      "kind": "BooleanLiteral",
+      "offset": 357,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/RecipientBank\/RecipientBankViewModel.swift",
