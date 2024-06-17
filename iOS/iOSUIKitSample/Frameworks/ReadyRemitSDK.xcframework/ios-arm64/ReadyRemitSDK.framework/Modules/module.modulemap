@@ -1,7 +1,7 @@
 framework module ReadyRemitSDK {
   umbrella header "ReadyRemitSDK.h"
-
   export *
+
   module * { export * }
 }
 

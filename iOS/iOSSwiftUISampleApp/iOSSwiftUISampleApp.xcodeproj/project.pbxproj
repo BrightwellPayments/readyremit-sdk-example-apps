@@ -14,8 +14,27 @@
 		4A39F6042A39370F00BB25D1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39F6032A39370F00BB25D1 /* MainViewModel.swift */; };
 		4A39F6062A393BAA00BB25D1 /* MainAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A39F6052A393BAA00BB25D1 /* MainAPI.swift */; };
 		A00D8CBA2A8BA8CC00F3B877 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A00D8CBC2A8BA8CC00F3B877 /* Localizable.strings */; };
-		A022D80B2B3B6BB20051D8D5 /* ReadyRemitSDK in Frameworks */ = {isa = PBXBuildFile; productRef = A022D80A2B3B6BB20051D8D5 /* ReadyRemitSDK */; };
+		A0256C632C20B52400E90663 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A0256C622C20B52400E90663 /* Swinject */; };
+		A0256C642C20B53C00E90663 /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A39F5EC2A39140D00BB25D1 /* VisaSensoryBranding.xcframework */; };
+		A0256C652C20B53C00E90663 /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A39F5EC2A39140D00BB25D1 /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A0256C682C20B53C00E90663 /* ReadyRemitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0256C672C20B53C00E90663 /* ReadyRemitSDK.xcframework */; };
+		A0256C692C20B53C00E90663 /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0256C672C20B53C00E90663 /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A0256C662C20B53C00E90663 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A0256C692C20B53C00E90663 /* ReadyRemitSDK.xcframework in Embed Frameworks */,
+				A0256C652C20B53C00E90663 /* VisaSensoryBranding.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4A39F5D22A3912DF00BB25D1 /* iOSSwiftUISampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSwiftUISampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +56,7 @@
 		4A39F6052A393BAA00BB25D1 /* MainAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAPI.swift; sourceTree = "<group>"; };
 		A00D8CBB2A8BA8CC00F3B877 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A00D8CBD2A8BA8DA00F3B877 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A0256C672C20B53C00E90663 /* ReadyRemitSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ReadyRemitSDK.xcframework; path = Frameworks/ReadyRemitSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A022D80B2B3B6BB20051D8D5 /* ReadyRemitSDK in Frameworks */,
+				A0256C632C20B52400E90663 /* Swinject in Frameworks */,
+				A0256C642C20B53C00E90663 /* VisaSensoryBranding.xcframework in Frameworks */,
+				A0256C682C20B53C00E90663 /* ReadyRemitSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +116,7 @@
 		4A39F5E42A39134B00BB25D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0256C672C20B53C00E90663 /* ReadyRemitSDK.xcframework */,
 				4A39F5E92A39140C00BB25D1 /* AcuantCamera.xcframework */,
 				4A39F5EB2A39140D00BB25D1 /* AcuantCommon.xcframework */,
 				4A39F5EE2A39140E00BB25D1 /* AcuantFaceCapture.xcframework */,
@@ -117,6 +140,7 @@
 				4A39F5CE2A3912DF00BB25D1 /* Sources */,
 				4A39F5CF2A3912DF00BB25D1 /* Frameworks */,
 				4A39F5D02A3912DF00BB25D1 /* Resources */,
+				A0256C662C20B53C00E90663 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +149,7 @@
 			);
 			name = iOSSwiftUISampleApp;
 			packageProductDependencies = (
-				A022D80A2B3B6BB20051D8D5 /* ReadyRemitSDK */,
+				A0256C622C20B52400E90663 /* Swinject */,
 			);
 			productName = iOSSwiftUISampleApp;
 			productReference = 4A39F5D22A3912DF00BB25D1 /* iOSSwiftUISampleApp.app */;
@@ -157,7 +181,7 @@
 			);
 			mainGroup = 4A39F5C92A3912DF00BB25D1;
 			packageReferences = (
-				A022D8092B3B6BB20051D8D5 /* XCRemoteSwiftPackageReference "readyremit-sdk-ios" */,
+				A0256C612C20B52400E90663 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 4A39F5D32A3912DF00BB25D1 /* Products */;
 			projectDirPath = "";
@@ -438,18 +462,26 @@
 				revision = 04e82869f1f9a54934241218abb256d941d8b7a6;
 			};
 		};
+		A0256C612C20B52400E90663 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A022D80A2B3B6BB20051D8D5 /* ReadyRemitSDK */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A022D8092B3B6BB20051D8D5 /* XCRemoteSwiftPackageReference "readyremit-sdk-ios" */;
-			productName = ReadyRemitSDK;
-		};
 		A022D80C2B3B6BC00051D8D5 /* ReadyRemitSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A022D8092B3B6BB20051D8D5 /* XCRemoteSwiftPackageReference "readyremit-sdk-ios" */;
 			productName = ReadyRemitSDK;
+		};
+		A0256C622C20B52400E90663 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A0256C612C20B52400E90663 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

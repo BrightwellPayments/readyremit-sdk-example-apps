@@ -10,9 +10,9 @@ const App = () => {
   const readyRemitEnvironment = 'SANDBOX'; // Options are 'SANDBOX' or 'PRODUCTION'
   const readyRemitLanguage = 'en_US'; // Options are 'en' or 'es_mx'
 
-  const senderId = "b01ef34d-dc5f-4796-85fa-f3e9d91dc6c9";
-  const clientId = "ymZyGsLmCmhz7GMSQQ5OKUVxYrtuHfot";
-  const clientSecret = "PoPLoW8Y0EqayFhvfLEVcUb-qGTenDETN-cYww_9R5_Z99IVc4bfo6qP4dUjjikT";
+  const senderId = "<Your Sender ID>";
+  const clientId = "<Your Client ID>";
+  const clientSecret = "<Your Client Secret>";
 
   useEffect(() => {
     eventEmitter.addListener("READYREMIT_AUTH_TOKEN_REQUESTED", async () => {
