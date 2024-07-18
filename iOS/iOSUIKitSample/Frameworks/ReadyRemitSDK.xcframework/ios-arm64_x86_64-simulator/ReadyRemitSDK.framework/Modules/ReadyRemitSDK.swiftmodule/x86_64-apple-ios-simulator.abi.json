@@ -33,13 +33,20 @@
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Combine",
+        "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK"
       },
       {
         "kind": "Import",
@@ -214,6 +221,16 @@
         "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
@@ -2251,16 +2268,6 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "ReadyRemitSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
@@ -5129,6 +5136,16 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -5950,8 +5967,8 @@
       },
       {
         "kind": "Import",
-        "name": "Swinject",
-        "printedName": "Swinject",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK",
         "declAttributes": [
@@ -5960,15 +5977,15 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
+        "name": "Combine",
+        "printedName": "Combine",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK"
       },
       {
         "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
+        "name": "Swinject",
+        "printedName": "Swinject",
         "declKind": "Import",
         "moduleName": "ReadyRemitSDK"
       },
@@ -9236,6 +9253,16 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "ReadyRemitSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -11385,13 +11412,6 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Business\/UseCase\/FetchCardListUseCase.swift",
-      "kind": "Array",
-      "offset": 333,
-      "length": 2,
-      "value": "[]"
-    },
-    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/DynamicFormFields\/PhoneNumberField.swift",
       "kind": "BooleanLiteral",
       "offset": 472,
@@ -11401,7 +11421,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewPolitcsView.swift",
       "kind": "StringLiteral",
-      "offset": 3375,
+      "offset": 3435,
       "length": 11,
       "value": "\"ReadyRemitSDK.Coordinator\""
     },
@@ -11443,9 +11463,121 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
       "kind": "StringLiteral",
-      "offset": 6991,
+      "offset": 7143,
       "length": 41,
       "value": "\"Next Business Day or A bigger text here\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7231,
+      "length": 9,
+      "value": "\"INSTANT\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7263,
+      "length": 13,
+      "value": "\"TEN_MINUTES\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7302,
+      "length": 16,
+      "value": "\"THIRTY_MINUTES\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7346,
+      "length": 20,
+      "value": "\"SAME_BUSSINESS_DAY\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7394,
+      "length": 19,
+      "value": "\"NEXT_BUSINESS_DAY\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7441,
+      "length": 19,
+      "value": "\"TWO_BUSINESS_DAYS\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7489,
+      "length": 20,
+      "value": "\"FIVE_BUSINESS_DAYS\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7552,
+      "length": 37,
+      "value": "\"THIRTY_MINUTES_TO_TWO_BUSINESS_DAYS\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7231,
+      "length": 9,
+      "value": "\"INSTANT\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7263,
+      "length": 13,
+      "value": "\"TEN_MINUTES\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7302,
+      "length": 16,
+      "value": "\"THIRTY_MINUTES\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7346,
+      "length": 20,
+      "value": "\"SAME_BUSSINESS_DAY\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7394,
+      "length": 19,
+      "value": "\"NEXT_BUSINESS_DAY\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7441,
+      "length": 19,
+      "value": "\"TWO_BUSINESS_DAYS\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7489,
+      "length": 20,
+      "value": "\"FIVE_BUSINESS_DAYS\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/Quote.swift",
+      "kind": "StringLiteral",
+      "offset": 7552,
+      "length": 37,
+      "value": "\"THIRTY_MINUTES_TO_TWO_BUSINESS_DAYS\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/ContainerView.swift",
@@ -11688,35 +11820,42 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1480,
-      "length": 20,
-      "value": "\"IdentityUnverified\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 1530,
-      "length": 30,
-      "value": "\"IdentityVerificationRequired\""
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
-      "kind": "StringLiteral",
-      "offset": 1589,
+      "offset": 1478,
       "length": 19,
       "value": "\"TWO_BUSINESS_DAYS\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1639,
+      "offset": 1528,
       "length": 18,
       "value": "\"SECOND_LAST_NAME\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
       "kind": "StringLiteral",
-      "offset": 1689,
+      "offset": 1600,
+      "length": 40,
+      "value": "\"SourceCardAndReceivingCardMustBeUnique\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1672,
+      "length": 30,
+      "value": "\"IdentityVerificationRequired\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1735,
+      "length": 20,
+      "value": "\"IdentityUnverified\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Constants.swift",
+      "kind": "StringLiteral",
+      "offset": 1791,
       "length": 98,
       "value": "\"https:\/\/docs.google.com\/document\/d\/16P5iCwoEzN0Bk8NlGorOIRXMmZJZxU-pm6N_xKn_Y8A\/edit?usp=sharing\""
     },
@@ -12136,7 +12275,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Presentantion\/ViewModel\/SenderCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 310,
+      "offset": 313,
       "length": 5,
       "value": "false"
     },
@@ -12276,35 +12415,35 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 762,
+      "offset": 861,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 795,
+      "offset": 894,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 893,
+      "offset": 992,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 953,
+      "offset": 1052,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1217,
+      "offset": 1418,
       "length": 5,
       "value": "false"
     },
@@ -12544,7 +12683,7 @@
       "kind": "StringLiteral",
       "offset": 2679,
       "length": 5,
-      "value": "\"6.0\""
+      "value": "\"7.2\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Data\/Model\/TransferType.swift",
@@ -12731,9 +12870,16 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/VisaView.swift",
       "kind": "BooleanLiteral",
-      "offset": 370,
+      "offset": 340,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/VisaView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 376,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/Controls\/PrimaryButton.swift",
@@ -12766,39 +12912,46 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 726,
+      "offset": 830,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 775,
+      "offset": 879,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "Array",
-      "offset": 904,
+      "offset": 1008,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1019,
+      "offset": 1123,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1063,
+      "offset": 1217,
       "length": 4,
       "value": "true"
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardViewModel.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1279,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
       "offset": 1290,
@@ -13410,6 +13563,34 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
       "kind": "StringLiteral",
+      "offset": 8060,
+      "length": 31,
+      "value": "\"HowWouldYouLikeToPay - Viewed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8131,
+      "length": 50,
+      "value": "\"HowWouldYouLikeToPay - New Source Account Tapped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8229,
+      "length": 48,
+      "value": "\"HowWouldYouLikeToPay - Source Account Selected\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8320,
+      "length": 36,
+      "value": "\"HowWouldYouLikeToPay - Back Tapped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
       "offset": 1290,
       "length": 23,
       "value": "\"CashLocation - Viewed\""
@@ -14015,13 +14196,48 @@
       "offset": 7976,
       "length": 23,
       "value": "\"VisaBranding - Viewed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8060,
+      "length": 31,
+      "value": "\"HowWouldYouLikeToPay - Viewed\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8131,
+      "length": 50,
+      "value": "\"HowWouldYouLikeToPay - New Source Account Tapped\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8229,
+      "length": 48,
+      "value": "\"HowWouldYouLikeToPay - Source Account Selected\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/MixpanelManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8320,
+      "length": 36,
+      "value": "\"HowWouldYouLikeToPay - Back Tapped\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsInteractor.swift",
       "kind": "BooleanLiteral",
-      "offset": 1041,
+      "offset": 1023,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsInteractor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 9812,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/Widgets\/PartialSheet\/PSViewModifier.swift",
@@ -14488,7 +14704,7 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/DoneButtonTextfield.swift",
       "kind": "StringLiteral",
-      "offset": 2365,
+      "offset": 2381,
       "length": 11,
       "value": "\"ReadyRemitSDK.Coordinator\""
     },
@@ -14516,77 +14732,77 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1201,
+      "offset": 1249,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1246,
+      "offset": 1294,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1291,
+      "offset": 1339,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "Array",
-      "offset": 1574,
+      "offset": 1622,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "Array",
-      "offset": 1623,
+      "offset": 1671,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1740,
+      "offset": 1788,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1816,
+      "offset": 1864,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 1960,
+      "offset": 2008,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2006,
+      "offset": 2054,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2049,
+      "offset": 2097,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 2093,
+      "offset": 2141,
       "length": 5,
       "value": "false"
     },
@@ -14864,13 +15080,6 @@
       "value": "false"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsPresenter.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3089,
-      "length": 4,
-      "value": "true"
-    },
-    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Util\/Extensions\/View+Extensions.swift",
       "kind": "BooleanLiteral",
       "offset": 256,
@@ -14969,6 +15178,13 @@
       "value": "\"PDF\""
     },
     {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferReview\/TransferReviewInteractor.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6176,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/RecipientBank\/RecipientBankInteractor.swift",
       "kind": "BooleanLiteral",
       "offset": 937,
@@ -14977,17 +15193,31 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/WebView.swift",
-      "kind": "StringLiteral",
-      "offset": 1800,
-      "length": 11,
-      "value": "\"ReadyRemitSDK.Coordinator\""
+      "kind": "BooleanLiteral",
+      "offset": 347,
+      "length": 4,
+      "value": "true"
     },
     {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/VisaBranding\/VisaBrandingView.swift",
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/WebView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 631,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/WebView.swift",
       "kind": "BooleanLiteral",
-      "offset": 391,
-      "length": 5,
-      "value": "false"
+      "offset": 656,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/WebView.swift",
+      "kind": "StringLiteral",
+      "offset": 2513,
+      "length": 11,
+      "value": "\"ReadyRemitSDK.Coordinator\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/View Modifiers\/NetworkAPIErrorBanner.swift",
@@ -15104,21 +15334,21 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/HorizontalTextView.swift",
       "kind": "StringLiteral",
-      "offset": 738,
+      "offset": 755,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/HorizontalTextView.swift",
       "kind": "StringLiteral",
-      "offset": 768,
+      "offset": 785,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/UI\/CustomComponents\/HorizontalTextView.swift",
       "kind": "BooleanLiteral",
-      "offset": 886,
+      "offset": 903,
       "length": 5,
       "value": "false"
     },
@@ -15286,14 +15516,14 @@
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Presentantion\/State\/SenderCardViewState.swift",
       "kind": "BooleanLiteral",
-      "offset": 382,
+      "offset": 387,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/new_arch\/Presentantion\/State\/SenderCardViewState.swift",
       "kind": "Array",
-      "offset": 423,
+      "offset": 428,
       "length": 2,
       "value": "[]"
     },
@@ -15411,43 +15641,29 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
+      "kind": "StringLiteral",
+      "offset": 3723,
+      "length": 7,
+      "value": "\"10000\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 4613,
+      "offset": 4706,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 5892,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 5925,
+      "offset": 6002,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 6325,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6721,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/TransferDetails\/TransferDetailsViewModel.swift",
-      "kind": "IntegerLiteral",
-      "offset": 7022,
+      "offset": 6398,
       "length": 1,
       "value": "2"
     },
@@ -15499,6 +15715,13 @@
       "offset": 357,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/PushToCard\/PushToCardView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 400,
+      "length": 3,
+      "value": "580"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/ReadyRemitSDK\/Screens\/RecipientBank\/RecipientBankViewModel.swift",

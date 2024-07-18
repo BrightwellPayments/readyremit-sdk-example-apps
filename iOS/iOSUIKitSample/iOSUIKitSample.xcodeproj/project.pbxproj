@@ -16,6 +16,7 @@
 		A001F2892A096378003DA650 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001F2882A096378003DA650 /* API.swift */; };
 		A001F29F2A096C54003DA650 /* ReadyRemitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2912A096C53003DA650 /* ReadyRemitSDK.xcframework */; };
 		A001F2A02A096C54003DA650 /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A001F2912A096C53003DA650 /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A03D98892C49DCB000397249 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A03D98882C49DCB000397249 /* Swinject */; };
 		A042FD412A3155550041DFE9 /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */; };
 		A042FD422A3155550041DFE9 /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A042FD402A3155550041DFE9 /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 			files = (
 				A001F29F2A096C54003DA650 /* ReadyRemitSDK.xcframework in Frameworks */,
 				A042FD412A3155550041DFE9 /* VisaSensoryBranding.xcframework in Frameworks */,
+				A03D98892C49DCB000397249 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +138,9 @@
 			dependencies = (
 			);
 			name = iOSUIKitSample;
+			packageProductDependencies = (
+				A03D98882C49DCB000397249 /* Swinject */,
+			);
 			productName = iOSUIKitSample;
 			productReference = A001F2712A093F44003DA650 /* iOSUIKitSample.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +170,9 @@
 				es,
 			);
 			mainGroup = A001F2682A093F44003DA650;
+			packageReferences = (
+				A03D98872C49DCB000397249 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = A001F2722A093F44003DA650 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -417,6 +425,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A03D98872C49DCB000397249 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A03D98882C49DCB000397249 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A03D98872C49DCB000397249 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A001F2692A093F44003DA650 /* Project object */;
 }
