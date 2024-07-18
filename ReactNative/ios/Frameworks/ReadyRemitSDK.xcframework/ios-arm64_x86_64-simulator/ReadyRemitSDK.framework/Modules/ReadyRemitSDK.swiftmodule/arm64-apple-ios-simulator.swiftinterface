@@ -1,25 +1,23 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ReadyRemitSDK
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ReadyRemitSDK
 import AVFoundation
 import Combine
+import DeveloperToolsSupport
 import Foundation
-import LaunchDarkly
-import Mixpanel
 import Network
 import PDFKit
 @_exported import ReadyRemitSDK
 import Swift
 import SwiftUI
 import Swinject
-import SwinjectAutoregistration
 import SystemConfiguration
 import UIKit
 import VisaSensoryBranding
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 extension UIKit.UIApplication : UIKit.UIGestureRecognizerDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
 }
@@ -122,11 +120,11 @@ extension Swift.Collection where Self.Element : Swift.StringProtocol {
   @objc public static let shared: ReadyRemitSDK.ReadyRemit
   @objc public var appearance: ReadyRemitSDK.ReadyRemitAppearance
   @objc public var environment: ReadyRemitSDK.ReadyRemitEnvironment
-  public func launch(inNavigation: UIKit.UINavigationController, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
-  public func launch(onLoad: @escaping (SwiftUI.AnyView) -> Swift.Void, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  public func launch(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  public func launch(onLoad: @escaping (SwiftUI.AnyView) -> Swift.Void, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
   public func launchEntrySwiftUi(authToken: Swift.String, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)?) -> SwiftUI.AnyView
-  @objc public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
-  public func launchAFT(onLoad: @escaping (SwiftUI.AnyView) -> Swift.Void, delegate: ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  @objc public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
+  public func launchAFT(onLoad: @escaping (SwiftUI.AnyView) -> Swift.Void, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil)
   @objc public func close(afterSeconds time: Swift.Double)
   @objc public func close()
   @objc public func languageSelected(_ lang: Swift.String)
@@ -144,7 +142,7 @@ public typealias Headers = [Swift.String : Swift.String]
 @objc public class ReadyRemitObjcOAuthToken : ObjectiveC.NSObject, Swift.Decodable {
   @objc public init(tokenType: Swift.String, accessToken: Swift.String, expiresInSeconds: Swift.Int)
   @objc deinit
-  required public init(from decoder: Swift.Decoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
 }
 @objc public class ReadyRemitFontScheme : ObjectiveC.NSObject {
   @objc public static var defaultFamily: Swift.String
@@ -153,19 +151,19 @@ public typealias Headers = [Swift.String : Swift.String]
   @objc deinit
 }
 public struct InjectSettings {
-  public static var resolver: Swinject.Resolver?
+  public static var resolver: (any Swinject.Resolver)?
 }
 @propertyWrapper public struct Inject<Value> {
   public var wrappedValue: Value {
     get
   }
   public init()
-  public init(name: Swift.String? = nil, resolver: Swinject.Resolver? = nil)
-  public init<Wrapped>(name: Swift.String? = nil, resolver: Swinject.Resolver? = nil) where Value == Wrapped?
+  public init(name: Swift.String? = nil, resolver: (any Swinject.Resolver)? = nil)
+  public init<Wrapped>(name: Swift.String? = nil, resolver: (any Swinject.Resolver)? = nil) where Value == Wrapped?
 }
 @propertyWrapper @_Concurrency.MainActor(unsafe) public struct InjectStateObject<Value> : SwiftUI.DynamicProperty where Value : Combine.ObservableObject {
   @_Concurrency.MainActor(unsafe) public init()
-  @_Concurrency.MainActor(unsafe) public init(name: Swift.String? = nil, resolver: Swinject.Resolver? = nil)
+  @_Concurrency.MainActor(unsafe) public init(name: Swift.String? = nil, resolver: (any Swinject.Resolver)? = nil)
   @_Concurrency.MainActor(unsafe) public var wrappedValue: Value {
     get
   }
@@ -213,7 +211,7 @@ extension ReadyRemitSDK.ReadyRemit {
     @objc public init(dstCountryIso3Code: Swift.String, dstCurrencyIso3Code: Swift.String, srcCurrencyIso3Code: Swift.String, transferMethod: Swift.String, quoteBy: Swift.String, amount: Swift.String, fee: Swift.Int, recipientId: Swift.String, recipientAccountId: Swift.String?, fields: [ReadyRemitSDK.ReadyRemit.RequestField]?, quoteHistoryId: Swift.String, sourceAccountId: Swift.String? = nil)
     @objc public func toJSON() -> Swift.String?
     @objc deinit
-    public func encode(to encoder: Swift.Encoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
   }
   @objc public class RequestField : ObjectiveC.NSObject, Swift.Codable {
     @objc final public let id: Swift.String
@@ -223,8 +221,8 @@ extension ReadyRemitSDK.ReadyRemit {
     @objc final public let displayText: Swift.String
     @objc public init(id: Swift.String, name: Swift.String, type: Swift.String, value: Swift.String, displayText: Swift.String)
     @objc deinit
-    public func encode(to encoder: Swift.Encoder) throws
-    required public init(from decoder: Swift.Decoder) throws
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
   }
 }
 @_inheritsConvenienceInitializers @objc public class ReadyRemitAppearance : ObjectiveC.NSObject {
