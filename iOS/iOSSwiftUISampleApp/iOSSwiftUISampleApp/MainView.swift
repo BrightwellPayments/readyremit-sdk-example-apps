@@ -16,11 +16,7 @@ struct MainView: View {
                 .foregroundColor(Color.white)
                 .background(Color.blue)
                 .cornerRadius(10)
-                NavigationLink(
-                    destination: viewModel.destView,
-                    isActive: $viewModel.showNextScreen,
-                label: { })
-            }
+            }.fullScreenCover(isPresented: $viewModel.openReadyRemitSDK, content: { viewModel.readyRemitSDKView })
         }
     }
 }

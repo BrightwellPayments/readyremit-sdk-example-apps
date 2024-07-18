@@ -3,26 +3,25 @@ import UIKit
 import ReadyRemitSDK
 
 internal protocol MainViewState  {
-    var showNextScreen: Bool { get set }
+    var openReadyRemitSDK: Bool { get set }
 }
 
 internal class MainViewModel: ObservableObject, MainViewState {
     
-    @Published var showNextScreen: Bool = false
+    @Published var openReadyRemitSDK: Bool = false
+    var readyRemitSDKView = AnyView(Color.white)
     
-    var destView = AnyView(Color.white)
-    
-    let senderId = "<Your Sender ID>"
-    let clientId = "<Your Client ID>"
-    let clientSecret = "<Your Client Secret>"
+    let senderId = "3d3b2929-aaae-4eb3-b26f-4b6bc83cde26"
+    let clientId = "ymZyGsLmCmhz7GMSQQ5OKUVxYrtuHfot"
+    let clientSecret = "PoPLoW8Y0EqayFhvfLEVcUb-qGTenDETN-cYww_9R5_Z99IVc4bfo6qP4dUjjikT"
     
     func onTapStartSDK() {
         changeFont()
         changeStyle()
         ReadyRemit.shared.environment = .sandbox
         ReadyRemit.shared.launch(onLoad: { view in
-            self.destView = view
-            self.showNextScreen = true
+            self.readyRemitSDKView = view
+            self.openReadyRemitSDK = true
         }, delegate: self) { }
     }
     
