@@ -11,9 +11,9 @@ internal class MainViewModel: ObservableObject, MainViewState {
     @Published var openReadyRemitSDK: Bool = false
     var readyRemitSDKView = AnyView(Color.white)
     
-    let senderId = "3d3b2929-aaae-4eb3-b26f-4b6bc83cde26"
-    let clientId = "ymZyGsLmCmhz7GMSQQ5OKUVxYrtuHfot"
-    let clientSecret = "PoPLoW8Y0EqayFhvfLEVcUb-qGTenDETN-cYww_9R5_Z99IVc4bfo6qP4dUjjikT"
+    let senderId = "<Your Sender ID>"
+    let clientId = "<Your Client ID>"
+    let clientSecret = "<Your Client Secret>"
     
     func onTapStartSDK() {
         changeFont()
