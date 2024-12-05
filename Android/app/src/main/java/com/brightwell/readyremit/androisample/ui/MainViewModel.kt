@@ -2,22 +2,22 @@ package com.brightwell.readyremit.androisample.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.brightwell.readyremit.androisample.network.ReadyRemitService
 import com.brightwell.readyremit.androisample.network.model.AuthRequest
 import com.brightwell.readyremit.sdk.ReadyRemitAuth
 import com.brightwell.readyremit.sdk.ReadyRemitAuthCallback
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-class MainViewModel {
+class MainViewModel : ViewModel() {
 
     private val service: ReadyRemitService by lazy {
-        Retrofit.Builder().baseUrl("https://sandbox-api.readyremit.com")
+        Retrofit.Builder().baseUrl("https://apim-rr-uat-eastus-001.azure-api.net/")
             .client(
                 OkHttpClient.Builder()
                     .addInterceptor(HttpLoggingInterceptor().apply {
@@ -44,18 +44,14 @@ class MainViewModel {
         callback: ReadyRemitAuthCallback
     ) {
         val request = AuthRequest(clientId, clientSecret, senderId)
-        runBlocking {
+        viewModelScope.launch {
             try {
                 val token = service.auth(request).token
-                withContext(Dispatchers.Main) {
-                    _auth.value = ReadyRemitAuth(token, token)
-                    callback.onAuthSucceeded(ReadyRemitAuth(token, token))
-                }
+                _auth.value = ReadyRemitAuth(token, token)
+                callback.onAuthSucceeded(ReadyRemitAuth(token, token))
             } catch (e: Exception) {
-                withContext(Dispatchers.Main) {
-                    _error.value = e.message
-                    callback.onAuthFailed()
-                }
+                _error.value = e.message
+                callback.onAuthFailed()
             }
         }
     }
