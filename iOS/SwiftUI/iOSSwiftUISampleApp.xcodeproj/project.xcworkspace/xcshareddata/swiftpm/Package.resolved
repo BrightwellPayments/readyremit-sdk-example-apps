@@ -1,0 +1,24 @@
+{
+  "originHash" : "d9f5d1f35f838c03c2aed78344dd199756f41ba6381d2b7c7701dd2966dd6100",
+  "pins" : [
+    {
+      "identity" : "readyremit-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BrightwellPayments/readyremit-sdk-ios.git",
+      "state" : {
+        "branch" : "9.0",
+        "revision" : "8ec29ffd768d03f7bd0b73ab1eeca750f8998517"
+      }
+    },
+    {
+      "identity" : "swinject",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Swinject/Swinject.git",
+      "state" : {
+        "revision" : "be9dbcc7b86811bc131539a20c6f9c2d3e56919f",
+        "version" : "2.9.1"
+      }
+    }
+  ],
+  "version" : 3
+}
