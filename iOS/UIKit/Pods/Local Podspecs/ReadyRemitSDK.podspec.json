@@ -1,0 +1,31 @@
+{
+  "name": "ReadyRemitSDK",
+  "version": "9.0",
+  "summary": "Cross-border payouts, remittances & disbursements made easy",
+  "description": "ReadyRemit is designed to help you capture more revenue by quickly and\nseamlessly integrating global remittances into your product via API or SDK.\nReadyRemit takes care of the heavy lifting by forming partnerships, building infrastructure,\nand navigating the complex compliance and regulatory requirements needed.",
+  "homepage": "https://www.brightwell.com/readyremit",
+  "license": {
+    "type": "Proprietary",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Brightwell": "contact@brightwell.com"
+  },
+  "source": {
+    "git": "https://github.com/BrightwellPayments/readyremit-sdk-ios.git",
+    "branch": "9.0",
+    "submodules": true
+  },
+  "platforms": {
+    "ios": "15.0"
+  },
+  "vendored_frameworks": [
+    "Cocoapods/ReadyRemitSDK.xcframework",
+    "Cocoapods/VisaSensoryBranding.xcframework"
+  ],
+  "dependencies": {
+    "Swinject": [
+      "2.9.1"
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.2 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
+// swift-module-flags: -target x86_64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -enforce-exclusivity=checked -O -module-name ReadyRemitSDK
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import AVFoundation
+import Combine
+import CommonCrypto
+import DeveloperToolsSupport
+import Foundation
+import PDFKit
+@_exported import ReadyRemitSDK
+import Swift
+import SwiftUI
+import SystemConfiguration
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+#if compiler(>=5.3) && $RetroactiveAttribute
+extension UIKit.UIApplication : @retroactive UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+#else
+extension UIKit.UIApplication : UIKit.UIGestureRecognizerDelegate {
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+}
+#endif
+
+@objc public enum RSP : Swift.Int, Swift.Sendable {
+  case VISA, MASTERCARD, MONEYGRAM, CONVERA
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum ReachabilityError : Swift.Error {
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension Foundation.NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+final public class Reachability : Swift.Sendable {
+  public typealias NetworkReachable = (ReadyRemitSDK.Reachability) -> ()
+  public typealias NetworkUnreachable = (ReadyRemitSDK.Reachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: ReadyRemitSDK.Reachability.NetworkStatus, b: ReadyRemitSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    case unavailable, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    @available(*, deprecated, renamed: "unavailable")
+    nonisolated(unsafe) public static let none: ReadyRemitSDK.Reachability.Connection
+    public static func == (a: ReadyRemitSDK.Reachability.Connection, b: ReadyRemitSDK.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  nonisolated(unsafe) final public var whenReachable: ReadyRemitSDK.Reachability.NetworkReachable?
+  nonisolated(unsafe) final public var whenUnreachable: ReadyRemitSDK.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  nonisolated(unsafe) final public var allowsCellularConnection: Swift.Bool
+  nonisolated(unsafe) final public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  final public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  final public var currentReachabilityStatus: ReadyRemitSDK.Reachability.Connection {
+    get
+  }
+  final public var connection: ReadyRemitSDK.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  @objc deinit
+}
+extension ReadyRemitSDK.Reachability {
+  final public func startNotifier() throws
+  final public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  final public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  final public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  final public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  final public var description: Swift.String {
+    get
+  }
+}
+@objc public enum ReadyRemitEnvironment : Swift.Int, Swift.Sendable {
+  case production, sandbox
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor final public class ReadyRemit : ObjectiveC.NSObject, Swift.Sendable {
+  @objc @_Concurrency.MainActor public static let shared: ReadyRemitSDK.ReadyRemit
+  @objc @_Concurrency.MainActor final public var environment: ReadyRemitSDK.ReadyRemitEnvironment {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor final public var appearance: ReadyRemitSDK.ReadyRemitAppearance {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor final public func launch(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil, rsp: ReadyRemitSDK.RSP? = nil, singleMethod: ReadyRemitSDK.TransferMethod? = nil)
+  @_Concurrency.MainActor final public func launch(onLoad: @escaping (SwiftUICore.AnyView) -> Swift.Void, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil, rsp: ReadyRemitSDK.RSP? = nil, singleMethod: ReadyRemitSDK.TransferMethod? = nil)
+  @objc @_Concurrency.MainActor final public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)? = nil, rsp: ReadyRemitSDK.RSP, singleMethod: ReadyRemitSDK.TransferMethod)
+  @objc @_Concurrency.MainActor final public func launchObjc(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)?)
+  @_Concurrency.MainActor final public func launchTransferDetails(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, transferId: Swift.String, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)?)
+  @objc @_Concurrency.MainActor final public func launchTransferDetailsObjc(inNavigation: UIKit.UINavigationController, delegate: any ReadyRemitSDK.ReadyRemitDelegate, transferId: Swift.String, onLaunch: (() -> Swift.Void)?, onDismiss: (() -> Swift.Void)?)
+  @objc @_Concurrency.MainActor final public func close(afterSeconds time: Swift.Double, onExpireDo: @escaping () -> Swift.Void = { })
+  @objc @_Concurrency.MainActor final public func close()
+  @objc @_Concurrency.MainActor final public func languageSelected(_ lang: Swift.String)
+  @objc @_Concurrency.MainActor final public func dateFormatSelected(_ format: Swift.String)
+  @_Concurrency.MainActor @objc override dynamic public init()
+  @objc deinit
+}
+
+extension UIKit.UIColor {
+  convenience public init(hex: Swift.String)
+}
+@objc public class ReadyRemitObjcOAuthToken : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public init(tokenType: Swift.String, accessToken: Swift.String, expiresInSeconds: Swift.Int)
+  @objc deinit
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum TransferMethod : Swift.Int, Swift.Sendable {
+  case BANK_ACCOUNT
+  case CASH_PICKUP
+  case PUSH_TO_CARD
+  case MOBILE_WALLET
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct RRMDynamicColor : Swift.Sendable {
+  public init(light: SwiftUICore.Color, dark: SwiftUICore.Color)
+  public init(light: UIKit.UIColor, dark: UIKit.UIColor)
+  public init(light: Swift.String, dark: Swift.String)
+}
+final public class ReadyRemitColorScheme : Swift.Sendable {
+  public init()
+  nonisolated(unsafe) final public var background: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var foreground: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var danger: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var dangerLight: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var success: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var divider: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var inputLine: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var icon: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var text: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var textSecondary: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var buttonText: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var buttonColor: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var primary: ReadyRemitSDK.RRMDynamicColor
+  nonisolated(unsafe) final public var primaryLight: ReadyRemitSDK.RRMDynamicColor
+  @objc deinit
+}
+
+@objc public protocol ReadyRemitDelegate {
+  @objc func onAuthTokenRequest(success: @escaping (Swift.String) -> Swift.Void, failure: @escaping () -> Swift.Void)
+  @objc func onSubmitTransfer(transferRequest: ReadyRemitSDK.ReadyRemit.TransferRequest, success: @escaping (Swift.String) -> Swift.Void, failure: @escaping (Swift.String, Swift.String) -> Swift.Void)
+  @objc optional func onSDKClose()
+}
+extension ReadyRemitSDK.ReadyRemit {
+  @objc public class TransferRequest : ObjectiveC.NSObject, Swift.Encodable {
+    @objc final public let dstCountryIso3Code: Swift.String
+    @objc final public let dstCurrencyIso3Code: Swift.String
+    @objc final public let srcCurrencyIso3Code: Swift.String
+    @objc final public let transferMethod: Swift.String
+    @objc final public let quoteBy: Swift.String
+    @objc final public let amount: Swift.Int
+    @objc final public let fee: Swift.Int
+    @objc final public let recipientId: Swift.String
+    @objc final public let recipientAccountId: Swift.String?
+    @objc final public let fields: [ReadyRemitSDK.ReadyRemit.RequestField]?
+    @objc final public let quoteHistoryId: Swift.String?
+    @objc public var sourceAccountId: Swift.String?
+    @objc public init(dstCountryIso3Code: Swift.String, dstCurrencyIso3Code: Swift.String, srcCurrencyIso3Code: Swift.String, transferMethod: Swift.String, quoteBy: Swift.String, amount: Swift.Int, fee: Swift.Int, recipientId: Swift.String, recipientAccountId: Swift.String?, fields: [ReadyRemitSDK.ReadyRemit.RequestField]?, quoteHistoryId: Swift.String, sourceAccountId: Swift.String? = nil)
+    @objc public func toJSON() -> Swift.String?
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+  }
+  @objc public class RequestField : ObjectiveC.NSObject, Swift.Codable {
+    @objc final public let id: Swift.String
+    @objc final public let name: Swift.String
+    @objc final public let type: Swift.String
+    @objc final public let value: Swift.String
+    @objc final public let displayText: Swift.String
+    @objc public init(id: Swift.String, name: Swift.String, type: Swift.String, value: Swift.String, displayText: Swift.String)
+    @objc deinit
+    public func encode(to encoder: any Swift.Encoder) throws
+    required public init(from decoder: any Swift.Decoder) throws
+  }
+}
+public enum ReadyRemitDateFormats : Swift.String, Swift.Sendable {
+  case yearMonthDay
+  case dayMonthYear
+  case monthDayYear
+  case fullDate
+  case locale
+  public var format: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+
+extension UIKit.UIFont {
+  public static func registerSFFont(withFilenameString filenameString: Swift.String)
+}
+@_inheritsConvenienceInitializers @objc final public class ReadyRemitAppearance : ObjectiveC.NSObject, Swift.Sendable {
+  public init(colors: ReadyRemitSDK.ReadyRemitColorScheme)
+  @objc public init(styles: Foundation.NSDictionary)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension ReadyRemitSDK.RSP : Swift.Equatable {}
+extension ReadyRemitSDK.RSP : Swift.Hashable {}
+extension ReadyRemitSDK.RSP : Swift.RawRepresentable {}
+@available(*, unavailable, renamed: "Connection")
+extension ReadyRemitSDK.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension ReadyRemitSDK.Reachability.NetworkStatus : Swift.Hashable {}
+extension ReadyRemitSDK.Reachability.Connection : Swift.Equatable {}
+extension ReadyRemitSDK.Reachability.Connection : Swift.Hashable {}
+extension ReadyRemitSDK.ReadyRemitEnvironment : Swift.Equatable {}
+extension ReadyRemitSDK.ReadyRemitEnvironment : Swift.Hashable {}
+extension ReadyRemitSDK.ReadyRemitEnvironment : Swift.RawRepresentable {}
+extension ReadyRemitSDK.TransferMethod : Swift.Equatable {}
+extension ReadyRemitSDK.TransferMethod : Swift.Hashable {}
+extension ReadyRemitSDK.TransferMethod : Swift.RawRepresentable {}
+extension ReadyRemitSDK.ReadyRemitDateFormats : Swift.Equatable {}
+extension ReadyRemitSDK.ReadyRemitDateFormats : Swift.Hashable {}
+extension ReadyRemitSDK.ReadyRemitDateFormats : Swift.RawRepresentable {}

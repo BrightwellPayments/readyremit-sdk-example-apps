@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '15.0'
+
+target 'iOSUIKitSample' do
+  use_frameworks!
+
+  # Pods for iOSUIKitSample
+  pod 'ReadyRemitSDK', :git => 'https://github.com/BrightwellPayments/readyremit-sdk-ios.git', :branch => '9.0'
+
+end

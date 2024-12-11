@@ -24,7 +24,7 @@ This repository contains examples of how to integrate the ReadyRemit SDK into yo
 
  ### iOS Examples
 
-- [UIKit Example](https://github.com/BrightwellPayments/readyremit-sdk-example-apps/tree/main/iOS/iOSUIKitSample): demonstrates how to integrate the ReadyRemit SDK into an iOS app using UIKit.
+- [UIKit + Cocoapods Example](https://github.com/BrightwellPayments/readyremit-sdk-example-apps/tree/main/iOS/UIKit): demonstrates how to integrate the ReadyRemit SDK into an iOS app using UIKit.
 - [SwiftUI + Swift Package Manager Example](https://github.com/BrightwellPayments/readyremit-sdk-example-apps/tree/main/iOS/SwiftUI): demonstrates how to integrate the ReadyRemit SDK into an iOS app using SwiftUI.
 
 ### Android Examples

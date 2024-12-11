@@ -1,0 +1,11 @@
+framework module ReadyRemitSDK {
+  umbrella header "ReadyRemitSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module ReadyRemitSDK.Swift {
+  header "ReadyRemitSDK-Swift.h"
+  requires objc
+}
