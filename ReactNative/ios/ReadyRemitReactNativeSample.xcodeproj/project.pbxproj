@@ -15,11 +15,7 @@
 		7699B88040F8A987B510C191 /* libPods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReadyRemitReactNativeSample-ReadyRemitReactNativeSampleTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A03582CB2A8C200A0037165B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A03582CD2A8C200A0037165B /* Localizable.strings */; };
-		A0B9D4F02A261FC2004F54BC /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E8BD902A1FF76200523A17 /* VisaSensoryBranding.xcframework */; };
-		A0B9D4F12A261FC2004F54BC /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0E8BD902A1FF76200523A17 /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A0ED144B2BF3C39D0097E88E /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A0ED144A2BF3C39D0097E88E /* PrivacyInfo.xcprivacy */; };
-		A0F33C3A2B59D8A3006749E1 /* ReadyRemitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */; };
-		A0F33C3B2B59D8A3006749E1 /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B7C695CC2935058800BC653A /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7C695D2293505C500BC653A /* ReadyRemitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C695D1293505C500BC653A /* ReadyRemitViewController.m */; };
 		B7C695D5293505F200BC653A /* RCTReadyRemitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C695D4293505F200BC653A /* RCTReadyRemitModule.m */; };
 /* End PBXBuildFile section */
@@ -33,21 +29,6 @@
 			remoteInfo = ReadyRemitReactNativeSample;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A0B9D4F22A261FC2004F54BC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A0F33C3B2B59D8A3006749E1 /* ReadyRemitSDK.xcframework in Embed Frameworks */,
-				A0B9D4F12A261FC2004F54BC /* VisaSensoryBranding.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* ReadyRemitReactNativeSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadyRemitReactNativeSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,9 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B9D4F02A261FC2004F54BC /* VisaSensoryBranding.xcframework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-ReadyRemitReactNativeSample.a in Frameworks */,
-				A0F33C3A2B59D8A3006749E1 /* ReadyRemitSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +221,6 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
-				A0B9D4F22A261FC2004F54BC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -14,14 +14,20 @@ RCT_EXPORT_MODULE();
 
 
 RCT_EXPORT_METHOD(setAuthToken: (NSString *)token :(NSString *)errorCode) {
-  _authSuccessCallback(token);
+  dispatch_async(dispatch_get_main_queue(), ^{
+    self->_authSuccessCallback(token);
+  });
 }
 
 RCT_EXPORT_METHOD(setTransferId: (NSString *)transferId :(NSString *)errorCode :(NSString *)errorMessage) {
     if (transferId != nil && transferId.length > 0) {
-        _transferSuccessCallback(transferId);
+      dispatch_async(dispatch_get_main_queue(), ^{
+        self->_transferSuccessCallback(transferId);
+      });
   } else {
-    _transferFailCallback(errorMessage, errorCode);
+    dispatch_async(dispatch_get_main_queue(), ^{
+      self->_transferFailCallback(errorMessage, errorCode);
+    });
   }
 }
 
@@ -31,8 +37,6 @@ RCT_EXPORT_METHOD(launch: (NSString *)environment :(NSString *)language :(NSDict
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:readyRemitViewController];
     [readyRemitViewController setModalPresentationStyle: UIModalPresentationOverCurrentContext];
     [navigationController setModalPresentationStyle: UIModalPresentationOverCurrentContext];
-
-    ReadyRemitFontScheme.defaultFamily = [styles valueForKeyPath:@"fonts.default.family"];
     
     if ([environment isEqual:@"PRODUCTION"]) {
       readyRemitViewController.environment = ReadyRemitEnvironmentProduction;

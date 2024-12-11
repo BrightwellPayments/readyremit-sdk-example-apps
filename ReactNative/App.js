@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Button, SafeAreaView } from 'react-native';
 import { NativeModules, NativeEventEmitter } from 'react-native'
 import onAuth from './api/Auth';
+import { readyRemitStyles } from './theme/theme';
 
 const App = () => {
   const { ReadyRemitModule } = NativeModules;
@@ -52,7 +53,7 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <Button title='Start SDK' onPress={() => ReadyRemitModule.launch(readyRemitEnvironment, readyRemitLanguage, null)}>Start ReadyRemitSDK</Button>
+      <Button title='Start SDK' onPress={() => ReadyRemitModule.launch(readyRemitEnvironment, readyRemitLanguage, readyRemitStyles)}>Start ReadyRemitSDK</Button>
     </SafeAreaView>
   );
 };
