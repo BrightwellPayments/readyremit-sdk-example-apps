@@ -16,9 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     private val viewModel: MainViewModel = MainViewModel()
 
-    private val clientID = "ymZyGsLmCmhz7GMSQQ5OKUVxYrtuHfot"
-    private val clientSecret = "PoPLoW8Y0EqayFhvfLEVcUb-qGTenDETN-cYww_9R5_Z99IVc4bfo6qP4dUjjikT"
-    private val senderID = "3d3b2929-aaae-4eb3-b26f-4b6bc83cde26"
+    private val clientID = "<Your Client ID Here>"
+    private val clientSecret = "<Your Client Secret Here>"
+    private val senderID = "<Your Sender ID Here>"
 
     companion object {
         private const val REQUEST_CODE = 1
