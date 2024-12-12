@@ -12,33 +12,13 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
 		96905EF65AED1B983A6B3ABC /* libPods-ExpoSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58EEBF8E8E6FB1BC6CAF49B5 /* libPods-ExpoSampleApp.a */; };
-		A0BA3F312C49E5E200103E2E /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = A0BA3F302C49E5E200103E2E /* Swinject */; };
 		A0BA3F362C49E5F100103E2E /* RCTReadyRemitModule.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA3F332C49E5F100103E2E /* RCTReadyRemitModule.m */; };
 		A0BA3F372C49E5F100103E2E /* ReadyRemitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BA3F352C49E5F100103E2E /* ReadyRemitViewController.m */; };
-		A0BA3F3A2C49E60A00103E2E /* ReadyRemitSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BA3F382C49E60A00103E2E /* ReadyRemitSDK.xcframework */; };
-		A0BA3F3B2C49E60A00103E2E /* ReadyRemitSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0BA3F382C49E60A00103E2E /* ReadyRemitSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A0BA3F3C2C49E60A00103E2E /* VisaSensoryBranding.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0BA3F392C49E60A00103E2E /* VisaSensoryBranding.xcframework */; };
-		A0BA3F3D2C49E60A00103E2E /* VisaSensoryBranding.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A0BA3F392C49E60A00103E2E /* VisaSensoryBranding.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AB3226085C4848C480D87A59 /* noop-file.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA36A793DDC421999FE3642 /* noop-file.swift */; };
 		B18059E884C0ABDD17F3DC3D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC715A2D49A985799AEE119 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
 		D7B034EB0047C6E7622B92BE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = C6E2B193C11FE6FEB3903EF7 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A0BA3F3E2C49E60A00103E2E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A0BA3F3B2C49E60A00103E2E /* ReadyRemitSDK.xcframework in Embed Frameworks */,
-				A0BA3F3D2C49E60A00103E2E /* VisaSensoryBranding.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		13B07F961A680F5B00A75B9A /* ExpoSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpoSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,9 +50,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96905EF65AED1B983A6B3ABC /* libPods-ExpoSampleApp.a in Frameworks */,
-				A0BA3F3C2C49E60A00103E2E /* VisaSensoryBranding.xcframework in Frameworks */,
-				A0BA3F312C49E5E200103E2E /* Swinject in Frameworks */,
-				A0BA3F3A2C49E60A00103E2E /* ReadyRemitSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,16 +165,13 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				A0BA3F3E2C49E60A00103E2E /* Embed Frameworks */,
+				906155C1D5D20E58D7F9471E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ExpoSampleApp;
-			packageProductDependencies = (
-				A0BA3F302C49E5E200103E2E /* Swinject */,
-			);
 			productName = ExpoSampleApp;
 			productReference = 13B07F961A680F5B00A75B9A /* ExpoSampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -224,9 +198,6 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
-			packageReferences = (
-				A0BA3F2F2C49E5E200103E2E /* XCRemoteSwiftPackageReference "Swinject" */,
-			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -318,6 +289,9 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/ExpoFileSystem/ExpoFileSystem_privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/RCTI18nStrings.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Swinject/Swinject.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-launcher/EXDevLauncher.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/expo-dev-menu/EXDevMenu.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -325,10 +299,33 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoConstants_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ExpoFileSystem_privacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCTI18nStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Swinject.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevLauncher.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXDevMenu.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpoSampleApp/Pods-ExpoSampleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		906155C1D5D20E58D7F9471E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExpoSampleApp/Pods-ExpoSampleApp-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ReadyRemitSDK/ReadyRemitSDK.framework/ReadyRemitSDK",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/ReadyRemitSDK/VisaSensoryBranding.framework/VisaSensoryBranding",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReadyRemitSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisaSensoryBranding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExpoSampleApp/Pods-ExpoSampleApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -473,7 +470,10 @@
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = false;
@@ -531,7 +531,10 @@
 				);
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/usr/lib/swift\"$(inherited)\"";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = false;
@@ -561,25 +564,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A0BA3F2F2C49E5E200103E2E /* XCRemoteSwiftPackageReference "Swinject" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Swinject/Swinject.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.9.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A0BA3F302C49E5E200103E2E /* Swinject */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A0BA3F2F2C49E5E200103E2E /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = Swinject;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
