@@ -30,6 +30,7 @@ This repository contains examples of how to integrate the ReadyRemit SDK into yo
 ### Android Examples
 
 - [XML Example](https://github.com/BrightwellPayments/readyremit-sdk-example-apps/tree/main/Android/XML): demonstrates how to integrate the ReadyRemit SDK into an Android app using Kotlin.
+- [Compose Example](https://github.com/BrightwellPayments/readyremit-sdk-example-apps/tree/main/Android/Compose): demonstrates how to integrate the ReadyRemit SDK into an Android app using Kotlin and Jetpack Compose.
 
 ### React Native Example
 
