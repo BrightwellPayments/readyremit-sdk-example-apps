@@ -2,16 +2,17 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
 }
 
 android {
     namespace 'com.brightwell.readyremit.androisample'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.brightwell.readyremit.androisample"
         minSdk 29
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -32,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    kotlin {
+        jvmToolchain(17)
+    }
     buildFeatures {
         dataBinding true
         viewBinding true
@@ -39,15 +43,16 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.3.2'
+        kotlinCompilerExtensionVersion '1.5.2'
     }
 }
 
 dependencies {
 
     // ReadyRemit SDK necessary libs
-    implementation files('libs/readyremit.aar')
-    implementation files('libs/visa-sensory-branding-2.0.aar')
+    //implementation files('libs/readyremit.aar')
+    //implementation files('libs/visa-sensory-branding-2.0.aar')
+    implementation "io.github.brightwellpayments:ReadyRemitSDK:9.2"
 
     // Core
     implementation "androidx.core:core-ktx:1.10.0"
@@ -92,7 +97,7 @@ dependencies {
     // Moshi
     implementation "com.squareup.moshi:moshi:1.14.0"
     implementation "com.squareup.moshi:moshi-adapters:1.14.0"
-    kapt "com.squareup.moshi:moshi-kotlin-codegen:1.14.0"
+    ksp "com.squareup.moshi:moshi-kotlin-codegen:1.14.0"
 
     // Dagger
     implementation "com.google.dagger:dagger:2.50"
