@@ -8,6 +8,6 @@ data class AuthRequest(
     @Json(name = "client_id") var clientId: String,
     @Json(name = "client_secret") var clientSecret: String,
     @Json(name = "sender_id") var senderId: String,
-    @Json(name = "audience") val audience: String = "https://uat-api.readyremit.com",
+    @Json(name = "audience") val audience: String = "https://dev-api.readyremit.com",
     @Json(name = "grant_type") val grantType: String = "client_credentials"
 )
