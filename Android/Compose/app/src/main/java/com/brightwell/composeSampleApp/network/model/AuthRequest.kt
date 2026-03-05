@@ -1,4 +1,4 @@
-package com.brightwell.readyremit.androisample.network.model
+package com.brightwell.composeSampleApp.network.model
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -8,9 +8,10 @@ data class AuthRequest(
     @Json(name = "client_id") var clientId: String,
     @Json(name = "client_secret") var clientSecret: String,
     @Json(name = "sender_id") var senderId: String,
+    @Json(name = "grant_type") val grantType: String = "client_credentials",
+
     // PROD
-    @Json(name = "audience") val audience: String = "https://api.readyremit.com",
+    // @Json(name = "audience") val audience: String = "https://api.readyremit.com",
     // SANDBOX
-//        @Json(name = "audience") val audience: String = "https://sandbox-api.readyremit.com",
-    @Json(name = "grant_type") val grantType: String = "client_credentials"
+    @Json(name = "audience") val audience: String = "https://sandbox-api.readyremit.com",
 )
