@@ -49,9 +49,9 @@ class MainViewModel : ViewModel() {
 
     fun createSdkConfig(): ReadyRemitConfiguration {
         return ReadyRemitConfiguration(
-            defaultCountry = CountryIso3Code.USA,
+            defaultCountry = null, // CountryIso3Code.USA
             environment = ReadyRemitEnvironment.SANDBOX,
-            fixedRemittanceServiceProvider = RemittanceServiceProvider.VISA,
+            fixedRemittanceServiceProvider = null, // RemittanceServiceProvider.VISA
             fixedTransferMethod = null, // allows any transfer method
             localization = Localization.enUS,
             sourceAccounts = listOf(
@@ -63,7 +63,7 @@ class MainViewModel : ViewModel() {
                 )
             ),
             idleTimeoutInterval = 3 * 60, // measured in seconds
-            appearance = "",
+            appearance = "", // pass JSON value for appearance
             supportedAppearance = SupportedAppearance.Device, // adapts to light or dark mode
             authenticateIntoTheSdk = {
                 withContext(Dispatchers.IO) {
