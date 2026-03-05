@@ -20,6 +20,7 @@ dependencyResolutionManagement {
         mavenCentral()
         mavenLocal()
         maven { url = URI("https://jitpack.io") }
+        mavenLocal()
     }
 }
 

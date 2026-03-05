@@ -1,7 +1,7 @@
 package com.brightwell.composeSampleApp.network
 
-import com.brightwell.readyremit.androisample.network.model.AuthRequest
-import com.brightwell.readyremit.androisample.network.model.AuthResponse
+import com.brightwell.composeSampleApp.network.model.AuthRequest
+import com.brightwell.composeSampleApp.network.model.AuthResponse
 import com.brightwell.readyremit.androisample.network.model.TransferResponse
 import com.brightwell.readyremit.sdk.ReadyRemitTransferRequest
 import retrofit2.Response
