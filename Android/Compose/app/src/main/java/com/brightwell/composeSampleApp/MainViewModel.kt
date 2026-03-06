@@ -70,7 +70,7 @@ class MainViewModel : ViewModel() {
                     try {
                         val senderId = "< your sender id >"
                         val clientId = "<your client id>"
-                        val clientSecret = "<your client id>"
+                        val clientSecret = "<your client secret>"
                         val request = AuthRequest(
                             clientId = clientId,
                             clientSecret = clientSecret,
