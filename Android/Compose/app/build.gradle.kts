@@ -46,12 +46,17 @@ android {
 }
 
 dependencies {
+    // Use, at least, Compose BOM 2025.11.01 which includes
+    // Compose 1.9.5 and AndroidX Core 1.17.0, that requires
+    // compile and target SDK 36
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
+
+    // networking
     implementation(libs.okhttp.core)
     implementation(libs.okhttp.logging)
     implementation(libs.okhttpprofiler)
@@ -61,6 +66,8 @@ dependencies {
     implementation(libs.moshi.core)
     implementation(libs.moshi.adapters)
     ksp(libs.moshi.kotlin.codegen)
+
+    // tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
