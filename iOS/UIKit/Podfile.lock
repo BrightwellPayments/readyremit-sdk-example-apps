@@ -1,29 +1,22 @@
 PODS:
-  - ReadyRemitSDK (9.0):
-    - Swinject (= 2.9.1)
-  - Swinject (2.9.1)
+  - ReadyRemitSDK (10.0.0)
 
 DEPENDENCIES:
-  - ReadyRemitSDK (from `https://github.com/BrightwellPayments/readyremit-sdk-ios.git`, branch `9.0`)
-
-SPEC REPOS:
-  trunk:
-    - Swinject
+  - ReadyRemitSDK (from `https://github.com/BrightwellPayments/readyremit-sdk-ios.git`, tag `10.0.0`)
 
 EXTERNAL SOURCES:
   ReadyRemitSDK:
-    :branch: '9.0'
     :git: https://github.com/BrightwellPayments/readyremit-sdk-ios.git
+    :tag: 10.0.0
 
 CHECKOUT OPTIONS:
   ReadyRemitSDK:
-    :commit: 34eece165d00536e92e6a78783c44702b61993f9
     :git: https://github.com/BrightwellPayments/readyremit-sdk-ios.git
+    :tag: 10.0.0
 
 SPEC CHECKSUMS:
-  ReadyRemitSDK: 3f6299f10ee481ea8cfc636b0f72e7a4d5a296a9
-  Swinject: a827d508c6270da03ec74e558e728917a888fa9b
+  ReadyRemitSDK: 2f8cff2f7070b8591eec50e293fa9319c1bb46b8
 
-PODFILE CHECKSUM: f35298cdf9ff5d3297be6e8e7e80c81f2d703968
+PODFILE CHECKSUM: 3e05ea1781b59b7476f7d3d86376e159db190c96
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

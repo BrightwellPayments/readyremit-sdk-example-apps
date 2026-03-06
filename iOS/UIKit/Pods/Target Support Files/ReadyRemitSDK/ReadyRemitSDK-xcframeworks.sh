@@ -129,6 +129,6 @@ install_xcframework() {
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/ReadyRemitSDK/Cocoapods/ReadyRemitSDK.xcframework" "ReadyRemitSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
-install_xcframework "${PODS_ROOT}/ReadyRemitSDK/Cocoapods/VisaSensoryBranding.xcframework" "ReadyRemitSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/ReadyRemitSDK/ReadyRemitSDK.xcframework" "ReadyRemitSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/ReadyRemitSDK/VisaSensoryBranding.xcframework" "ReadyRemitSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 

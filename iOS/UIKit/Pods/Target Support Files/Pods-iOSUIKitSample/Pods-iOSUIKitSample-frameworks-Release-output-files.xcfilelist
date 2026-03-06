@@ -1,3 +1,0 @@
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReadyRemitSDK.framework
-${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VisaSensoryBranding.framework
