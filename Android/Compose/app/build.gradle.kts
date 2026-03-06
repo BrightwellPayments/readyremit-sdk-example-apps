@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.brightwell.composeSampleApp"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.brightwell.composeSampleApp"
-        minSdk = 29
-        targetSdk = 34
+        minSdk = 26
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -35,22 +35,28 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    kotlin {
+        // JDK used to run the Kotlin compiler
+        // It does not affect the output bytecode
+        jvmToolchain(21)
+    }
     buildFeatures {
         compose = true
     }
 }
 
 dependencies {
-
+    // Use, at least, Compose BOM 2025.11.01 which includes
+    // Compose 1.9.5 and AndroidX Core 1.17.0, that requires
+    // compile and target SDK 36
+    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    implementation(libs.readyremit.sdk)
+
+    // networking
     implementation(libs.okhttp.core)
     implementation(libs.okhttp.logging)
     implementation(libs.okhttpprofiler)
@@ -59,7 +65,9 @@ dependencies {
     implementation(libs.retrofit.converter.moshi)
     implementation(libs.moshi.core)
     implementation(libs.moshi.adapters)
-//    ksp(libs.moshi.kotlin.codegen)
+    ksp(libs.moshi.kotlin.codegen)
+
+    // tests
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -67,4 +75,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // ReadyRemit SDK
+    implementation(libs.readyremit.sdk)
 }

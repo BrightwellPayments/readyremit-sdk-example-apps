@@ -14,7 +14,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -25,17 +24,19 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.brightwell.composeSampleApp.ui.theme.ComposeSampleAppTheme
 import com.brightwell.composeSampleApp.util.getActivity
+import com.brightwell.readyremit.sdk.AccessTokenDetails
+import com.brightwell.readyremit.sdk.AuthenticationResult
 import com.brightwell.readyremit.sdk.ReadyRemit
-import com.brightwell.readyremit.sdk.environment.Environment
+import com.brightwell.readyremit.sdk.ReadyRemitConfiguration
+import com.brightwell.readyremit.sdk.TransferSubmissionResult
 
-class MainActivity : ComponentActivity() {
+internal class MainActivity : ComponentActivity() {
 
     private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        initializeReadyRemitSDK()
         setContent {
             ComposeSampleAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
@@ -48,34 +49,19 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    fun initializeReadyRemitSDK() {
-        ReadyRemit.initialize(ReadyRemit.Config.Builder(application = application)
-            .useEnvironment(Environment.PRODUCTION)
-            .useAuthProvider { callback -> viewModel.onAuth(callback) }
-            .useTransferSubmitProvider { request, callback ->
-                viewModel.onTransfer(
-                    request,
-                    callback
-                )
-            }
-            .useLanguage("en_US")
-            .build()
-        )
-    }
 }
 
 @Composable
-fun MainView(
+internal fun MainView(
     modifier: Modifier = Modifier,
     viewModel: MainViewModel
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
-
     HomeView(modifier, state)
 }
 
 @Composable
-fun HomeView(
+internal fun HomeView(
     modifier: Modifier = Modifier,
     state: MainState
 ) {
@@ -93,9 +79,9 @@ fun HomeView(
         Button(
             modifier = Modifier.padding(16.dp), onClick = {
                 if (activity != null) {
-                    ReadyRemit.remitFrom(
+                    ReadyRemit.startSdk(
                         activity = activity,
-                        requestCode = 99
+                        readyRemitConfiguration = state.config
                     )
                 }
             }
@@ -107,8 +93,29 @@ fun HomeView(
 
 @Preview(showBackground = true)
 @Composable
-fun HomePreview() {
+internal fun HomePreview() {
     ComposeSampleAppTheme {
-        MainView(viewModel = MainViewModel())
+        HomeView(
+            modifier = Modifier,
+            state = MainState(
+                config = ReadyRemitConfiguration(
+                    authenticateIntoTheSdk = {
+                        AuthenticationResult.Success(
+                            AccessTokenDetails(
+                                accessToken = "",
+                                expiresIn = 10000,
+                                scope = "",
+                                tokenType = ""
+                            )
+                        )
+                    },
+                    submitTransfer = {
+                        TransferSubmissionResult.Success(
+                            transferId = ""
+                        )
+                    }
+                )
+            )
+        )
     }
 }
