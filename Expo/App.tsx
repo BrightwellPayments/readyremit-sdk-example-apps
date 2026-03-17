@@ -1,83 +1,162 @@
+import React, { useState } from 'react';
 import {
+  Alert,
+  Button,
   SafeAreaView,
   StyleSheet,
-  NativeModules,
-  NativeEventEmitter,
-  Pressable,
   Text,
-} from "react-native";
-import React, { useEffect } from "react";
+  View,
+} from 'react-native';
+import {
+  startSDK,
+  ReadyRemitEnvironment,
+  ReadyRemitSupportedAppearance,
+  ReadyRemitLocalization,
+  type ReadyRemitConfiguration,
+  type ReadyRemitTokenResponse,
+  type ReadyRemitTransferRequest,
+  type ReadyRemitError,
+} from 'react-native-ready-remit-sdk';
 
-import tryAuth from "./Auth";
+const SENDER_ID = '<SENDER_ID>';
+const CLIENT_ID = '<CLIENT_ID>';
+const CLIENT_SECRET = '<CLIENT_SECRET>';
 
-const { ReadyRemitModule } = NativeModules;
-const eventEmitter = new NativeEventEmitter(ReadyRemitModule);
+const AUTH_URL = 'https://sandbox-api.readyremit.com/v1/oauth/token';
+const AUTH_AUDIENCE = 'https://sandbox-api.readyremit.com';
+
+const sdkConfiguration: ReadyRemitConfiguration = {
+  environment: ReadyRemitEnvironment.Sandbox,
+  supportedAppearance: ReadyRemitSupportedAppearance.Device,
+  localization: ReadyRemitLocalization.EN_US,
+  appearance: {
+    foundations: {
+      colorPrimary: { light: '#2563EB', dark: '#558CF4' },
+      colorBackground: { light: '#F3F4F6', dark: '#111111' },
+      colorForeground: { light: '#FFFFFF', dark: '#1F1F1F' },
+      colorTextPrimary: { light: '#0E0F0C', dark: '#E3E3E3' },
+      colorTextSecondary: { light: '#454545', dark: '#B0B0B0' },
+      colorDivider: { light: '#E2E2E2', dark: '#313131' },
+      colorDanger: { light: '#AA220F', dark: '#AA220F' },
+      colorSuccess: { light: '#008761', dark: '#008761' },
+    },
+    components: {
+      button: {
+        buttonPrimaryBackgroundColor: { light: '#2563EB', dark: '#558CF4' },
+        buttonPrimaryTextColor: { light: '#FFFFFF', dark: '#FFFFFF' },
+        buttonRadius: 8,
+      },
+    },
+  },
+};
+
+async function fetchAccessTokenDetails(): Promise<
+  ReadyRemitTokenResponse | ReadyRemitError
+> {
+  try {
+    const response = await fetch(AUTH_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        grant_type: 'client_credentials',
+        sender_id: SENDER_ID,
+        audience: AUTH_AUDIENCE,
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+      }),
+    });
+
+    const json = await response.json();
+
+    if (!response.ok || !json.access_token) {
+      return {
+        code: 'AUTH_FAILED',
+        message: json.description ?? json.message ?? 'Authentication failed',
+      };
+    }
+
+    return {
+      accessToken: json.access_token,
+      tokenType: json.token_type ?? 'Bearer',
+      expiresIn: json.expires_in ?? 3600,
+      scope: json.scope ?? 'openid',
+    };
+  } catch (error) {
+    return {
+      code: 'NETWORK_ERROR',
+      message:
+        error instanceof Error ? error.message : 'Network request failed',
+    };
+  }
+}
 
 export default function App() {
-  const readyRemitEnvironment = "SANDBOX"; // Options are 'SANDBOX' or 'PRODUCTION'
-  const readyRemitLanguage = "en_US"; // Options are 'en' or 'es_mx'
+  const [sdkStatus, setSdkStatus] = useState<string>('Ready');
 
-  const senderId = "<Sender ID>";
-  const clientId = "<Client ID>";
-  const clientSecret = "<Client Secret>";
+  const handleStartSDK = () => {
+    setSdkStatus('Loading...');
 
-  useEffect(() => {
-    eventEmitter.addListener("READYREMIT_AUTH_TOKEN_REQUESTED", async () => {
-      let auth = await tryAuth(senderId, clientSecret, clientId);
-      if (auth["error"] !== null) {
-        ReadyRemitModule.setAuthToken(null, auth["error"]);
-      }
-      if (auth["token"] !== undefined) {
-        ReadyRemitModule.setAuthToken(auth["token"], null);
-      }
+    startSDK({
+      configuration: sdkConfiguration,
+      fetchAccessTokenDetails,
+      verifyFundsAndCreateTransfer: async (
+        request: ReadyRemitTransferRequest,
+      ) => {
+        Alert.alert('Transfer Request', JSON.stringify(request, null, 2));
+        return { transferId: `sample-${Date.now()}` };
+      },
+      onLoad: async () => {
+        setSdkStatus('SDK Open');
+      },
+      onClose: async () => {
+        setSdkStatus('Ready');
+      },
     });
-
-    return function cleanup() {
-      eventEmitter.removeAllListeners("READYREMIT_AUTH_TOKEN_REQUESTED");
-    };
-  }, []);
-
-  useEffect(() => {
-    eventEmitter.addListener("SDK_CLOSED", () => {
-      console.log("SDK CLOSED");
-    });
-
-    return function cleanup() {
-      eventEmitter.removeAllListeners("SDK_CLOSED");
-    };
-  }, []);
-
-  useEffect(() => {
-    eventEmitter.addListener("READYREMIT_TRANSFER_SUBMITTED", (request) => {
-      ReadyRemitModule.setTransferId("", "", "");
-    });
-
-    return function cleanup() {
-      eventEmitter.removeAllListeners("READYREMIT_TRANSFER_SUBMITTED");
-    };
-  }, []);
+  };
 
   return (
-    <SafeAreaView>
-      <Pressable
-        style={styles.pressable}
-        onPress={() =>
-          ReadyRemitModule.launch(
-            readyRemitEnvironment,
-            readyRemitLanguage,
-            null
-          )
-        }
-      >
-        <Text>Start ReadyRemitSDK</Text>
-      </Pressable>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.content}>
+        <Text style={styles.title}>ReadyRemit SDK</Text>
+        <Text style={styles.subtitle}>Expo Example</Text>
+        <Text style={styles.status}>{sdkStatus}</Text>
+        <View style={styles.buttonContainer}>
+          <Button title="Launch ReadyRemit SDK" onPress={handleStartSDK} />
+        </View>
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  pressable: {
-    marginTop: 72,
-    marginHorizontal: 24,
+  container: {
+    flex: 1,
+    backgroundColor: '#F5F5F5',
+  },
+  content: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 24,
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: '700',
+    color: '#1A1A1A',
+    marginBottom: 4,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: '#666',
+    marginBottom: 24,
+  },
+  status: {
+    fontSize: 14,
+    color: '#999',
+    marginBottom: 32,
+  },
+  buttonContainer: {
+    width: '100%',
+    maxWidth: 300,
   },
 });
