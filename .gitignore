@@ -1,1 +1,8 @@
 .DS_Store
+
+# CocoaPods
+iOS/UIKit/Pods/
+iOS/UIKit/Podfile.lock
+
+# Swift Package Manager
+**/xcshareddata/swiftpm/
