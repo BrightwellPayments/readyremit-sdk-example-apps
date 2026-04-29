@@ -2,6 +2,6 @@ platform :ios, '17.0'
 
 target 'ReadyRemitHostPods' do
   use_frameworks!
-  pod 'ReadyRemitSDK', :git => 'https://github.com/BrightwellPayments/readyremit-sdk-ios.git', :tag => '10.0.0'
+  pod 'ReadyRemitSDK', :git => 'https://github.com/BrightwellPayments/readyremit-sdk-ios.git', :tag => '10.2.0'
 
 end
