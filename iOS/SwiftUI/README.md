@@ -169,4 +169,4 @@ configuration: .init(environment: .production)
 
 ## License
 
-Copyright © 2025 Brightwell. All rights reserved.
+Copyright © 2025 PayMitto. All rights reserved.
