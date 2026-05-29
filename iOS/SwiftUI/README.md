@@ -23,12 +23,12 @@ This app serves as a reference implementation for integrating the ReadyRemit SDK
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd ReadyRemitHost
+   cd PayMittoHost
    ```
 
 2. **Open in Xcode**
    ```bash
-   open ReadyRemitHost.xcodeproj
+   open PayMittoHost.xcodeproj
    ```
 
 3. **Resolve Swift Packages**
@@ -50,8 +50,8 @@ This app serves as a reference implementation for integrating the ReadyRemit SDK
 ## Project Structure
 
 ```
-ReadyRemitHost/
-├── ReadyRemitHostApp.swift       # App entry point
+PayMittoHost/
+├── PayMittoHostApp.swift       # App entry point
 ├── ContentView.swift             # Main navigation view
 ├── ContentView-ViewModel.swift   # Navigation state management
 ├── ViewModel.swift               # SDK integration logic

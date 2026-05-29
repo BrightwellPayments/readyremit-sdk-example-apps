@@ -1,6 +1,6 @@
 //
-//  ReadyRemitHostApp.swift
-//  ReadyRemitHost
+//  PayMittoHostApp.swift
+//  PayMittoHost
 //
 //  Created by Matthew Mohrman on 9/4/25.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ReadyRemitHostApp: App {
+struct PayMittoHostApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

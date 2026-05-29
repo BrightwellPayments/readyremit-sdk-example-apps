@@ -1,6 +1,6 @@
 //
 //  ContentView-ViewModel.swift
-//  ReadyRemitHost
+//  PayMittoHost
 //
 //  Created by Matthew Mohrman on 9/4/25.
 //

@@ -1,13 +1,13 @@
 //
-//  ReadyRemitHostUITestsLaunchTests.swift
-//  ReadyRemitHostUITests
+//  PayMittoHostUITestsLaunchTests.swift
+//  PayMittoHostUITests
 //
 //  Created by Matthew Mohrman on 9/4/25.
 //
 
 import XCTest
 
-final class ReadyRemitHostUITestsLaunchTests: XCTestCase {
+final class PayMittoHostUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

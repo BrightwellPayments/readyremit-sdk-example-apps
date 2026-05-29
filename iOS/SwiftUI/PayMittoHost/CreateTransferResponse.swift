@@ -1,6 +1,6 @@
 //
 //  CreateTransferResponse.swift
-//  ReadyRemitHost
+//  PayMittoHost
 //
 //  Created by Matthew Mohrman on 10/23/25.
 //

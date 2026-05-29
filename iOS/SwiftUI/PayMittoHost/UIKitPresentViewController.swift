@@ -1,33 +1,25 @@
 //
-//  UIKitPushViewController.swift
-//  ReadyRemitHost
+//  UIKitPresentViewController.swift
+//  PayMittoHost
 //
 //  Created by Matthew Mohrman on 10/24/25.
 //
 
 import SwiftUI
 
-class UIKitPushViewController: UIViewController {
+class UIKitPresentViewController: UIViewController {
     private let viewModel: ViewModel = .init()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupButton()
-        setupCloseButton()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        navigationController?.setNavigationBarHidden(false, animated: animated)
         setupObservation()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     private func setupButton() {
@@ -40,19 +32,11 @@ class UIKitPushViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(button)
-        
+
         NSLayoutConstraint.activate([
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
-    }
-    
-    private func setupCloseButton() {
-        let action = UIAction { [weak self] _ in
-            self?.dismiss(animated: true, completion: nil)
-        }
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Close", primaryAction: action)
     }
     
     private func setupObservation() {
@@ -65,7 +49,7 @@ class UIKitPushViewController: UIViewController {
                     if let payMittoItem = self.viewModel.payMittoItem {
                         let hostingController = UIHostingController(rootView: AnyView(payMittoItem.view))
                         hostingController.modalPresentationStyle = .fullScreen
-                        self.navigationController?.pushViewController(hostingController, animated: true)
+                        self.present(hostingController, animated: true)
                     }
                 }
             }
