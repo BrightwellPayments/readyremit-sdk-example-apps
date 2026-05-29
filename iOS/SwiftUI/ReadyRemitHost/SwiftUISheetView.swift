@@ -11,7 +11,7 @@ struct SwiftUISheetView: View {
     @State private var viewModel: ViewModel = .init()
     
     var body: some View {
-        Button("ReadyRemit SDK v10.0.0") {
+        Button("ReadyRemit SDK v10.2.0") {
             viewModel.showReadyRemitSDK()
         }
         .fullScreenCover(item: $viewModel.readyRemitItem) {

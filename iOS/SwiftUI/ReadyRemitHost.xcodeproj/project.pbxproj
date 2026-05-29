@@ -661,7 +661,7 @@
 			repositoryURL = "https://github.com/BrightwellPayments/readyremit-sdk-ios";
 			requirement = {
 				kind = exactVersion;
-				version = 10.0.0;
+				version = 10.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -36,7 +36,7 @@ class UIKitPushViewController: UIViewController {
         }
         
         let button = UIButton(primaryAction: action)
-        button.setTitle("ReadyRemit SDK v10.0.0", for: .normal)
+        button.setTitle("ReadyRemit SDK v10.2.0", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(button)
