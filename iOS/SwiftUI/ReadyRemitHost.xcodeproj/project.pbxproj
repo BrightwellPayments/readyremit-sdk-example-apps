@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		57FA79AB2F59FAE8002D0910 /* ReadyRemitSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 57FA79AA2F59FAE8002D0910 /* ReadyRemitSDK */; };
+		57FA79AB2F59FAE8002D0910 /* PayMittoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 57FA79AA2F59FAE8002D0910 /* PayMittoSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57FA79AB2F59FAE8002D0910 /* ReadyRemitSDK in Frameworks */,
+				57FA79AB2F59FAE8002D0910 /* PayMittoSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +131,7 @@
 			);
 			name = ReadyRemitHost;
 			packageProductDependencies = (
-				57FA79AA2F59FAE8002D0910 /* ReadyRemitSDK */,
+				57FA79AA2F59FAE8002D0910 /* PayMittoSDK */,
 			);
 			productName = ReadyRemitHost;
 			productReference = 57363B612E69ED5A002D0DCA /* ReadyRemitHost.app */;
@@ -216,7 +216,7 @@
 			mainGroup = 57363B582E69ED5A002D0DCA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				57FA79A92F59FAE8002D0910 /* XCRemoteSwiftPackageReference "readyremit-sdk-ios" */,
+				57FA79A92F59FAE8002D0910 /* XCRemoteSwiftPackageReference "paymitto-ios-spm" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 57363B622E69ED5A002D0DCA /* Products */;
@@ -656,21 +656,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		57FA79A92F59FAE8002D0910 /* XCRemoteSwiftPackageReference "readyremit-sdk-ios" */ = {
+		57FA79A92F59FAE8002D0910 /* XCRemoteSwiftPackageReference "paymitto-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/BrightwellPayments/readyremit-sdk-ios";
+			repositoryURL = "https://github.com/PayMitto/paymitto-ios-spm.git";
 			requirement = {
 				kind = exactVersion;
-				version = 10.0.0;
+				version = 11.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		57FA79AA2F59FAE8002D0910 /* ReadyRemitSDK */ = {
+		57FA79AA2F59FAE8002D0910 /* PayMittoSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 57FA79A92F59FAE8002D0910 /* XCRemoteSwiftPackageReference "readyremit-sdk-ios" */;
-			productName = ReadyRemitSDK;
+			package = 57FA79A92F59FAE8002D0910 /* XCRemoteSwiftPackageReference "paymitto-ios-spm" */;
+			productName = PayMittoSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -5,32 +5,32 @@
 //  Created by Matthew Mohrman on 10/24/25.
 //
 
-import ReadyRemitSDK
+import PayMittoSDK
 import SwiftUI
 
 @Observable
 class ViewModel {
-    struct ReadyRemitItem: Identifiable {
+    struct PayMittoItem: Identifiable {
         let id = UUID()
         let view: any View
     }
-    
-    var readyRemitItem: ReadyRemitItem?
-    
+
+    var payMittoItem: PayMittoItem?
+
     private var authorizationValue: String?
-    
-    func showReadyRemitSDK() {
-        ReadyRemit.shared.startSDK(
+
+    func showPayMittoSDK() {
+        PayMitto.shared.startSDK(
             configuration: .init(environment: .sandbox),
             fetchAccessTokenDetails: fetchAccessTokenDetails,
             verifyFundsAndCreateTransfer: verifyFundsAndCreateTransfer,
             onDismiss: { [weak self] in
                 guard let self else { return }
-                self.readyRemitItem = nil
+                self.payMittoItem = nil
             }
-        ) { [weak self] readyRemitSDKView in
+        ) { [weak self] payMittoSDKView in
             guard let self else { return }
-            self.readyRemitItem = .init(view: readyRemitSDKView)
+            self.payMittoItem = .init(view: payMittoSDKView)
         }
     }
     
@@ -61,13 +61,13 @@ class ViewModel {
             authorizationValue = "\(response.tokenType) \(response.accessToken)"
             return response
         default:
-            throw ReadyRemitError(code: .none, message: "Failed to fetch access token details")
+            throw PayMittoError(code: .none, message: "Failed to fetch access token details")
         }
     }
     
     private func verifyFundsAndCreateTransfer(
         transferRequest: TransferRequest
-    ) async throws(ReadyRemitError) -> TransferDetails {
+    ) async throws(PayMittoError) -> TransferDetails {
         do {
             guard let url = URL(string: "https://sandbox-api.readyremit.com/v1/quote/\(transferRequest.quoteHistoryId)") else {
                 throw URLError(.badURL)
@@ -84,7 +84,7 @@ class ViewModel {
             guard let httpResponse = response as? HTTPURLResponse,
                   200...299 ~= httpResponse.statusCode
             else {
-                throw ReadyRemitError(code: .none, message: "Failed to fetch quote details")
+                throw PayMittoError(code: .none, message: "Failed to fetch quote details")
             }
             
             let readQuoteDetailsResponse = try JSONDecoder().decode(ReadQuoteDetailsResponse.self, from: data)
@@ -133,14 +133,14 @@ class ViewModel {
             guard let httpResponse = response as? HTTPURLResponse,
                   200...299 ~= httpResponse.statusCode
             else {
-                throw ReadyRemitError(code: .none, message: "Failed to create transfer")
+                throw PayMittoError(code: .none, message: "Failed to create transfer")
             }
             
             return try JSONDecoder().decode(CreateTransferResponse.self, from: data)
-        } catch let error as ReadyRemitError {
+        } catch let error as PayMittoError {
             throw error
         } catch {
-            throw ReadyRemitError(code: .none, message: "Error: \(error.localizedDescription)")
+            throw PayMittoError(code: .none, message: "Error: \(error.localizedDescription)")
         }
     }
 }

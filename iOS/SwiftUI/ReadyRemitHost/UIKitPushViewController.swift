@@ -32,11 +32,11 @@ class UIKitPushViewController: UIViewController {
 
     private func setupButton() {
         let action = UIAction { _ in
-            self.viewModel.showReadyRemitSDK()
+            self.viewModel.showPayMittoSDK()
         }
-        
+
         let button = UIButton(primaryAction: action)
-        button.setTitle("ReadyRemit SDK v10.0.0", for: .normal)
+        button.setTitle("PayMitto SDK v11.0.0", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(button)
@@ -57,13 +57,13 @@ class UIKitPushViewController: UIViewController {
     
     private func setupObservation() {
         withObservationTracking {
-            _ = viewModel.readyRemitItem
+            _ = viewModel.payMittoItem
         } onChange: { [weak self] in
             guard let self else { return }
             Task {
                 await MainActor.run {
-                    if let readyRemitItem = self.viewModel.readyRemitItem {
-                        let hostingController = UIHostingController(rootView: AnyView(readyRemitItem.view))
+                    if let payMittoItem = self.viewModel.payMittoItem {
+                        let hostingController = UIHostingController(rootView: AnyView(payMittoItem.view))
                         hostingController.modalPresentationStyle = .fullScreen
                         self.navigationController?.pushViewController(hostingController, animated: true)
                     }

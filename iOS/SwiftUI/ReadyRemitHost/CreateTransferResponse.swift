@@ -5,7 +5,7 @@
 //  Created by Matthew Mohrman on 10/23/25.
 //
 
-import ReadyRemitSDK
+import PayMittoSDK
 
 struct CreateTransferResponse: Decodable {
     let transferId: String

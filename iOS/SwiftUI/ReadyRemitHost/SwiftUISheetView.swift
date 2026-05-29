@@ -11,10 +11,10 @@ struct SwiftUISheetView: View {
     @State private var viewModel: ViewModel = .init()
     
     var body: some View {
-        Button("ReadyRemit SDK v10.0.0") {
-            viewModel.showReadyRemitSDK()
+        Button("PayMitto SDK v11.0.0") {
+            viewModel.showPayMittoSDK()
         }
-        .fullScreenCover(item: $viewModel.readyRemitItem) {
+        .fullScreenCover(item: $viewModel.payMittoItem) {
             AnyView($0.view)
         }
         .navigationTitle("SwiftUI - Sheet")

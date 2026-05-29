@@ -43,7 +43,7 @@ struct ContentView: View {
                         .navigationTitle("UIKit - Present")
                 }
             }
-            .navigationTitle("ReadyRemit Integrations")
+            .navigationTitle("PayMitto Integrations")
             .toolbarTitleDisplayMode(.inline)
         }
     }
