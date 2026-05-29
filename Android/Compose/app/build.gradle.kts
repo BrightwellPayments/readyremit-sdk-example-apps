@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.brightwell.composeSampleApp"
+    namespace = "com.paymitto.composeSampleApp"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.brightwell.composeSampleApp"
+        applicationId = "com.paymitto.composeSampleApp"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
@@ -77,5 +77,5 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     // ReadyRemit SDK
-    implementation(libs.readyremit.sdk)
+    implementation(libs.payMitto.sdk)
 }
